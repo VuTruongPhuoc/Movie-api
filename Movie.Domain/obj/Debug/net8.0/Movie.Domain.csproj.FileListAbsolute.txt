@@ -1,0 +1,11 @@
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\bin\Debug\net8.0\Movie.Domain.deps.json
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\bin\Debug\net8.0\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\bin\Debug\net8.0\Movie.Domain.pdb
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.AssemblyInfoInputs.cache
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.AssemblyInfo.cs
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.csproj.CoreCompileInputs.cache
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\refint\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.pdb
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\ref\Movie.Domain.dll
