@@ -9,3 +9,4 @@ D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.dll
 D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\refint\Movie.Domain.dll
 D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.pdb
 D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\ref\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Movie.Domain\obj\Debug\net8.0\Movie.Domain.sourcelink.json

@@ -9,3 +9,10 @@ D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\Movie.Inf
 D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\refint\Movie.Infrastructure.dll
 D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\Movie.Infrastructure.pdb
 D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\ref\Movie.Infrastructure.dll
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\bin\Debug\net8.0\Movie.Application.dll
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\bin\Debug\net8.0\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\bin\Debug\net8.0\Movie.Application.pdb
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\bin\Debug\net8.0\Movie.Domain.pdb
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\Movie.Infrastructure.csproj.AssemblyReference.cache
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\Movie.Infrastructure.sourcelink.json
+D:\Workplace\MoviesApp\movie-api\Moive.Infrastructure\obj\Debug\net8.0\Movie.Infrastructure.csproj.CopyComplete

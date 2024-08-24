@@ -30,3 +30,10 @@ D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\refint\Movie.API.dll
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.pdb
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.genruntimeconfig.cache
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\ref\Movie.API.dll
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Application.dll
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Domain.dll
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Infrastructure.dll
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Infrastructure.pdb
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Application.pdb
+D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Domain.pdb
+D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.sourcelink.json

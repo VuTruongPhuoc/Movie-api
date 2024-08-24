@@ -9,6 +9,9 @@
       "Movie.API/1.0.0": {
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.5",
+          "Movie.Application": "1.0.0",
+          "Movie.Domain": "1.0.0",
+          "Movie.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -61,6 +64,27 @@
             "assemblyVersion": "6.4.0.0",
             "fileVersion": "6.4.0.0"
           }
+        }
+      },
+      "Movie.Application/1.0.0": {
+        "dependencies": {
+          "Movie.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Movie.Application.dll": {}
+        }
+      },
+      "Movie.Domain/1.0.0": {
+        "runtime": {
+          "Movie.Domain.dll": {}
+        }
+      },
+      "Movie.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Movie.Application": "1.0.0"
+        },
+        "runtime": {
+          "Movie.Infrastructure.dll": {}
         }
       }
     }
@@ -119,6 +143,21 @@
       "sha512": "sha512-1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.4.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    },
+    "Movie.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Movie.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Movie.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
