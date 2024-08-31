@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "38PbVgbYqXmEOASlzSMrQVvuFVFG7tjlOjMopqrIn2nQkVuxrMhXLY9+vDpBsbO/O0EDVP3jwL1epoZgX96fEQ==",
+  "dgSpecHash": "rE4flHCgdM64Nm7NaD+O57oFS/5iVDzQZMNQAUg4LwXWFqrrpg/TfiTfdDF6dxcCVExKyyEbET/pJ7rFxpeYMg==",
   "success": true,
-  "projectFilePath": "D:\\Workplace\\MoviesApp\\Movie-api\\Moive.Infrastructure\\Movie.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Workplace\\MoviesApp\\movie-api\\Moive.Infrastructure\\Movie.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
