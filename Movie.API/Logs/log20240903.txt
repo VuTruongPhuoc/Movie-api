@@ -1,0 +1,40 @@
+2024-09-03 17:21:28.076 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:21:28.103 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:21:28.105 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:21:28.105 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:21:28.105 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:22:18.463 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:22:18.486 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:22:18.487 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:22:18.488 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:22:18.488 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:23:17.750 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:23:17.774 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:23:17.776 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:23:17.776 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:23:17.776 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:24:29.684 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:24:29.708 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:24:29.709 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:24:29.710 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:24:29.710 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:25:11.495 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:25:11.517 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:25:11.518 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:25:11.519 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:25:11.519 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:25:32.515 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:25:32.538 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:25:32.539 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:25:32.539 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:25:32.539 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:25:50.549 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:25:50.571 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:25:50.573 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:25:50.573 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:25:50.573 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 17:28:41.562 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 17:28:41.584 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 17:28:41.585 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 17:28:41.586 +07:00 [INF] Hosting environment: Development
+2024-09-03 17:28:41.586 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API

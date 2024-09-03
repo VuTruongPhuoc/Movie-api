@@ -11,7 +11,7 @@
         "projectName": "Movie.Domain",
         "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
-        "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\obj\\",
+        "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuoc\\AppData\\Roaming\\NuGet\\NuGet.Config",

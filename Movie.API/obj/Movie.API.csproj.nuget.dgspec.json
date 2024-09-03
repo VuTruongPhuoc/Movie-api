@@ -131,9 +131,23 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -229,7 +243,7 @@
         "projectName": "Movie.Domain",
         "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
-        "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\obj\\",
+        "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuoc\\AppData\\Roaming\\NuGet\\NuGet.Config",

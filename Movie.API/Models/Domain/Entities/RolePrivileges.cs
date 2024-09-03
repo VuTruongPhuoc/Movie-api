@@ -6,7 +6,9 @@ namespace Movie.API.Models.Domain.Entities
     {
         public int RoleId { get; set; }
 
-        public string RolePrivilegeName { get; set; } = default!;
+        public string Name { get; set; } = default!;
+
+        public Role? Role { get; set; }
 
     }
 }

@@ -1,0 +1,18 @@
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
+using Movie.API.Models.Domain.Entities;
+
+namespace Movie.API.Data.Configuration
+{
+    public class ServerConfiguration : IEntityTypeConfiguration<Server>
+    {
+        public void Configure(EntityTypeBuilder<Server> builder)
+        {
+            builder.ToTable("Servers");
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
+
+            builder.Property(x => x.Name).IsRequired().HasMaxLength(30);
+        }
+    }
+}
