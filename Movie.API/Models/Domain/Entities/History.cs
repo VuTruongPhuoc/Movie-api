@@ -9,7 +9,7 @@ namespace Movie.API.Models.Domain.Entities
 {
     public class History : BaseDomainEntity
     {
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public User? User { get; set; }
 

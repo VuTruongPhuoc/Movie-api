@@ -1,0 +1,1568 @@
+2024-09-04 16:06:21.569 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:06:21.637 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:06:21.639 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:06:21.640 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:06:21.659 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:06:21.672 +07:00 [INF] Applying migration '20240904090610_Initial'.
+2024-09-04 16:06:21.793 +07:00 [ERR] Failed executing DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categorys] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categorys] PRIMARY KEY ([Id])
+);
+2024-09-04 16:06:59.231 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:06:59.278 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:06:59.290 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:07:55.435 +07:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [MovieDB];
+2024-09-04 16:07:55.516 +07:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [MovieDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2024-09-04 16:07:55.531 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:07:55.589 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2024-09-04 16:07:55.590 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:07:55.603 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:07:55.613 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:07:55.625 +07:00 [INF] Applying migration '20240904090704_Initial'.
+2024-09-04 16:07:55.697 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:07:55.699 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:07:55.701 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:07:55.702 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:07:55.704 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:07:55.706 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.709 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.710 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.712 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.715 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.717 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoleMapping] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoleMapping] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoleMapping_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoleMapping_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.719 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.721 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.723 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:07:55.742 +07:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.269 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:08:18.311 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:08:18.313 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:08:18.313 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:08:18.327 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:08:18.337 +07:00 [INF] Applying migration '20240904090704_Initial'.
+2024-09-04 16:08:18.424 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:08:18.426 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:08:18.427 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:08:18.429 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:08:18.430 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:08:18.432 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.433 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.435 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.437 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.439 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.441 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoleMapping] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoleMapping] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoleMapping_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoleMapping_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.443 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.444 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.446 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:08:18.461 +07:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:22.705 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:09:22.749 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:09:22.763 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:09:36.091 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:09:36.132 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:09:36.134 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:09:36.134 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:09:36.151 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:09:36.163 +07:00 [INF] Applying migration '20240904090929_Initial'.
+2024-09-04 16:09:36.267 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:09:36.268 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:09:36.270 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:09:36.272 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:09:36.273 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:09:36.275 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.277 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.279 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.280 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.283 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.285 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.286 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.289 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:09:36.304 +07:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.717 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:10:49.764 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:10:49.767 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:10:49.768 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:10:49.786 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:10:49.798 +07:00 [INF] Applying migration '20240904090929_Initial'.
+2024-09-04 16:10:49.910 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:10:49.912 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:10:49.913 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:10:49.915 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:10:49.917 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:10:49.918 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.920 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.922 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.924 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.927 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.929 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.931 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.934 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.936 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:10:49.938 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FilmCategories] (
+    [FilmId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    CONSTRAINT [PK_FilmCategories] PRIMARY KEY ([FilmId], [CategoryId]),
+    CONSTRAINT [FK_FilmCategories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FilmCategories_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:10:49.955 +07:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [Rate] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.056 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:12:15.095 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:12:15.097 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:12:15.098 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:12:15.115 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:12:15.128 +07:00 [INF] Applying migration '20240904090929_Initial'.
+2024-09-04 16:12:15.217 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:15.219 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:15.220 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:15.221 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:15.223 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:15.225 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.226 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.228 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.230 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.232 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.234 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.236 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.238 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.240 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:12:15.242 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FilmCategories] (
+    [FilmId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    CONSTRAINT [PK_FilmCategories] PRIMARY KEY ([FilmId], [CategoryId]),
+    CONSTRAINT [FK_FilmCategories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FilmCategories_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.244 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [Rate] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:12:15.247 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Sections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Sections] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sections_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:15.265 +07:00 [ERR] Failed executing DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Tracks] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Tracks] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Tracks_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Tracks_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.408 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:12:29.449 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:12:29.451 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:12:29.452 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:12:29.466 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:12:29.478 +07:00 [INF] Applying migration '20240904090929_Initial'.
+2024-09-04 16:12:29.575 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:29.576 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:29.578 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:29.580 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:29.582 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:12:29.583 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.585 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.587 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.589 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.591 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.593 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.595 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.598 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.600 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:12:29.602 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FilmCategories] (
+    [FilmId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    CONSTRAINT [PK_FilmCategories] PRIMARY KEY ([FilmId], [CategoryId]),
+    CONSTRAINT [FK_FilmCategories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FilmCategories_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.604 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [Rate] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:12:29.606 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Sections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Sections] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sections_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:12:29.609 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Tracks] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Tracks] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Tracks_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Tracks_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:12:29.628 +07:00 [ERR] Failed executing DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Episodes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [FilmId] int NOT NULL,
+    [SectionId] int NOT NULL,
+    [Link] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Episodes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Episodes_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Episodes_Sections_SectionId] FOREIGN KEY ([SectionId]) REFERENCES [Sections] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.072 +07:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:13:45.113 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:13:45.115 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2024-09-04 16:13:45.115 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2024-09-04 16:13:45.129 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2024-09-04 16:13:45.141 +07:00 [INF] Applying migration '20240904090929_Initial'.
+2024-09-04 16:13:45.234 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Categories] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Categories] PRIMARY KEY ([Id])
+);
+2024-09-04 16:13:45.236 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Countries] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Countries] PRIMARY KEY ([Id])
+);
+2024-09-04 16:13:45.237 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Roles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NOT NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_Roles] PRIMARY KEY ([Id])
+);
+2024-09-04 16:13:45.239 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Schedule] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Schedule] PRIMARY KEY ([Id])
+);
+2024-09-04 16:13:45.240 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] nvarchar(450) NOT NULL,
+    [DisplayName] nvarchar(max) NOT NULL,
+    [Avatar] nvarchar(max) NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2024-09-04 16:13:45.242 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_RoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RoleClaims_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.244 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [RolePrivileges] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [Name] nvarchar(30) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_RolePrivileges] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_RolePrivileges_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.246 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Histories] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Histories] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Histories_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.247 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_UserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.250 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_UserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.252 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_UserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_UserRoles_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [Roles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_UserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.254 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [UserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_UserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_UserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.256 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Films] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    [Image] nvarchar(255) NOT NULL,
+    [NumberOfEpisodes] int NOT NULL,
+    [ReleaseYear] int NOT NULL,
+    [ViewCount] bigint NOT NULL,
+    [CountryId] int NOT NULL,
+    [HistoryId] int NOT NULL,
+    [ScheduleId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Films] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Films_Countries_CountryId] FOREIGN KEY ([CountryId]) REFERENCES [Countries] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Histories_HistoryId] FOREIGN KEY ([HistoryId]) REFERENCES [Histories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Films_Schedule_ScheduleId] FOREIGN KEY ([ScheduleId]) REFERENCES [Schedule] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.258 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Comments] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [content] nvarchar(255) NOT NULL,
+    [IsLocked] bit NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Comments] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Comments_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Comments_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:13:45.260 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [FilmCategories] (
+    [FilmId] int NOT NULL,
+    [CategoryId] int NOT NULL,
+    CONSTRAINT [PK_FilmCategories] PRIMARY KEY ([FilmId], [CategoryId]),
+    CONSTRAINT [FK_FilmCategories_Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Categories] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_FilmCategories_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.263 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reviews] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [Rate] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Reviews] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Reviews_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Reviews_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:13:45.265 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Sections] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Sections] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Sections_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.267 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Tracks] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [FilmId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Tracks] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Tracks_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Tracks_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id])
+);
+2024-09-04 16:13:45.269 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Episodes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [FilmId] int NOT NULL,
+    [SectionId] int NOT NULL,
+    [Link] nvarchar(max) NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Episodes] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Episodes_Films_FilmId] FOREIGN KEY ([FilmId]) REFERENCES [Films] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Episodes_Sections_SectionId] FOREIGN KEY ([SectionId]) REFERENCES [Sections] ([Id])
+);
+2024-09-04 16:13:45.271 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Servers] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [EpisodeId] int NOT NULL,
+    [CreateDate] datetime2 NOT NULL,
+    [LastModifiedDate] datetime2 NOT NULL,
+    [IsActive] bit NOT NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Servers] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Servers_Episodes_EpisodeId] FOREIGN KEY ([EpisodeId]) REFERENCES [Episodes] ([Id]) ON DELETE CASCADE
+);
+2024-09-04 16:13:45.272 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_FilmId] ON [Comments] ([FilmId]);
+2024-09-04 16:13:45.273 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Comments_UserId] ON [Comments] ([UserId]);
+2024-09-04 16:13:45.274 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Episodes_FilmId] ON [Episodes] ([FilmId]);
+2024-09-04 16:13:45.275 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Episodes_SectionId] ON [Episodes] ([SectionId]);
+2024-09-04 16:13:45.276 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_FilmCategories_CategoryId] ON [FilmCategories] ([CategoryId]);
+2024-09-04 16:13:45.276 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Films_CountryId] ON [Films] ([CountryId]);
+2024-09-04 16:13:45.277 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Films_HistoryId] ON [Films] ([HistoryId]);
+2024-09-04 16:13:45.278 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Films_ScheduleId] ON [Films] ([ScheduleId]);
+2024-09-04 16:13:45.279 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Histories_UserId] ON [Histories] ([UserId]);
+2024-09-04 16:13:45.280 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_FilmId] ON [Reviews] ([FilmId]);
+2024-09-04 16:13:45.281 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Reviews_UserId] ON [Reviews] ([UserId]);
+2024-09-04 16:13:45.281 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RoleClaims_RoleId] ON [RoleClaims] ([RoleId]);
+2024-09-04 16:13:45.282 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_RolePrivileges_RoleId] ON [RolePrivileges] ([RoleId]);
+2024-09-04 16:13:45.285 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [Roles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2024-09-04 16:13:45.286 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Sections_FilmId] ON [Sections] ([FilmId]);
+2024-09-04 16:13:45.287 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Servers_EpisodeId] ON [Servers] ([EpisodeId]);
+2024-09-04 16:13:45.288 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Tracks_FilmId] ON [Tracks] ([FilmId]);
+2024-09-04 16:13:45.289 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Tracks_UserId] ON [Tracks] ([UserId]);
+2024-09-04 16:13:45.290 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserClaims_UserId] ON [UserClaims] ([UserId]);
+2024-09-04 16:13:45.290 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserLogins_UserId] ON [UserLogins] ([UserId]);
+2024-09-04 16:13:45.291 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_UserRoles_RoleId] ON [UserRoles] ([RoleId]);
+2024-09-04 16:13:45.292 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [Users] ([NormalizedEmail]);
+2024-09-04 16:13:45.293 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [Users] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2024-09-04 16:13:45.296 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240904090929_Initial', N'8.0.8');

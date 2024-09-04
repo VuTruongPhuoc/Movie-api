@@ -9,9 +9,7 @@ namespace Movie.API.Infrastructure.Data.Configuration
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.ToTable("Users");
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).UseIdentityColumn();
-
+            
         }
     }
 }

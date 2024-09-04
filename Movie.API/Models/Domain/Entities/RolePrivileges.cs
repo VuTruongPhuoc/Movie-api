@@ -4,7 +4,7 @@ namespace Movie.API.Models.Domain.Entities
 {
     public class RolePrivileges: BaseDomainEntity
     {
-        public int RoleId { get; set; }
+        public string RoleId { get; set; }
 
         public string Name { get; set; } = default!;
 

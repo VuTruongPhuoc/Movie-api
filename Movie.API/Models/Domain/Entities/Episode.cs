@@ -13,7 +13,6 @@ namespace Movie.API.Models.Domain.Entities
         public string Name { get; set; } = default!;
         public int FilmId { get; set; }
         public int SectionId { get; set; }
-        public int ServerId { get; set; }
         public string Link { get; set; } = default!;
         public Film Film { get; set; }
         public Section Section { get; set; }

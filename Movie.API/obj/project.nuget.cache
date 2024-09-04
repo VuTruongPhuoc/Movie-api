@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v6qAHLBT+tGCnhSmUpOcPz39qiMepsQDNd/qVCOEvGew52jBnfhIsXGLA3GxqdWQvQtIuz/VOzeeN3V1vTqseg==",
+  "dgSpecHash": "bEe51fUN3Mv7JJDzuewBtDbpcg07YdOy9cBi5sKJxW3L9Gzbaj+8zywSMIBktw+Trb/MEZcznjy4KFFGATm7Dg==",
   "success": true,
   "projectFilePath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.API\\Movie.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phuoc\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\phuoc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\phuoc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\phuoc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

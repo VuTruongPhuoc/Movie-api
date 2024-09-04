@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Models.Domain.Entities;
 
@@ -22,6 +23,7 @@ namespace Movie.API.Controllers
         [Route("All", Name = "GetAllFilms")]
         public ActionResult<Film> GetAllFilms()
         {
+            CustomMapper.InitializeAutoMapper();
             _logger.LogInformation("Start get all films");
             _logger.LogError("Error get all films");
             return Ok(_dbContext.Films.ToList());

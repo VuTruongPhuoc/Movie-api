@@ -9,7 +9,7 @@ namespace Movie.API.Models.Domain.Entities
 {
     public class Review : BaseDomainEntity
     {
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int FilmId { get; set; }
         public int Rate { get; set; }
         public Film Film { get; set; }
