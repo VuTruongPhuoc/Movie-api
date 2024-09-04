@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Movie.API.Models.Domain.Entities;
 
-namespace Movie.API.Data.Configuration
+namespace Movie.API.Infrastructure.Data.Configuration
 {
     public class CountryConfiguration : IEntityTypeConfiguration<Country>
     {

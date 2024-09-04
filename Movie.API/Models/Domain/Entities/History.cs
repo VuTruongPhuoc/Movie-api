@@ -13,6 +13,6 @@ namespace Movie.API.Models.Domain.Entities
 
         public User? User { get; set; }
 
-        public List<Film> Films { get; set; } = new();
+        public virtual ICollection<Film> Films { get; set; }
     }
 }

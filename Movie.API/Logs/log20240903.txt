@@ -1,40 +1,200 @@
-2024-09-03 17:21:28.076 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:21:28.103 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:21:28.105 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:21:28.105 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:21:28.105 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:22:18.463 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:22:18.486 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:22:18.487 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:22:18.488 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:22:18.488 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:23:17.750 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:23:17.774 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:23:17.776 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:23:17.776 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:23:17.776 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:24:29.684 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:24:29.708 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:24:29.709 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:24:29.710 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:24:29.710 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:25:11.495 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:25:11.517 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:25:11.518 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:25:11.519 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:25:11.519 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:25:32.515 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:25:32.538 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:25:32.539 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:25:32.539 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:25:32.539 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:25:50.549 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:25:50.571 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:25:50.573 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:25:50.573 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:25:50.573 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
-2024-09-03 17:28:41.562 +07:00 [INF] Now listening on: https://localhost:7039
-2024-09-03 17:28:41.584 +07:00 [INF] Now listening on: http://localhost:5203
-2024-09-03 17:28:41.585 +07:00 [INF] Application started. Press Ctrl+C to shut down.
-2024-09-03 17:28:41.586 +07:00 [INF] Hosting environment: Development
-2024-09-03 17:28:41.586 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:09:30.142 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:09:30.166 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:09:30.167 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:09:30.167 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:09:30.167 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:09:30.309 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:09:30.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 177.0097ms
+2024-09-03 23:09:30.541 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:09:30.541 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:09:30.544 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.2178ms
+2024-09-03 23:09:30.579 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.8099ms
+2024-09-03 23:09:30.871 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:09:31.004 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.5565ms
+2024-09-03 23:09:34.313 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:09:34.321 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 7.7483ms
+2024-09-03 23:09:34.342 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:09:34.345 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:09:34.346 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.7763ms
+2024-09-03 23:09:34.355 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.9957ms
+2024-09-03 23:09:34.467 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:09:34.478 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.2737ms
+2024-09-03 23:09:35.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:09:35.108 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 2.4736ms
+2024-09-03 23:09:35.130 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:09:35.131 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.6521ms
+2024-09-03 23:09:35.141 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:09:35.145 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.1212ms
+2024-09-03 23:09:35.306 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:09:35.312 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.2035ms
+2024-09-03 23:09:46.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:09:46.769 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:09:46.779 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:09:46.870 +07:00 [INF] Start get all films
+2024-09-03 23:09:47.775 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:09:47.790 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:09:47.809 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1026.9054ms
+2024-09-03 23:09:47.809 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:09:47.815 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1049.2649ms
+2024-09-03 23:10:38.560 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:10:38.583 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:10:38.584 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:10:38.584 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:10:38.584 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:10:39.104 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:10:39.296 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 192.6617ms
+2024-09-03 23:10:39.328 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:10:39.331 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.5215ms
+2024-09-03 23:10:39.335 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:10:39.359 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.4443ms
+2024-09-03 23:10:39.500 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:10:39.614 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.0315ms
+2024-09-03 23:10:43.607 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:10:43.611 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:10:43.622 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:10:43.709 +07:00 [INF] Start get all films
+2024-09-03 23:10:44.644 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:10:44.659 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:10:44.678 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1053.0042ms
+2024-09-03 23:10:44.678 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:10:44.684 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1076.8212ms
+2024-09-03 23:12:05.002 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:12:05.025 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:12:05.028 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:12:05.028 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:12:05.028 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:12:05.180 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:12:05.354 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 174.0448ms
+2024-09-03 23:12:05.363 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:12:05.364 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:12:05.367 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7161ms
+2024-09-03 23:12:05.389 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.6761ms
+2024-09-03 23:12:05.562 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:12:05.672 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 109.6274ms
+2024-09-03 23:12:13.233 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:12:13.237 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:12:13.250 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:12:13.335 +07:00 [INF] Start get all films
+2024-09-03 23:12:14.270 +07:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:12:14.285 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:12:14.306 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1052.2313ms
+2024-09-03 23:12:14.306 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:12:14.312 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1079.0273ms
+2024-09-03 23:12:40.315 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:12:40.339 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:12:40.341 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:12:40.341 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:12:40.341 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:12:40.787 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:12:40.977 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 191.884ms
+2024-09-03 23:12:40.992 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:12:40.994 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:12:40.998 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.625ms
+2024-09-03 23:12:41.026 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.06ms
+2024-09-03 23:12:41.149 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:12:41.268 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.0908ms
+2024-09-03 23:12:50.046 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:12:50.051 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:12:50.065 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:12:50.152 +07:00 [INF] Start get all films
+2024-09-03 23:12:51.091 +07:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:12:51.108 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:12:51.132 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1060.4081ms
+2024-09-03 23:12:51.132 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:12:51.138 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1092.3218ms
+2024-09-03 23:13:38.542 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:13:38.582 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:13:38.585 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:13:38.585 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:13:38.586 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:13:38.728 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:13:38.944 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 217.9821ms
+2024-09-03 23:13:38.954 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:13:38.954 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:13:38.957 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.7522ms
+2024-09-03 23:13:38.978 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.8999ms
+2024-09-03 23:13:39.160 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:13:39.276 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 115.8796ms
+2024-09-03 23:13:42.746 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:13:42.750 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:13:42.762 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:13:42.853 +07:00 [INF] Start get all films
+2024-09-03 23:13:42.862 +07:00 [ERR] Error get all films
+2024-09-03 23:13:43.789 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:13:43.804 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:13:43.823 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1057.8211ms
+2024-09-03 23:13:43.823 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:13:43.829 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1083.1181ms
+2024-09-03 23:14:17.779 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:14:17.821 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:14:17.823 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:14:17.823 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:14:17.823 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:14:17.919 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:14:18.114 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 199.2095ms
+2024-09-03 23:14:18.118 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:14:18.118 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:14:18.123 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.3067ms
+2024-09-03 23:14:18.149 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.3407ms
+2024-09-03 23:14:18.225 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:14:18.353 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.2572ms
+2024-09-03 23:14:21.072 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:14:21.077 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:14:21.088 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:14:21.177 +07:00 [INF] Start get all films
+2024-09-03 23:14:21.177 +07:00 [ERR] Error get all films
+2024-09-03 23:14:22.148 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:14:22.163 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:14:22.184 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1092.7187ms
+2024-09-03 23:14:22.184 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:14:22.189 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1117.2977ms
+2024-09-03 23:14:33.949 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:14:33.973 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:14:33.975 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:14:33.976 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:14:33.976 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:14:34.192 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:14:34.347 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 155.3632ms
+2024-09-03 23:14:34.358 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:14:34.358 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:14:34.361 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4894ms
+2024-09-03 23:14:34.381 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.9841ms
+2024-09-03 23:14:34.455 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:14:34.562 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 107.0401ms
+2024-09-03 23:16:04.048 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-03 23:16:04.071 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-03 23:16:04.073 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-03 23:16:04.074 +07:00 [INF] Hosting environment: Development
+2024-09-03 23:16:04.074 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\movie-api\Movie.API
+2024-09-03 23:16:04.308 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-03 23:16:04.467 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 159.2226ms
+2024-09-03 23:16:04.474 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-03 23:16:04.474 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-03 23:16:04.477 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.1626ms
+2024-09-03 23:16:04.497 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.6054ms
+2024-09-03 23:16:04.594 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-03 23:16:04.709 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.8548ms
+2024-09-03 23:16:15.932 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-03 23:16:15.937 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:16:15.951 +07:00 [INF] Route matched with {action = "GetAllFilms", controller = "Film"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Movie.API.Models.Domain.Entities.Film] GetAllFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-03 23:16:16.049 +07:00 [INF] Start get all films
+2024-09-03 23:16:16.054 +07:00 [ERR] Error get all films
+2024-09-03 23:16:17.074 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-03 23:16:17.092 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Models.Domain.Entities.Film, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-03 23:16:17.115 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetAllFilms (Movie.API) in 1157.9013ms
+2024-09-03 23:16:17.116 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetAllFilms (Movie.API)'
+2024-09-03 23:16:17.122 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1189.9976ms

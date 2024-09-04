@@ -1,4 +1,5 @@
-﻿using Movie.API.Models.Domain.Common;
+﻿using Microsoft.AspNetCore.Identity;
+using Movie.API.Models.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace Movie.API.Models.Domain.Entities
 {
-    public class Role : BaseDomainEntity
+    public class Role : IdentityRole
     {
-        public string Name { get; set; } = default!;
-        public string Description {  get; set; } = default!;
-
-        public List<RolePrivileges> Privileges { get; set; }
+        public virtual ICollection<RolePrivileges> RolePrivileges { get; set; }
     }
 }

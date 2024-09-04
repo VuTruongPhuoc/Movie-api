@@ -1,7 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
-using Movie.API.Data;
-using Movie.API.MyLogging;
+using Movie.API.Infrastructure.Data;
 using Serilog;
 
 namespace Movie.API
@@ -23,12 +22,12 @@ namespace Movie.API
                 .CreateLogger();
 
             //Use this line to ovirride the bulit-in loggers
-            builder.Host.UseSerilog();
+            //builder.Host.UseSerilog();
             //Use serilog alogn with the bulit-in loggers
-            builder.Services.AddSerilog();
+            builder.Logging.AddSerilog();
 
             //Add Logging to the container
-            builder.Logging.ClearProviders().AddConsole().AddDebug();
+            //builder.Logging.ClearProviders().AddConsole().AddDebug();
 
             // Add services to the container.
             builder.Services.AddControllers();
@@ -36,7 +35,6 @@ namespace Movie.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<IMyLogger, LogToDb>();
 
             var app = builder.Build();
 

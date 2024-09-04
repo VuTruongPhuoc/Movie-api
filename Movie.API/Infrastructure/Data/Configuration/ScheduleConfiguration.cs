@@ -2,17 +2,18 @@
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Models.Domain.Entities;
 
-namespace Movie.API.Data.Configuration
+namespace Movie.API.Infrastructure.Data.Configuration
 {
-    public class RoleConfiguration : IEntityTypeConfiguration<Role>
+    public class ScheduleConfiguration : IEntityTypeConfiguration<Schedule>
     {
-        public void Configure(EntityTypeBuilder<Role> builder)
+        public void Configure(EntityTypeBuilder<Schedule> builder)
         {
-            builder.ToTable("Roles");
+            builder.ToTable("Schedule");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(30);
+
         }
     }
 }

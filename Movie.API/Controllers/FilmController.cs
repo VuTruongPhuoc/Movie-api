@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
-using Movie.API.MyLogging;
+using Movie.API.Infrastructure.Data;
+using Movie.API.Models.Domain.Entities;
 
 namespace Movie.API.Controllers
 {
@@ -9,30 +10,21 @@ namespace Movie.API.Controllers
     [ApiController]
     public class FilmController : ControllerBase
     {
-        //private readonly ILogger<FilmController> _logger;
+        private readonly ILogger<FilmController> _logger;
+        private readonly MovieDbContext _dbContext;
 
-        //public FilmController(ILogger<FilmController> logger)
-        //{
-        //    _logger = logger;
-        //}
-        //[HttpGet]
-        //public ActionResult Demo()
-        //{
-        //    _logger.LogInformation("daslfd", );
-        //    return Ok();
-        
-        //}
-        private readonly IMyLogger _logger;
-
-        public FilmController(IMyLogger logger)
+        public FilmController(ILogger<FilmController> logger, MovieDbContext dbContext)
         {
             _logger = logger;
+            _dbContext = dbContext;
         }
         [HttpGet]
-        public ActionResult Demo()
+        [Route("All", Name = "GetAllFilms")]
+        public ActionResult<Film> GetAllFilms()
         {
-            _logger.Log("daslfd");
-            return Ok();
+            _logger.LogInformation("Start get all films");
+            _logger.LogError("Error get all films");
+            return Ok(_dbContext.Films.ToList());
         }
     }
 }

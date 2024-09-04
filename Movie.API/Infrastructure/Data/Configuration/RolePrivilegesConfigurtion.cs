@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Models.Domain.Entities;
 
-namespace Movie.API.Data.Configuration
+namespace Movie.API.Infrastructure.Data.Configuration
 {
     public class RolePrivilegesConfiguration : IEntityTypeConfiguration<RolePrivileges>
     {
@@ -13,6 +13,10 @@ namespace Movie.API.Data.Configuration
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(30);
+
+            builder.HasOne(x => x.Role)
+                .WithMany(x => x.RolePrivileges)
+                .HasForeignKey(x => x.RoleId);
         }
     }
 }

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj": {}
+    "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj": {}
   },
   "projects": {
-    "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj": {
+    "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj",
+        "projectUniqueName": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
         "projectName": "Movie.Application",
-        "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj",
+        "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
         "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj": {
-                "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj"
+              "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj": {
+                "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj"
               }
             }
           }
@@ -63,12 +63,12 @@
         }
       }
     },
-    "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj": {
+    "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj",
+        "projectUniqueName": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj",
         "projectName": "Movie.Domain",
-        "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj",
+        "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
         "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\obj\\",
         "projectStyle": "PackageReference",

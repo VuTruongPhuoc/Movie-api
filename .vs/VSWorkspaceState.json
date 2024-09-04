@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Movie.Domain"
+    "\\Movie.API",
+    "\\Movie.API\\Models",
+    "\\Movie.API\\Models\\Domain",
+    "\\Movie.API\\Models\\Domain\\Entities"
   ],
-  "SelectedNode": "\\Movie.Domain\\Class1.cs",
+  "SelectedNode": "\\Movie.API\\Models\\Domain\\Entities\\User.cs",
   "PreviewInSolutionExplorer": false
 }

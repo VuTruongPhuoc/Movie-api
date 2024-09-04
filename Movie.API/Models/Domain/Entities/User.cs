@@ -9,18 +9,13 @@ using System.Threading.Tasks;
 
 namespace Movie.API.Models.Domain.Entities
 {
-    public class User  : BaseDomainEntity
+    public class User : IdentityUser
     {
-        public string UserName { get; set; } = default!;
-        public string Password { get; set; } = default!;
-        public string FullName { get; set; } = default!;
-        public string Email { get; set; } = default!;
-        public string? BirthDay { get; set; }
-        public string? Gender { get; set; }
-        public string RefreshToken { get; set; } = default!;
-        public string Token { get; set; } = default!;
-
-        public List<Comment> Comments { get; set; } = new();
-        public List<Track> Tracks { get; set; } = new();
+        public string DisplayName { get; set; } = default!;
+        public string? Avatar { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Track> Tracks { get; set; }
+        public virtual ICollection<History> Histories { get; set; }
     }
 }

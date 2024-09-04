@@ -7,6 +7,6 @@ namespace Movie.API.Models.Domain.Entities
         public string Name { get; set; } = default!;
         public string Description { get; set; } = default!;
 
-        public List<Film> Films { get; set; } = new();
+        public virtual ICollection<Film> Films { get; set; }
     }
 }

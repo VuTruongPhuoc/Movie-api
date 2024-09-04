@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Models.Domain.Entities;
 
-namespace Movie.API.Data.Configuration
+namespace Movie.API.Infrastructure.Data.Configuration
 {
-    public class SectionConfiguration : IEntityTypeConfiguration<Section>
+    public class RoleConfiguration : IEntityTypeConfiguration<Role>
     {
-        public void Configure(EntityTypeBuilder<Section> builder)
+        public void Configure(EntityTypeBuilder<Role> builder)
         {
-            builder.ToTable("Sections");
+            builder.ToTable("Roles");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
 

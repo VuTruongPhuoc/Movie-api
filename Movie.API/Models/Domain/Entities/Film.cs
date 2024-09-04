@@ -22,11 +22,11 @@ namespace Movie.API.Models.Domain.Entities
         public Country? Country { get; set; }
         public History? History { get; set; }
         public Schedule? Schedule { get; set; }
-        public List<Episode> Episodes { get; set; } = new();
-        public List<Section> Sections { get; set; } = new();
-        public List<Category> Categories { get; set; } = new();
-        public List<Review> Reviews { get; set; } = new();
-        public List<Track> Tracks { get; set; } = new();
+        public virtual ICollection<Episode> Episodes { get; set; } 
+        public virtual ICollection<Section> Sections { get; set; } 
+        public virtual ICollection<Review> Reviews { get; set; } 
+        public virtual ICollection<Track> Tracks { get; set; } 
+        public virtual ICollection<Comment> Comments { get; set; }
 
     }
 }

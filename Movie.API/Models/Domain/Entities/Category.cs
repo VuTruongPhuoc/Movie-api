@@ -11,7 +11,5 @@ namespace Movie.API.Models.Domain.Entities
     {
         public string Name { get; set; } = default!;
         public string? Description { get; set; }
-        public int FilmId { get; set; }
-        public List<Film> films { get; set; } = new();
     }
 }

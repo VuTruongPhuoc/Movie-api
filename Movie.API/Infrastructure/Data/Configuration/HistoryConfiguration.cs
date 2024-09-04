@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Models.Domain.Entities;
 
-namespace Movie.API.Data.Configuration
+namespace Movie.API.Infrastructure.Data.Configuration
 {
     public class HistoryConfiguration : IEntityTypeConfiguration<History>
     {
@@ -11,6 +11,10 @@ namespace Movie.API.Data.Configuration
             builder.ToTable("Histories");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
+
+            builder.HasOne(x => x.User)
+                .WithMany(x => x.Histories)
+                .HasForeignKey(x => x.UserId);
 
         }
     }

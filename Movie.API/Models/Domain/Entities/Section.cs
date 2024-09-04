@@ -11,6 +11,7 @@ namespace Movie.API.Models.Domain.Entities
     {
         public string Name { get; set; }
         public int FilmId { get; set; }
-        public Film? Film { get; set; }
+        public Film Film { get; set; }
+        public virtual ICollection<Episode> Episodes { get; set; } 
     }
 }

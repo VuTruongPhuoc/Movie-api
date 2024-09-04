@@ -15,8 +15,8 @@ namespace Movie.API.Models.Domain.Entities
         public int SectionId { get; set; }
         public int ServerId { get; set; }
         public string Link { get; set; } = default!;
-        public Film? Film { get; set; }
-        public Section? Section { get; set; }
-        public Server? Server { get; set; }
+        public Film Film { get; set; }
+        public Section Section { get; set; }
+        public virtual ICollection<Server> Servers { get; set; }
     }
 }
