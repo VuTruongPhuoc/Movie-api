@@ -13,7 +13,7 @@ namespace Movie.API.Models.Domain.Common
         public DateTime CreateDate { get; set; }
         public DateTime LastModifiedDate { get; set; }
         public bool IsActive {  get; set; } 
-        public bool Status { get; set; }
+        public int Status { get; set; }
 
 
     }

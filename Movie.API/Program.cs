@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Infrastructure.Data;
+using Movie.API.Infrastructure.Repositories;
 using Serilog;
 
 namespace Movie.API
@@ -34,7 +35,8 @@ namespace Movie.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             var app = builder.Build();
 
