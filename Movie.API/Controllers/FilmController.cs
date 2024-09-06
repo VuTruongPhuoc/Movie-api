@@ -1,28 +1,35 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Data;
+using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Responses.DTOs;
+using System.Security.Claims;
 
 namespace Movie.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class FilmController : ControllerBase
     {
         private readonly ILogger<FilmController> _logger;
         private readonly MovieDbContext _dbContext;
+        private readonly IFilmRepository _filmRepository;
 
-        public FilmController(ILogger<FilmController> logger, MovieDbContext dbContext)
+        public FilmController(ILogger<FilmController> logger, MovieDbContext dbContext, IFilmRepository filmRepository)
         {
             _logger = logger;
             _dbContext = dbContext;
+            _filmRepository = filmRepository;
         }
         [HttpGet]
         [Route("All", Name = "GetAllFilms")]
+        //[AllowAnonymous]
         public async Task<ActionResult<IEnumerable<FilmDTO>>> GetFilms()
         {
            
@@ -37,7 +44,7 @@ namespace Movie.API.Controllers
                 Image = x.Image
             }).ToList();*/
 
-            var films = await _dbContext.Films.ToListAsync();
+            var films = await _filmRepository.GetAllAsync();
             var filmsdto = CustomMapper.Mapper.Map<List<FilmDTO>>(films);
  
             return Ok(filmsdto);

@@ -1,0 +1,1393 @@
+2024-09-06 10:04:34.777 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 10:04:34.799 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 10:04:34.802 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 10:04:34.802 +07:00 [INF] Hosting environment: Development
+2024-09-06 10:04:34.802 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 10:04:35.148 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 10:04:35.436 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 288.736ms
+2024-09-06 10:04:35.475 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 10:04:35.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 10:04:35.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 7.3391ms
+2024-09-06 10:04:35.538 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.2112ms
+2024-09-06 10:04:36.202 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 10:04:36.379 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 176.9652ms
+2024-09-06 10:04:39.652 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 10:04:39.659 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:04:39.683 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 10:04:40.706 +07:00 [INF] Start get all films
+2024-09-06 10:04:40.743 +07:00 [ERR] Error get all films
+2024-09-06 10:04:41.965 +07:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 10:04:42.073 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 10:04:42.080 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2393.5142ms
+2024-09-06 10:04:42.081 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:04:42.086 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2434.0059ms
+2024-09-06 10:14:18.604 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 10:14:18.627 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 10:14:18.629 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 10:14:18.629 +07:00 [INF] Hosting environment: Development
+2024-09-06 10:14:18.629 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 10:14:19.148 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 10:14:19.300 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 153.1978ms
+2024-09-06 10:14:19.311 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 10:14:19.311 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 10:14:19.315 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.2871ms
+2024-09-06 10:14:19.334 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.3746ms
+2024-09-06 10:14:19.405 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 10:14:19.537 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.8084ms
+2024-09-06 10:14:22.379 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 10:14:22.385 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:14:22.399 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 10:14:22.493 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 84.3769ms
+2024-09-06 10:14:22.496 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:14:22.536 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Movie.API.Infrastructure.Repositories.IFilmRepository' while attempting to activate 'Movie.API.Controllers.FilmController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-06 10:14:22.542 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 500 null text/plain; charset=utf-8 163.0622ms
+2024-09-06 10:15:35.404 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 10:15:35.439 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 10:15:35.442 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 10:15:35.443 +07:00 [INF] Hosting environment: Development
+2024-09-06 10:15:35.443 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 10:15:35.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 10:15:35.888 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 151.0724ms
+2024-09-06 10:15:35.897 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 10:15:35.897 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 10:15:35.900 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4728ms
+2024-09-06 10:15:35.919 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.644ms
+2024-09-06 10:15:36.019 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 10:15:36.143 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.0406ms
+2024-09-06 10:15:38.700 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 10:15:38.706 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:15:38.719 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 10:15:39.420 +07:00 [INF] Start get all films
+2024-09-06 10:15:39.424 +07:00 [ERR] Error get all films
+2024-09-06 10:15:39.823 +07:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 10:15:39.925 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 10:15:39.935 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1211.9281ms
+2024-09-06 10:15:39.935 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:15:39.940 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1240.0074ms
+2024-09-06 10:30:14.360 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 10:30:14.384 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 10:30:14.387 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 10:30:14.388 +07:00 [INF] Hosting environment: Development
+2024-09-06 10:30:14.388 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 10:30:14.453 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 10:30:14.604 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 152.1521ms
+2024-09-06 10:30:14.612 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 10:30:14.616 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 10:30:14.619 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.9625ms
+2024-09-06 10:30:14.637 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.8321ms
+2024-09-06 10:30:14.847 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 10:30:14.960 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.6106ms
+2024-09-06 10:30:17.706 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 10:30:17.712 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:30:17.725 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 10:30:18.425 +07:00 [INF] Start get all films
+2024-09-06 10:30:18.428 +07:00 [ERR] Error get all films
+2024-09-06 10:30:18.799 +07:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 10:30:18.900 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 10:30:18.909 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1180.2824ms
+2024-09-06 10:30:18.909 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 10:30:18.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1207.642ms
+2024-09-06 16:46:51.343 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:46:51.375 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:46:51.381 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:46:51.509 +07:00 [INF] Start get all films
+2024-09-06 16:46:51.521 +07:00 [ERR] Error get all films
+2024-09-06 16:46:51.653 +07:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:46:51.658 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:46:51.660 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 278.5059ms
+2024-09-06 16:46:51.660 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:46:51.663 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 322.0449ms
+2024-09-06 16:46:51.669 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:46:51.669 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:46:51.669 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:46:51.689 +07:00 [INF] Start get all films
+2024-09-06 16:46:51.689 +07:00 [ERR] Error get all films
+2024-09-06 16:46:51.705 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:46:51.705 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:46:51.705 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 35.8859ms
+2024-09-06 16:46:51.705 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:46:51.706 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 36.9226ms
+2024-09-06 16:47:44.973 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 16:47:44.996 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 16:47:44.999 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 16:47:44.999 +07:00 [INF] Hosting environment: Development
+2024-09-06 16:47:44.999 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 16:47:45.201 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 16:47:45.380 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 179.9451ms
+2024-09-06 16:47:45.390 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 16:47:45.394 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.7508ms
+2024-09-06 16:47:45.411 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 16:47:45.436 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.2886ms
+2024-09-06 16:47:45.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 16:47:45.888 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.4421ms
+2024-09-06 16:47:50.807 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:47:50.840 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:47:50.859 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:47:50.890 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:47:52.533 +07:00 [INF] Start get all films
+2024-09-06 16:47:52.540 +07:00 [ERR] Error get all films
+2024-09-06 16:47:53.783 +07:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:47:53.951 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:47:53.962 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:47:53.964 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:47:53.964 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:47:53.964 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:47:53.967 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3070.254ms
+2024-09-06 16:47:53.967 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:47:53.975 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3168.2333ms
+2024-09-06 16:47:54.031 +07:00 [INF] Start get all films
+2024-09-06 16:47:54.031 +07:00 [ERR] Error get all films
+2024-09-06 16:47:54.056 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:47:54.058 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:47:54.059 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 94.7772ms
+2024-09-06 16:47:54.059 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:47:54.060 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 97.5175ms
+2024-09-06 16:48:16.318 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:48:16.320 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:48:16.320 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:16.320 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:48:16.346 +07:00 [INF] Start get all films
+2024-09-06 16:48:16.346 +07:00 [ERR] Error get all films
+2024-09-06 16:48:16.349 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:48:16.350 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:48:16.350 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 29.4223ms
+2024-09-06 16:48:16.350 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:16.350 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 31.9187ms
+2024-09-06 16:48:19.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:48:19.766 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:48:19.766 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:19.766 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:48:19.767 +07:00 [INF] Start get all films
+2024-09-06 16:48:19.767 +07:00 [ERR] Error get all films
+2024-09-06 16:48:19.769 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:48:19.770 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:48:19.770 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.7967ms
+2024-09-06 16:48:19.770 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:19.771 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.6989ms
+2024-09-06 16:48:47.363 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:48:47.364 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:48:47.364 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.364 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:48:47.366 +07:00 [INF] Start get all films
+2024-09-06 16:48:47.367 +07:00 [ERR] Error get all films
+2024-09-06 16:48:47.380 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:48:47.381 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:48:47.381 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 16.4582ms
+2024-09-06 16:48:47.381 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.381 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 17.9537ms
+2024-09-06 16:48:47.553 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:48:47.554 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:48:47.554 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.554 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:48:47.555 +07:00 [INF] Start get all films
+2024-09-06 16:48:47.555 +07:00 [ERR] Error get all films
+2024-09-06 16:48:47.557 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:48:47.557 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:48:47.558 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.6373ms
+2024-09-06 16:48:47.558 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.558 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.6917ms
+2024-09-06 16:48:47.736 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 16:48:47.737 +07:00 [INF] CORS policy execution successful.
+2024-09-06 16:48:47.737 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.737 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 16:48:47.738 +07:00 [INF] Start get all films
+2024-09-06 16:48:47.739 +07:00 [ERR] Error get all films
+2024-09-06 16:48:47.740 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 16:48:47.741 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 16:48:47.741 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.6921ms
+2024-09-06 16:48:47.741 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 16:48:47.741 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.8685ms
+2024-09-06 16:57:34.879 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 16:57:34.908 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 16:57:34.910 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 16:57:34.910 +07:00 [INF] Hosting environment: Development
+2024-09-06 16:57:34.911 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 16:57:35.300 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 16:57:35.460 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 160.4292ms
+2024-09-06 16:57:35.475 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 16:57:35.475 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 16:57:35.479 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.0856ms
+2024-09-06 16:57:35.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.7652ms
+2024-09-06 16:57:35.762 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 16:57:35.892 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 129.4985ms
+2024-09-06 17:02:06.775 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:02:06.782 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:02:06.788 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:02:06.804 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:02:07.619 +07:00 [INF] Start get all films
+2024-09-06 17:02:07.625 +07:00 [ERR] Error get all films
+2024-09-06 17:02:08.133 +07:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:02:08.272 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:02:08.281 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1473.4779ms
+2024-09-06 17:02:08.281 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:02:08.288 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1512.9806ms
+2024-09-06 17:04:56.233 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:04:56.235 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:04:56.236 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 2.1141ms
+2024-09-06 17:04:56.240 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:04:56.241 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:04:56.242 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:04:56.242 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:04:56.242 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 1.763ms
+2024-09-06 17:05:00.339 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:05:00.339 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:05:00.339 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:00.339 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:00.339 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.5758ms
+2024-09-06 17:05:00.505 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:05:00.505 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:05:00.505 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:00.505 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:00.506 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.5718ms
+2024-09-06 17:05:15.930 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:05:15.930 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:05:15.930 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.7706ms
+2024-09-06 17:05:15.933 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:05:15.933 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:05:15.933 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:15.933 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:05:15.934 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.5433ms
+2024-09-06 17:06:17.791 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 17:06:17.814 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 17:06:17.816 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 17:06:17.816 +07:00 [INF] Hosting environment: Development
+2024-09-06 17:06:17.816 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 17:06:17.880 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 17:06:18.032 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 153.1571ms
+2024-09-06 17:06:18.374 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 17:06:18.374 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 17:06:18.380 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.6714ms
+2024-09-06 17:06:18.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3554ms
+2024-09-06 17:06:18.894 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 17:06:19.016 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 121.1618ms
+2024-09-06 17:06:22.828 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 17:06:22.839 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 10.7738ms
+2024-09-06 17:06:22.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 17:06:22.855 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 17:06:22.855 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.4769ms
+2024-09-06 17:06:22.862 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9.516ms
+2024-09-06 17:06:22.945 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 17:06:22.951 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6077ms
+2024-09-06 17:06:25.589 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:06:25.593 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:06:25.608 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:06:26.381 +07:00 [INF] Start get all films
+2024-09-06 17:06:26.385 +07:00 [ERR] Error get all films
+2024-09-06 17:06:26.891 +07:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:06:27.030 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:06:27.042 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1429.0776ms
+2024-09-06 17:06:27.042 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:06:27.050 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1460.2336ms
+2024-09-06 17:06:34.554 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:06:34.554 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:06:34.558 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:06:34.558 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:06:34.559 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 4.6148ms
+2024-09-06 17:06:34.559 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 4.6148ms
+2024-09-06 17:06:34.561 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:06:34.563 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:06:34.563 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:06:34.564 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:06:34.564 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 2.7427ms
+2024-09-06 17:06:34.736 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:06:34.736 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:06:34.736 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:06:34.736 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:06:34.736 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.407ms
+2024-09-06 17:07:21.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:07:21.275 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:07:21.276 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:07:21.276 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:07:21.352 +07:00 [INF] Start get all films
+2024-09-06 17:07:21.352 +07:00 [ERR] Error get all films
+2024-09-06 17:07:21.365 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:07:21.367 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:07:21.367 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 91.3697ms
+2024-09-06 17:07:21.368 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:07:21.368 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 92.9884ms
+2024-09-06 17:07:58.243 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:07:58.244 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:07:58.244 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:07:58.244 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:07:58.268 +07:00 [INF] Start get all films
+2024-09-06 17:07:58.269 +07:00 [ERR] Error get all films
+2024-09-06 17:07:58.279 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:07:58.279 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:07:58.280 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 35.3727ms
+2024-09-06 17:07:58.280 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:07:58.280 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 36.6562ms
+2024-09-06 17:08:37.253 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:08:37.253 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:08:37.254 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 1.0251ms
+2024-09-06 17:08:37.258 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:08:37.258 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:08:37.258 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:08:37.258 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:08:37.258 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.9301ms
+2024-09-06 17:10:14.526 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Film/All - null 0
+2024-09-06 17:10:14.526 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:10:14.527 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:10:14.527 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:10:14.527 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Film/All - 405 0 null 0.6957ms
+2024-09-06 17:10:27.695 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:10:27.696 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:10:27.696 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 1.1634ms
+2024-09-06 17:10:27.700 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:10:27.701 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:10:27.701 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:10:27.701 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:10:27.701 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 1.0758ms
+2024-09-06 17:13:53.296 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 17:13:53.318 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 17:13:53.321 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 17:13:53.321 +07:00 [INF] Hosting environment: Development
+2024-09-06 17:13:53.321 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 17:13:53.784 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 17:13:53.942 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 158.3821ms
+2024-09-06 17:13:53.951 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 17:13:53.951 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 17:13:53.956 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.7619ms
+2024-09-06 17:13:53.977 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.9969ms
+2024-09-06 17:13:54.266 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 17:13:54.386 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.23ms
+2024-09-06 17:14:20.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 17:14:20.496 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 8.9344ms
+2024-09-06 17:14:20.505 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 17:14:20.508 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 17:14:20.509 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.5799ms
+2024-09-06 17:14:20.519 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.1993ms
+2024-09-06 17:14:20.773 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 17:14:20.778 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 4.6929ms
+2024-09-06 17:14:28.952 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:14:28.952 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:14:28.957 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:14:28.957 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:14:28.958 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 5.5335ms
+2024-09-06 17:14:28.958 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 5.7617ms
+2024-09-06 17:14:28.959 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:14:28.961 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:14:28.965 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:28.965 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:28.965 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 5.7915ms
+2024-09-06 17:14:29.156 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:14:29.157 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:14:29.157 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:29.157 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:29.157 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 1.0718ms
+2024-09-06 17:14:31.662 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:14:31.662 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:14:31.662 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:31.662 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:14:31.663 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.4346ms
+2024-09-06 17:15:13.257 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:13.257 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:13.258 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3439ms
+2024-09-06 17:15:13.260 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:13.260 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:13.260 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:13.260 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:13.260 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3649ms
+2024-09-06 17:15:29.257 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:29.257 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:29.257 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3453ms
+2024-09-06 17:15:29.259 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:29.259 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:29.259 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:29.259 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:29.259 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3679ms
+2024-09-06 17:15:35.265 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:35.265 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:35.265 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.6229ms
+2024-09-06 17:15:35.269 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:35.269 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:35.269 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:35.269 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:35.269 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.6803ms
+2024-09-06 17:15:44.776 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:44.776 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:44.777 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.8287ms
+2024-09-06 17:15:44.778 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:44.778 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:44.778 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:44.778 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:44.778 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.32ms
+2024-09-06 17:15:44.950 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:44.950 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:44.950 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:44.950 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:44.950 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3572ms
+2024-09-06 17:15:47.289 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:15:47.289 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:15:47.289 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:47.289 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:15:47.290 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.4023ms
+2024-09-06 17:17:56.259 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:17:56.259 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:17:56.259 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.5509ms
+2024-09-06 17:17:56.261 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:17:56.262 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:17:56.262 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:17:56.262 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:17:56.262 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.408ms
+2024-09-06 17:18:09.015 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:09.015 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:09.016 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.4637ms
+2024-09-06 17:18:09.017 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:09.017 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:09.017 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:09.017 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:09.018 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2762ms
+2024-09-06 17:18:09.186 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:09.186 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:09.186 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:09.187 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:09.187 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.304ms
+2024-09-06 17:18:13.277 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:13.278 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:13.278 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:13.278 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:13.278 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.6397ms
+2024-09-06 17:18:36.308 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:36.308 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:36.308 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.6403ms
+2024-09-06 17:18:36.312 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:18:36.312 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:18:36.312 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:36.312 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:18:36.312 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.6224ms
+2024-09-06 17:19:29.304 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:19:29.304 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:19:29.305 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 1.2778ms
+2024-09-06 17:19:29.310 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:19:29.310 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:19:29.310 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:19:29.310 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:19:29.311 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.7999ms
+2024-09-06 17:19:43.288 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:19:43.288 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:19:43.288 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3207ms
+2024-09-06 17:19:43.290 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:19:43.290 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:19:43.290 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:19:43.290 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:19:43.291 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.5408ms
+2024-09-06 17:20:14.268 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:14.268 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:14.268 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.303ms
+2024-09-06 17:20:14.270 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:14.270 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:14.270 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:14.270 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:14.270 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2709ms
+2024-09-06 17:20:32.261 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:32.261 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:32.261 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.4322ms
+2024-09-06 17:20:32.263 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:32.263 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:32.263 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:32.263 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:32.264 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.4334ms
+2024-09-06 17:20:46.253 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:46.253 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:46.253 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.4017ms
+2024-09-06 17:20:46.254 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:20:46.255 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:20:46.255 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:46.255 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:20:46.255 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2654ms
+2024-09-06 17:21:15.261 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:21:15.262 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:21:15.262 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.5166ms
+2024-09-06 17:21:15.264 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:21:15.264 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:21:15.264 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:21:15.264 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:21:15.264 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3533ms
+2024-09-06 17:21:34.258 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:21:34.259 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:21:34.259 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.7297ms
+2024-09-06 17:21:34.260 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:21:34.261 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:21:34.261 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:21:34.261 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:21:34.261 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.24ms
+2024-09-06 17:22:11.258 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:22:11.259 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:22:11.259 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3871ms
+2024-09-06 17:22:11.261 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:22:11.261 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:22:11.261 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:22:11.261 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:22:11.261 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3761ms
+2024-09-06 17:22:52.261 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:22:52.261 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:22:52.261 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.2054ms
+2024-09-06 17:22:52.263 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:22:52.263 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:22:52.263 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:22:52.263 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:22:52.263 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2337ms
+2024-09-06 17:23:15.253 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:15.253 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:15.253 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.2684ms
+2024-09-06 17:23:15.255 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:15.255 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:15.255 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:15.255 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:15.255 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2666ms
+2024-09-06 17:23:19.776 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:19.776 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:19.776 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:19.776 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:19.776 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2734ms
+2024-09-06 17:23:19.964 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:19.964 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:19.964 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:19.964 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:19.964 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3159ms
+2024-09-06 17:23:22.756 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:22.756 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:22.756 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3862ms
+2024-09-06 17:23:22.760 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:22.760 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:22.760 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:22.760 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:22.760 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3952ms
+2024-09-06 17:23:30.485 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:30.485 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:30.485 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.3505ms
+2024-09-06 17:23:30.486 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:30.486 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:30.487 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.5386ms
+2024-09-06 17:23:30.488 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:30.488 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:30.488 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:30.488 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:30.489 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.2379ms
+2024-09-06 17:23:30.676 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:23:30.677 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:23:30.677 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:30.677 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:23:30.677 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.3076ms
+2024-09-06 17:24:03.261 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/Film/All - null null
+2024-09-06 17:24:03.262 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:24:03.262 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/Film/All - 204 null null 0.2593ms
+2024-09-06 17:24:03.263 +07:00 [INF] Request starting HTTP/2 DELETE https://localhost:7039/api/Film/All - null null
+2024-09-06 17:24:03.264 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:24:03.264 +07:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:24:03.264 +07:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2024-09-06 17:24:03.264 +07:00 [INF] Request finished HTTP/2 DELETE https://localhost:7039/api/Film/All - 405 0 null 0.5732ms
+2024-09-06 17:25:30.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:25:30.970 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:25:30.970 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:31.046 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:25:31.857 +07:00 [INF] Start get all films
+2024-09-06 17:25:31.862 +07:00 [ERR] Error get all films
+2024-09-06 17:25:32.258 +07:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:25:32.371 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:25:32.382 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1330.7639ms
+2024-09-06 17:25:32.382 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:32.389 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1419.2035ms
+2024-09-06 17:25:34.684 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:25:34.684 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:25:34.684 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:34.684 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:25:34.786 +07:00 [INF] Start get all films
+2024-09-06 17:25:34.787 +07:00 [ERR] Error get all films
+2024-09-06 17:25:34.791 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:25:34.794 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:25:34.795 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 110.0909ms
+2024-09-06 17:25:34.795 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:34.795 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 111.1424ms
+2024-09-06 17:25:34.867 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:25:34.867 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:25:34.867 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:34.867 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:25:34.881 +07:00 [INF] Start get all films
+2024-09-06 17:25:34.882 +07:00 [ERR] Error get all films
+2024-09-06 17:25:34.887 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:25:34.887 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:25:34.888 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 20.141ms
+2024-09-06 17:25:34.888 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:34.888 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 20.9886ms
+2024-09-06 17:25:35.974 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:25:35.975 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:25:35.975 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:35.975 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:25:35.976 +07:00 [INF] Start get all films
+2024-09-06 17:25:35.977 +07:00 [ERR] Error get all films
+2024-09-06 17:25:35.978 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:25:35.978 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:25:35.978 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.0936ms
+2024-09-06 17:25:35.978 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:25:35.978 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.7285ms
+2024-09-06 17:25:49.339 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 17:25:49.361 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 17:25:49.363 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 17:25:49.363 +07:00 [INF] Hosting environment: Development
+2024-09-06 17:25:49.363 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 17:25:49.502 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 17:25:49.654 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 152.8551ms
+2024-09-06 17:25:49.663 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 17:25:49.663 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 17:25:49.667 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.0744ms
+2024-09-06 17:25:49.684 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.618ms
+2024-09-06 17:25:49.947 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 17:25:50.061 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 114.4735ms
+2024-09-06 17:26:54.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:26:54.860 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:26:54.865 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:26:54.888 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:26:55.957 +07:00 [INF] Start get all films
+2024-09-06 17:26:55.961 +07:00 [ERR] Error get all films
+2024-09-06 17:26:56.398 +07:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:26:56.637 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:26:56.665 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1769.1332ms
+2024-09-06 17:26:56.666 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:26:56.671 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 17:26:56.673 +07:00 [INF] CORS policy execution successful.
+2024-09-06 17:26:56.674 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:26:56.674 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 17:26:56.676 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1827.2075ms
+2024-09-06 17:26:56.728 +07:00 [INF] Start get all films
+2024-09-06 17:26:56.729 +07:00 [ERR] Error get all films
+2024-09-06 17:26:56.732 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 17:26:56.733 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 17:26:56.733 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 59.2073ms
+2024-09-06 17:26:56.734 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 17:26:56.734 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 63.2904ms
+2024-09-06 19:59:23.600 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:23.601 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:23.602 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:23.602 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:23.616 +07:00 [INF] Start get all films
+2024-09-06 19:59:23.616 +07:00 [ERR] Error get all films
+2024-09-06 19:59:23.704 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:23.704 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:23.705 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 102.6874ms
+2024-09-06 19:59:23.705 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:23.705 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 104.6487ms
+2024-09-06 19:59:23.706 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:23.707 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:23.707 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:23.707 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:23.708 +07:00 [INF] Start get all films
+2024-09-06 19:59:23.708 +07:00 [ERR] Error get all films
+2024-09-06 19:59:23.709 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:23.710 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:23.710 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.8892ms
+2024-09-06 19:59:23.710 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:23.710 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.6984ms
+2024-09-06 19:59:32.088 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:32.088 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:32.088 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:32.088 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:32.089 +07:00 [INF] Start get all films
+2024-09-06 19:59:32.090 +07:00 [ERR] Error get all films
+2024-09-06 19:59:32.092 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:32.093 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:32.093 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 4.4041ms
+2024-09-06 19:59:32.093 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:32.093 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 5.3362ms
+2024-09-06 19:59:32.094 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:32.094 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:32.094 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:32.095 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:32.096 +07:00 [INF] Start get all films
+2024-09-06 19:59:32.096 +07:00 [ERR] Error get all films
+2024-09-06 19:59:32.097 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:32.097 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:32.097 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.7888ms
+2024-09-06 19:59:32.098 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:32.098 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.5133ms
+2024-09-06 19:59:37.169 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:37.169 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:37.169 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:37.169 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:37.170 +07:00 [INF] Start get all films
+2024-09-06 19:59:37.171 +07:00 [ERR] Error get all films
+2024-09-06 19:59:37.172 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:37.172 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:37.173 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.0798ms
+2024-09-06 19:59:37.173 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:37.173 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.0676ms
+2024-09-06 19:59:37.174 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:37.175 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:37.175 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:37.175 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:37.175 +07:00 [INF] Start get all films
+2024-09-06 19:59:37.176 +07:00 [ERR] Error get all films
+2024-09-06 19:59:37.179 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:37.179 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:37.179 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 4.3654ms
+2024-09-06 19:59:37.179 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:37.179 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 5.0517ms
+2024-09-06 19:59:40.987 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:40.987 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:40.987 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:40.987 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:40.988 +07:00 [INF] Start get all films
+2024-09-06 19:59:40.988 +07:00 [ERR] Error get all films
+2024-09-06 19:59:40.989 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:40.990 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:40.990 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.6467ms
+2024-09-06 19:59:40.990 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:40.990 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.2442ms
+2024-09-06 19:59:40.991 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:40.992 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:40.992 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:40.992 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:40.992 +07:00 [INF] Start get all films
+2024-09-06 19:59:40.992 +07:00 [ERR] Error get all films
+2024-09-06 19:59:40.994 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:40.994 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:40.994 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.372ms
+2024-09-06 19:59:40.994 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:40.994 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.8735ms
+2024-09-06 19:59:46.613 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:46.613 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:46.613 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:46.614 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:46.614 +07:00 [INF] Start get all films
+2024-09-06 19:59:46.615 +07:00 [ERR] Error get all films
+2024-09-06 19:59:46.617 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:46.617 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:46.617 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.7831ms
+2024-09-06 19:59:46.617 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:46.618 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.5313ms
+2024-09-06 19:59:46.620 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:46.620 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:46.620 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:46.620 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:46.621 +07:00 [INF] Start get all films
+2024-09-06 19:59:46.621 +07:00 [ERR] Error get all films
+2024-09-06 19:59:46.622 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:46.622 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:46.622 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.9737ms
+2024-09-06 19:59:46.622 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:46.623 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.4859ms
+2024-09-06 19:59:54.169 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:54.170 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:54.170 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:54.170 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:54.170 +07:00 [INF] Start get all films
+2024-09-06 19:59:54.171 +07:00 [ERR] Error get all films
+2024-09-06 19:59:54.172 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:54.172 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:54.172 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.4047ms
+2024-09-06 19:59:54.172 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:54.172 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.9473ms
+2024-09-06 19:59:54.174 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 19:59:54.174 +07:00 [INF] CORS policy execution successful.
+2024-09-06 19:59:54.174 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:54.174 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 19:59:54.175 +07:00 [INF] Start get all films
+2024-09-06 19:59:54.175 +07:00 [ERR] Error get all films
+2024-09-06 19:59:54.176 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 19:59:54.177 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 19:59:54.178 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.3399ms
+2024-09-06 19:59:54.178 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 19:59:54.178 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 4.1596ms
+2024-09-06 20:00:15.466 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:00:15.467 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:00:15.467 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:00:15.467 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:00:15.468 +07:00 [INF] Start get all films
+2024-09-06 20:00:15.468 +07:00 [ERR] Error get all films
+2024-09-06 20:00:15.480 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:00:15.480 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:00:15.480 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 13.0447ms
+2024-09-06 20:00:15.480 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:00:15.480 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 13.7577ms
+2024-09-06 20:00:15.482 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:00:15.482 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:00:15.482 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:00:15.482 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:00:15.482 +07:00 [INF] Start get all films
+2024-09-06 20:00:15.483 +07:00 [ERR] Error get all films
+2024-09-06 20:00:15.483 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:00:15.483 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:00:15.483 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.5763ms
+2024-09-06 20:00:15.483 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:00:15.484 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.0157ms
+2024-09-06 20:13:25.723 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:13:25.724 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:13:25.724 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:13:25.724 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:13:25.725 +07:00 [INF] Start get all films
+2024-09-06 20:13:25.726 +07:00 [ERR] Error get all films
+2024-09-06 20:13:25.800 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:13:25.800 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:13:25.801 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 76.3077ms
+2024-09-06 20:13:25.801 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:13:25.801 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 77.7699ms
+2024-09-06 20:13:25.802 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:13:25.802 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:13:25.802 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:13:25.802 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:13:25.803 +07:00 [INF] Start get all films
+2024-09-06 20:13:25.803 +07:00 [ERR] Error get all films
+2024-09-06 20:13:25.804 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:13:25.804 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:13:25.804 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.0689ms
+2024-09-06 20:13:25.805 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:13:25.805 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.6315ms
+2024-09-06 20:15:29.076 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:15:29.077 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:15:29.077 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:15:29.077 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:15:29.078 +07:00 [INF] Start get all films
+2024-09-06 20:15:29.078 +07:00 [ERR] Error get all films
+2024-09-06 20:15:29.088 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:15:29.088 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:15:29.088 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 11.4623ms
+2024-09-06 20:15:29.088 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:15:29.088 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 12.0624ms
+2024-09-06 20:15:29.090 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:15:29.090 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:15:29.090 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:15:29.090 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:15:29.090 +07:00 [INF] Start get all films
+2024-09-06 20:15:29.091 +07:00 [ERR] Error get all films
+2024-09-06 20:15:29.091 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:15:29.091 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:15:29.092 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.6454ms
+2024-09-06 20:15:29.092 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:15:29.092 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.0408ms
+2024-09-06 20:18:50.955 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:50.955 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:50.955 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:50.955 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:50.956 +07:00 [INF] Start get all films
+2024-09-06 20:18:50.957 +07:00 [ERR] Error get all films
+2024-09-06 20:18:50.966 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:50.966 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:50.967 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 11.0151ms
+2024-09-06 20:18:50.967 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:50.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 11.7802ms
+2024-09-06 20:18:50.968 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:50.968 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:50.968 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:50.968 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:50.969 +07:00 [INF] Start get all films
+2024-09-06 20:18:50.970 +07:00 [ERR] Error get all films
+2024-09-06 20:18:50.971 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:50.971 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:50.971 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.8316ms
+2024-09-06 20:18:50.971 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:50.971 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.433ms
+2024-09-06 20:18:53.002 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:53.002 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:53.002 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:53.003 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:53.003 +07:00 [INF] Start get all films
+2024-09-06 20:18:53.003 +07:00 [ERR] Error get all films
+2024-09-06 20:18:53.005 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:53.005 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:53.005 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.6403ms
+2024-09-06 20:18:53.005 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:53.005 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.0176ms
+2024-09-06 20:18:53.629 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:53.629 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:53.629 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:53.629 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:53.630 +07:00 [INF] Start get all films
+2024-09-06 20:18:53.630 +07:00 [ERR] Error get all films
+2024-09-06 20:18:53.631 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:53.631 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:53.632 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.3596ms
+2024-09-06 20:18:53.632 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:53.632 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.9266ms
+2024-09-06 20:18:56.493 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:56.493 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:56.493 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:56.494 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:56.494 +07:00 [INF] Start get all films
+2024-09-06 20:18:56.494 +07:00 [ERR] Error get all films
+2024-09-06 20:18:56.495 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:56.495 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:56.495 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.7424ms
+2024-09-06 20:18:56.495 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:56.495 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.1136ms
+2024-09-06 20:18:56.497 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:18:56.497 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:18:56.497 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:56.497 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:18:56.497 +07:00 [INF] Start get all films
+2024-09-06 20:18:56.498 +07:00 [ERR] Error get all films
+2024-09-06 20:18:56.498 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:18:56.499 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:18:56.499 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.8094ms
+2024-09-06 20:18:56.499 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:18:56.499 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.1684ms
+2024-09-06 20:19:08.855 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:19:08.855 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:19:08.855 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:19:08.855 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:19:08.856 +07:00 [INF] Start get all films
+2024-09-06 20:19:08.857 +07:00 [ERR] Error get all films
+2024-09-06 20:19:08.858 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:19:08.858 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:19:08.859 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.2691ms
+2024-09-06 20:19:08.859 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:19:08.859 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 3.6991ms
+2024-09-06 20:19:08.861 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 20:19:08.861 +07:00 [INF] CORS policy execution successful.
+2024-09-06 20:19:08.861 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:19:08.861 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 20:19:08.862 +07:00 [INF] Start get all films
+2024-09-06 20:19:08.862 +07:00 [ERR] Error get all films
+2024-09-06 20:19:08.863 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 20:19:08.863 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 20:19:08.863 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1.7237ms
+2024-09-06 20:19:08.863 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 20:19:08.863 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2.1855ms
+2024-09-06 22:21:37.571 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:21:37.595 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:21:37.599 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:21:37.599 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:21:37.599 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:26:47.420 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:26:47.451 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:26:47.456 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:26:47.457 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:26:47.457 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:26:48.105 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:26:48.457 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 353.0595ms
+2024-09-06 22:26:48.472 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:26:48.477 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.7337ms
+2024-09-06 22:26:48.492 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:26:48.557 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.6972ms
+2024-09-06 22:26:49.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:26:49.352 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 307.4096ms
+2024-09-06 22:26:52.288 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 22:26:52.302 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-06 22:26:52.351 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-06 22:26:52.356 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 500 null text/plain; charset=utf-8 67.563ms
+2024-09-06 22:29:50.484 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:29:50.507 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:29:50.510 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:29:50.511 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:29:50.511 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:29:50.730 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:29:50.908 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 177.4322ms
+2024-09-06 22:29:50.917 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:29:50.924 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:29:50.929 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.3704ms
+2024-09-06 22:29:50.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.1452ms
+2024-09-06 22:29:51.062 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:29:51.227 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 165.3125ms
+2024-09-06 22:29:53.674 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 22:29:53.683 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 22:29:53.703 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 22:29:54.652 +07:00 [INF] Start get all films
+2024-09-06 22:29:54.656 +07:00 [ERR] Error get all films
+2024-09-06 22:29:55.834 +07:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 22:29:55.929 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 22:29:55.937 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2230.629ms
+2024-09-06 22:29:55.938 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 22:29:55.945 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2270.2192ms
+2024-09-06 22:30:08.151 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:30:08.173 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:30:08.176 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:30:08.177 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:30:08.177 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:30:09.256 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:30:09.409 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 154.7855ms
+2024-09-06 22:30:09.418 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:30:09.418 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:30:09.421 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.7149ms
+2024-09-06 22:30:09.440 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.2862ms
+2024-09-06 22:30:09.537 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:30:09.662 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.6521ms
+2024-09-06 22:30:12.364 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 22:30:12.376 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-09-06 22:30:12.391 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-06 22:30:12.392 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 500 null text/plain; charset=utf-8 28.3535ms
+2024-09-06 22:48:43.560 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:48:43.571 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 10.7163ms
+2024-09-06 22:48:43.586 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:48:43.588 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:48:43.590 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.3774ms
+2024-09-06 22:48:43.599 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.0826ms
+2024-09-06 22:48:43.832 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:48:43.837 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.0722ms
+2024-09-06 22:50:37.526 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:50:37.548 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:50:37.551 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:50:37.552 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:50:37.552 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:50:37.889 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:50:38.168 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 279.378ms
+2024-09-06 22:50:38.222 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:50:38.231 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:50:38.240 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 17.3063ms
+2024-09-06 22:50:38.302 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.2467ms
+2024-09-06 22:50:38.699 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:50:38.890 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.7463ms
+2024-09-06 22:53:37.595 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:53:37.601 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger - null null
+2024-09-06 22:53:37.625 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:53:37.625 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:53:37.683 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/index.html - null null
+2024-09-06 22:53:37.687 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger - 301 null null 87.2274ms
+2024-09-06 22:53:37.785 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/index.html - 200 null text/html;charset=utf-8 101.8827ms
+2024-09-06 22:53:37.798 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui-bundle.js - null null
+2024-09-06 22:53:37.798 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-06 22:53:37.799 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - null null
+2024-09-06 22:53:37.800 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:53:37.802 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.6939ms
+2024-09-06 22:53:37.815 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/_vs/browserLink - null null
+2024-09-06 22:53:37.821 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-06 22:53:37.821 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-06 22:53:37.821 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-06 22:53:37.823 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui.css - 200 143943 text/css 23.5942ms
+2024-09-06 22:53:37.831 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 32.4242ms
+2024-09-06 22:53:37.845 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 47.2969ms
+2024-09-06 22:53:37.851 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.0825ms
+2024-09-06 22:53:38.163 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - null null
+2024-09-06 22:53:38.283 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 119.8478ms
+2024-09-06 22:53:38.304 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44309/swagger/favicon-32x32.png - null null
+2024-09-06 22:53:38.304 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-09-06 22:53:38.304 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44309/swagger/favicon-32x32.png - 200 628 image/png 0.681ms
+2024-09-06 22:53:53.468 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:53:53.492 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:53:53.497 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:53:53.498 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:53:53.498 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:53:53.783 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:53:53.926 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 144.3769ms
+2024-09-06 22:53:53.935 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:53:53.939 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.3459ms
+2024-09-06 22:53:53.950 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:53:53.970 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.8237ms
+2024-09-06 22:53:54.126 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:53:54.312 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.903ms
+2024-09-06 22:54:48.001 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 22:54:48.023 +07:00 [INF] CORS policy execution successful.
+2024-09-06 22:54:48.028 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:48.029 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:48.029 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 28.6864ms
+2024-09-06 22:54:48.031 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 22:54:48.032 +07:00 [INF] CORS policy execution successful.
+2024-09-06 22:54:48.033 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:48.033 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:48.033 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 1.9879ms
+2024-09-06 22:54:51.207 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 22:54:51.208 +07:00 [INF] CORS policy execution successful.
+2024-09-06 22:54:51.209 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:51.209 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:54:51.209 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 2.4549ms
+2024-09-06 22:55:32.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 22:55:32.973 +07:00 [INF] CORS policy execution successful.
+2024-09-06 22:55:32.974 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:55:32.974 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 22:55:32.974 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 0.7426ms
+2024-09-06 22:57:40.895 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 22:57:40.918 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 22:57:40.921 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 22:57:40.922 +07:00 [INF] Hosting environment: Development
+2024-09-06 22:57:40.922 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 22:57:41.167 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 22:57:41.305 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 139.5433ms
+2024-09-06 22:57:41.309 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 22:57:41.310 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 22:57:41.313 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.9105ms
+2024-09-06 22:57:41.332 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.5039ms
+2024-09-06 22:57:41.411 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 22:57:41.536 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.8596ms
+2024-09-06 22:57:48.171 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/ - null null
+2024-09-06 22:57:48.191 +07:00 [INF] Executing endpoint 'HTTP: GET /'
+2024-09-06 22:57:48.192 +07:00 [INF] Executed endpoint 'HTTP: GET /'
+2024-09-06 22:57:48.192 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/ - 200 null text/plain; charset=utf-8 20.9673ms
+2024-09-06 23:14:14.752 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-06 23:14:14.929 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 23:14:14.929 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 23:14:14.932 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 23:14:14.933 +07:00 [INF] Hosting environment: Development
+2024-09-06 23:14:14.933 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 23:14:15.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 23:14:15.259 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 136.5624ms
+2024-09-06 23:14:15.271 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 23:14:15.271 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 23:14:15.274 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.5836ms
+2024-09-06 23:14:15.293 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.3701ms
+2024-09-06 23:14:15.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 23:14:15.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.8804ms
+2024-09-06 23:14:18.237 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 23:14:18.261 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Bearer)
+2024-09-06 23:14:18.275 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-06 23:14:18.276 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 500 null text/plain; charset=utf-8 39.7024ms
+2024-09-06 23:37:39.946 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-06 23:37:40.073 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 23:37:40.073 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 23:37:40.077 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 23:37:40.077 +07:00 [INF] Hosting environment: Development
+2024-09-06 23:37:40.077 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 23:37:40.552 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 23:37:41.352 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 800.314ms
+2024-09-06 23:37:41.363 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 23:37:41.363 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 23:37:41.367 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.2865ms
+2024-09-06 23:37:41.398 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.7749ms
+2024-09-06 23:37:41.686 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 23:37:41.839 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.1037ms
+2024-09-06 23:37:44.526 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 23:37:44.597 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Bearer)
+2024-09-06 23:37:44.606 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-06 23:37:44.607 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 401 0 null 80.3809ms
+2024-09-06 23:40:09.667 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:40:09.673 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:40:09.676 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:09.678 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:09.678 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 11.0881ms
+2024-09-06 23:40:35.864 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:40:35.865 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:40:35.866 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:35.866 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:35.866 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 1.6166ms
+2024-09-06 23:40:36.035 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:40:36.036 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:40:36.036 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:36.036 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:36.036 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 0.6762ms
+2024-09-06 23:40:58.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:40:58.045 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:40:58.045 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:58.045 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:58.045 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 0.7139ms
+2024-09-06 23:40:58.234 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:40:58.234 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:40:58.234 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:58.234 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:40:58.234 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 0.6345ms
+2024-09-06 23:41:00.573 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 23:41:00.594 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 23:41:00.599 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 23:41:00.600 +07:00 [INF] Hosting environment: Development
+2024-09-06 23:41:00.600 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 23:41:01.168 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 23:41:01.350 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 182.9879ms
+2024-09-06 23:41:01.359 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 23:41:01.359 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 23:41:01.365 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.8091ms
+2024-09-06 23:41:01.387 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.1126ms
+2024-09-06 23:41:01.676 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 23:41:01.803 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.8075ms
+2024-09-06 23:41:06.526 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:41:06.547 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:41:06.551 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:41:06.551 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:41:06.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 25.2607ms
+2024-09-06 23:41:30.893 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/testenpoints - null null
+2024-09-06 23:41:30.895 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:41:30.895 +07:00 [INF] Executing endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:41:30.895 +07:00 [INF] Executed endpoint 'HTTP: GET api/testenpoints'
+2024-09-06 23:41:30.895 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/testenpoints - 200 null null 2.4177ms
+2024-09-06 23:41:31.616 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 23:41:31.617 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:41:31.623 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Bearer)
+2024-09-06 23:41:31.644 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.<>c__DisplayClass0_0.<<HandleAsync>g__Handle|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-06 23:41:31.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 500 null text/plain; charset=utf-8 30.1694ms
+2024-09-06 23:42:07.843 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-06 23:42:07.975 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 23:42:07.976 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 23:42:07.979 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 23:42:07.980 +07:00 [INF] Hosting environment: Development
+2024-09-06 23:42:07.980 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 23:42:08.461 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 23:42:08.625 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 164.4004ms
+2024-09-06 23:42:08.634 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 23:42:08.634 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 23:42:08.637 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.9531ms
+2024-09-06 23:42:08.655 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.6323ms
+2024-09-06 23:42:08.900 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 23:42:09.014 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.2401ms
+2024-09-06 23:42:11.453 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 23:42:11.472 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:42:11.480 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Bearer)
+2024-09-06 23:42:11.482 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-06 23:42:11.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 401 0 null 29.6847ms
+2024-09-06 23:43:37.247 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-06 23:43:37.380 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-06 23:43:37.380 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-06 23:43:37.383 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-06 23:43:37.383 +07:00 [INF] Hosting environment: Development
+2024-09-06 23:43:37.384 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-06 23:43:37.876 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-06 23:43:38.040 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 164.6078ms
+2024-09-06 23:43:38.047 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-06 23:43:38.049 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-06 23:43:38.052 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.2128ms
+2024-09-06 23:43:38.071 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.5444ms
+2024-09-06 23:43:38.298 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-06 23:43:38.434 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.5038ms
+2024-09-06 23:43:47.568 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-06 23:43:47.588 +07:00 [INF] CORS policy execution successful.
+2024-09-06 23:43:47.593 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 23:43:47.610 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-06 23:43:48.568 +07:00 [INF] Start get all films
+2024-09-06 23:43:48.571 +07:00 [ERR] Error get all films
+2024-09-06 23:43:49.811 +07:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-06 23:43:49.964 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-06 23:43:49.975 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2361.6681ms
+2024-09-06 23:43:49.976 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-06 23:43:49.982 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 2413.9272ms

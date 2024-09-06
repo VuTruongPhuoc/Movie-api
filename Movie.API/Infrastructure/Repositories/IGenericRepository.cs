@@ -4,10 +4,10 @@
     {
         Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(object id);
-        Task<bool> InsertAsync(T Entity);
-        Task<bool> UpdateAsync(T Entity);
+        Task<T> InsertAsync(T Entity);
+        Task<T> UpdateAsync(T Entity);
         Task<bool> DeleteAsync(object id);
-        Task SaveChangeAsync();
+        Task SaveAsync();
 
     }
 }

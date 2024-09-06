@@ -23,20 +23,24 @@ namespace Movie.API.Infrastructure.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-        public Task<bool> InsertAsync(T model)
+        public async Task<T> InsertAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _dbSet.AddAsync(entity);
+            return entity;
         }
 
-        public Task<bool> UpdateAsync(T model)
+        public async Task<T> UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Update(entity);
+            return entity;
         }
-        public Task<bool> DeleteAsync(object id)
+        public async Task<bool> DeleteAsync(object id)
         {
-            throw new NotImplementedException();
+            var obj = _dbSet.Find(id);
+            _dbSet.Remove(obj);
+            return true;
         }
-        public async Task SaveChangeAsync()
+        public async Task SaveAsync()
         {
             await _dbContext.SaveChangesAsync();
         }

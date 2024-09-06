@@ -1,8 +1,11 @@
-
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Serilog;
+using System.Text;
 
 namespace Movie.API
 {
@@ -22,12 +25,7 @@ namespace Movie.API
                 .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
-            //Use this line to ovirride the bulit-in loggers
-            //builder.Host.UseSerilog();
-            //Use serilog alogn with the bulit-in loggers
             builder.Logging.AddSerilog();
-
-            //Add Logging to the container
             //builder.Logging.ClearProviders().AddConsole().AddDebug();
 
             // Add services to the container.
@@ -36,7 +34,34 @@ namespace Movie.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddServices();
+
+            // Cors Configuration
+            var corsname = "MoviesCORS";
+            builder.Services.AddCors(options => options.AddPolicy(corsname, policy =>
+            {
+                // Allow all origins
+                policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+            }));
+            // JWT Authentication Configuration
+            var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWTSecret"));
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+
+                };
+            });
+
 
             var app = builder.Build();
 
@@ -49,8 +74,19 @@ namespace Movie.API
 
             app.UseHttpsRedirection();
 
+            app.UseRouting();
+
+            app.UseCors(corsname);
+
             app.UseAuthorization();
 
+
+            app.UseEndpoints(enpoints =>
+            {
+                enpoints.MapGet("/", () => "Hello World!");
+                enpoints.MapGet("api/testenpoints",
+                    context => context.Response.WriteAsync(builder.Configuration.GetValue<string>("JWTSecret")));
+            });
 
             app.MapControllers();
 

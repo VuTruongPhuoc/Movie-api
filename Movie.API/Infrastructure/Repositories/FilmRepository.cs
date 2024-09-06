@@ -1,0 +1,28 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Movie.API.Infrastructure.Data;
+using Movie.API.Models.Domain.Entities;
+
+namespace Movie.API.Infrastructure.Repositories
+{
+    public interface IFilmRepository : IGenericRepository<Film>
+    {
+        Task<List<Film>> GetByNameAsync(string name);
+    }
+    public class FilmRepository : GenericRepository<Film>, IFilmRepository
+    {
+        private readonly MovieDbContext _dbContext;
+        private readonly DbSet<Film> _filmSet;
+        public FilmRepository(MovieDbContext dbContext) : base(dbContext)
+        {
+            _dbContext = dbContext;
+            _filmSet = _dbContext.Set<Film>();
+          
+        } 
+        public async Task<List<Film>> GetByNameAsync(string name)
+        {
+            return await _filmSet.Where(x => x.Name == name).ToListAsync();
+        }
+
+
+    }
+}
