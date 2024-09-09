@@ -159,7 +159,3 @@ D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\zh-Hans\Microsoft.Co
 D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\AutoMapper.dll
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
-D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
-D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll

@@ -14,7 +14,7 @@ namespace Movie.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Bearer")]
+    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
     public class FilmController : ControllerBase
     {
         private readonly ILogger<FilmController> _logger;

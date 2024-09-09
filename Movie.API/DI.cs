@@ -6,6 +6,7 @@ namespace Movie.API
     {
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
+            services.AddScoped<AccountManager>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IFilmRepository, FilmRepository>();
             return services;
