@@ -641,3 +641,176 @@ FROM [Films] AS [f]
 2024-09-09 22:35:17.412 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.3881ms
 2024-09-09 22:35:17.710 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
 2024-09-09 22:35:17.819 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.4781ms
+2024-09-09 22:51:53.393 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 22:51:53.521 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 22:51:53.521 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 22:51:53.523 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 22:51:53.524 +07:00 [INF] Hosting environment: Development
+2024-09-09 22:51:53.524 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 22:51:54.009 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 22:51:54.076 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-09 22:51:54.110 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 500 null text/html; charset=utf-8 102.4708ms
+2024-09-09 22:51:54.121 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 22:51:54.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 22:51:54.128 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7784ms
+2024-09-09 22:51:54.151 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.3464ms
+2024-09-09 22:53:05.332 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 22:53:05.461 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 22:53:05.461 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 22:53:05.463 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 22:53:05.464 +07:00 [INF] Hosting environment: Development
+2024-09-09 22:53:05.464 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 22:53:05.951 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 22:53:06.114 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 164.3033ms
+2024-09-09 22:53:06.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 22:53:06.128 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.6034ms
+2024-09-09 22:53:06.128 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 22:53:06.152 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.475ms
+2024-09-09 22:53:06.238 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-09 22:53:06.400 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 162.3642ms
+2024-09-09 22:53:17.854 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-09 22:53:17.873 +07:00 [INF] CORS policy execution successful.
+2024-09-09 22:53:17.878 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 22:53:17.896 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-09 22:53:17.946 +07:00 [INF] Executing OkObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-09 22:53:17.954 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 54.8686ms
+2024-09-09 22:53:17.955 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 22:53:17.955 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 100.5323ms
+2024-09-09 23:01:28.439 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 23:01:28.632 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 23:01:28.633 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 23:01:28.636 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 23:01:28.637 +07:00 [INF] Hosting environment: Development
+2024-09-09 23:01:28.637 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 23:01:29.205 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 23:01:29.378 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 174.2826ms
+2024-09-09 23:01:29.389 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 23:01:29.389 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 23:01:29.392 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.6889ms
+2024-09-09 23:01:29.412 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.6809ms
+2024-09-09 23:01:29.633 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-09 23:01:29.758 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.8324ms
+2024-09-09 23:01:41.000 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-09 23:01:41.018 +07:00 [INF] CORS policy execution successful.
+2024-09-09 23:01:41.023 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:01:41.040 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-09 23:01:41.089 +07:00 [INF] Executing OkObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-09 23:01:41.097 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 53.6025ms
+2024-09-09 23:01:41.097 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:01:41.097 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 97.4772ms
+2024-09-09 23:02:03.870 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-09 23:02:03.879 +07:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output, Boolean needReplace, Int32 decodedLength)
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2024-09-09 23:02:03.887 +07:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-09-09 23:02:03.889 +07:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2024-09-09 23:02:03.891 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-09-09 23:02:03.894 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-09 23:02:03.894 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 401 0 null 24.2429ms
+2024-09-09 23:02:31.271 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-09 23:02:31.295 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-09-09 23:02:31.296 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2024-09-09 23:02:31.297 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2024-09-09 23:02:31.297 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-09-09 23:02:31.298 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-09 23:02:31.298 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 401 0 null 27.0706ms
+2024-09-09 23:03:00.609 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 23:03:00.787 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 23:03:00.787 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 23:03:00.789 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 23:03:00.790 +07:00 [INF] Hosting environment: Development
+2024-09-09 23:03:00.790 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 23:03:00.862 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 23:03:01.031 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 170.4064ms
+2024-09-09 23:03:01.038 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 23:03:01.038 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 23:03:01.043 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.2281ms
+2024-09-09 23:03:01.063 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.6675ms
+2024-09-09 23:03:01.174 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-09 23:03:01.320 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 145.6652ms
+2024-09-09 23:03:20.096 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-09 23:03:20.117 +07:00 [INF] CORS policy execution successful.
+2024-09-09 23:03:20.122 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:03:20.141 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-09 23:03:20.190 +07:00 [INF] Executing OkObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-09 23:03:20.199 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 53.9759ms
+2024-09-09 23:03:20.199 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:03:20.199 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 103.0972ms
+2024-09-09 23:03:42.666 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-09 23:03:42.710 +07:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-09-09 23:03:42.717 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2024-09-09 23:03:42.720 +07:00 [INF] Bearer was not authenticated. Failure message: IDX10206: Unable to validate audience. The 'audiences' parameter is empty.
+2024-09-09 23:03:42.721 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2024-09-09 23:03:42.724 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-09 23:03:42.724 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 401 0 null 58.6205ms
+2024-09-09 23:07:03.546 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 23:07:03.858 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 23:07:03.858 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 23:07:03.871 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 23:07:03.871 +07:00 [INF] Hosting environment: Development
+2024-09-09 23:07:03.872 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 23:07:04.081 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 23:07:04.353 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 275.2027ms
+2024-09-09 23:07:04.362 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 23:07:04.362 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 23:07:04.366 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.9856ms
+2024-09-09 23:07:04.395 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.909ms
+2024-09-09 23:07:04.764 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-09 23:07:04.957 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 193.5592ms
+2024-09-09 23:07:13.239 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-09 23:07:13.259 +07:00 [INF] CORS policy execution successful.
+2024-09-09 23:07:13.263 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:07:13.281 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-09 23:07:13.336 +07:00 [INF] Executing OkObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-09 23:07:13.348 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 61.6418ms
+2024-09-09 23:07:13.348 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-09 23:07:13.348 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 109.4978ms
+2024-09-09 23:07:37.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/Film/All - null null
+2024-09-09 23:07:37.163 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-09 23:07:37.167 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Movie.API.Responses.DTOs.FilmDTO]]] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-09-09 23:07:37.963 +07:00 [INF] Start get all films
+2024-09-09 23:07:37.966 +07:00 [ERR] Error get all films
+2024-09-09 23:07:38.640 +07:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[HistoryId], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[NumberOfEpisodes], [f].[ReleaseYear], [f].[ScheduleId], [f].[Status], [f].[ViewCount]
+FROM [Films] AS [f]
+2024-09-09 23:07:38.831 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Movie.API.Responses.DTOs.FilmDTO, Movie.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-09 23:07:38.833 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 1666.0923ms
+2024-09-09 23:07:38.833 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-09-09 23:07:38.841 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/Film/All - 200 null application/json; charset=utf-8 1716.8788ms
+2024-09-09 23:08:07.033 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-09 23:08:07.156 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-09 23:08:07.156 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-09 23:08:07.158 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-09 23:08:07.158 +07:00 [INF] Hosting environment: Development
+2024-09-09 23:08:07.158 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-09 23:08:07.421 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-09 23:08:07.580 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 159.9402ms
+2024-09-09 23:08:07.587 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-09 23:08:07.591 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-09 23:08:07.595 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.6346ms
+2024-09-09 23:08:07.611 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.8268ms
+2024-09-09 23:08:07.713 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-09 23:08:07.854 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.3386ms

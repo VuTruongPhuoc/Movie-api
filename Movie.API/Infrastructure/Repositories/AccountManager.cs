@@ -25,9 +25,9 @@ namespace Movie.API.Infrastructure.Repositories
             return new AuthenticationResponse()
             {
                 Username = model.Username,
-                Type = "Success",
+                
                 Success = true,
-                Title = "Ok",
+                StatusCode = System.Net.HttpStatusCode.OK,
                 token = "23423423",
             };
         }
@@ -37,6 +37,8 @@ namespace Movie.API.Infrastructure.Repositories
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor()
             {
+                Issuer = _configuration["LocalIssuer"],
+                Audience = _configuration["LocalAudience"],
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddHours(4),
                 SigningCredentials = new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256)

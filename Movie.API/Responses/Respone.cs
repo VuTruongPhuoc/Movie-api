@@ -1,9 +1,11 @@
-﻿namespace Movie.API.Responses
+﻿using System.Net;
+
+namespace Movie.API.Responses
 {
     public class Respone
     {
-        public string Type { get; set; }
         public bool Success {  get; set; }
-        public string Title { get; set; }   
+        public HttpStatusCode StatusCode { get; set; }
+        public string Message { get; set; }
     }
 }

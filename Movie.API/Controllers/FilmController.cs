@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +33,6 @@ namespace Movie.API.Controllers
         //[AllowAnonymous]
         public async Task<ActionResult<IEnumerable<FilmDTO>>> GetFilms()
         {
-           
             _logger.LogInformation("Start get all films");
             _logger.LogError("Error get all films");
 

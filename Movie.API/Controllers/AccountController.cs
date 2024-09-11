@@ -46,9 +46,9 @@ namespace Movie.API.Controllers
                 var jwttoken = new JwtSecurityTokenHandler().WriteToken(token);
                 responeLogin = new AuthenticationResponse()
                 {
-                    Type = "Success",
-                    Title = "Login",
+                    StatusCode = System.Net.HttpStatusCode.OK,
                     Success = true,
+                    Message = "Đăng nhập thành công",
                     token = jwttoken,
                     Username = model.Username,
                 };

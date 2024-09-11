@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Movie.API.Features.Roles;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Responses.DTOs;
 
@@ -13,6 +14,7 @@ namespace Movie.API.AutoMapper
                 cfg.ShouldMapProperty = p => p.GetMethod.IsPublic || p.GetMethod.IsAssembly;
                 cfg.AddProfile<UserProfile>();
                 cfg.AddProfile<FilmProfile>();
+                cfg.AddProfile<RoleProfile>();
             });
             var mapper = config.CreateMapper();
             return mapper;
@@ -36,6 +38,13 @@ namespace Movie.API.AutoMapper
         {
 
             CreateMap<Film, FilmDTO>().ReverseMap();
+        }
+    }
+    public class RoleProfile: Profile
+    {
+        public RoleProfile()
+        {
+            CreateMap<Role, RoleDTO>().ReverseMap();
         }
     }
 }

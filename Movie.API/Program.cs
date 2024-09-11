@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Entities;
 using Serilog;
 using System.Security.Cryptography.Xml;
 using System.Text;
@@ -34,43 +37,9 @@ namespace Movie.API
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new OpenApiInfo 
-                {
-                    Version = "v1",
-                    Title = "WebAPI",
-                    Description = "W",
-                });
-                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    Description = "JWT Authorization header using the bearer scheme. Enter Bearer [space] add you token in the text input. Example: Bearer asdkfjds",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Scheme = "Bearer",
-                    Type = SecuritySchemeType.Http
-
-                });
-                options.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Id = "Bearer",
-                                Type = ReferenceType.SecurityScheme,
-
-                            },
-                            Scheme = "oauth2", 
-                            Name = "bearer",
-                            In = ParameterLocation.Header
-                        },
-                        new List<string>()
-                    }
-                });
-            });
+            
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            builder.Services.AddAuthenticationConfiguration(builder.Configuration);
             builder.Services.AddServices();
 
             // Cors Configuration
@@ -80,25 +49,18 @@ namespace Movie.API
                 // Allow all origins
                 policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
             }));
-            // JWT Authentication Configuration
-            var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWTSecret"));
-            builder.Services.AddAuthentication(options =>
+            builder.Services.AddIdentity<User, Role>(config =>
             {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters()
-                {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience = false
+                config.SignIn.RequireConfirmedEmail = false;
+                config.User.RequireUniqueEmail = true;
+            })
+              .AddEntityFrameworkStores<MovieDbContext>()
+              .AddDefaultTokenProviders();
 
-                };
+            builder.Services.AddMediatR(configuration =>
+            {
+                configuration.RegisterServicesFromAssembly(typeof(Program).Assembly);
             });
-
 
             var app = builder.Build();
 
@@ -106,7 +68,10 @@ namespace Movie.API
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI");
+                });
             }
 
             app.UseHttpsRedirection();
