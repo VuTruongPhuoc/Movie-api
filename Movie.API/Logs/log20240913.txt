@@ -1,0 +1,215 @@
+2024-09-13 14:44:30.917 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 14:44:31.399 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 14:44:31.400 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 14:44:31.403 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 14:44:31.404 +07:00 [INF] Hosting environment: Development
+2024-09-13 14:44:31.404 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 14:44:32.127 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 14:44:32.469 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 345.8202ms
+2024-09-13 14:44:32.500 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 14:44:32.504 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.7334ms
+2024-09-13 14:44:32.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 14:44:32.595 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.6337ms
+2024-09-13 14:44:32.957 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 14:44:33.242 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 284.9697ms
+2024-09-13 14:47:57.478 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 14:47:57.607 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 14:47:57.608 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 14:47:57.610 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 14:47:57.610 +07:00 [INF] Hosting environment: Development
+2024-09-13 14:47:57.610 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 14:47:58.155 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 14:47:58.357 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 203.3222ms
+2024-09-13 14:47:58.392 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 14:47:58.395 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 14:47:58.400 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 7.7483ms
+2024-09-13 14:47:58.431 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.4335ms
+2024-09-13 14:47:58.720 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 14:47:58.870 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.2351ms
+2024-09-13 14:48:03.434 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 50
+2024-09-13 14:48:03.464 +07:00 [INF] CORS policy execution successful.
+2024-09-13 14:48:04.521 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 14:48:04.549 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 14:48:04.964 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-13 14:48:04.980 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 425.8224ms
+2024-09-13 14:48:04.980 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 14:48:04.981 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 1547.7225ms
+2024-09-13 14:48:24.979 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-13 14:48:24.981 +07:00 [INF] CORS policy execution successful.
+2024-09-13 14:48:24.983 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 14:48:24.983 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 14:48:25.051 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-13 14:48:25.052 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 68.5384ms
+2024-09-13 14:48:25.052 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 14:48:25.052 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 72.4357ms
+2024-09-13 15:24:43.411 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 15:24:43.541 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 15:24:43.541 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 15:24:43.543 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 15:24:43.543 +07:00 [INF] Hosting environment: Development
+2024-09-13 15:24:43.543 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 15:24:44.032 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 15:24:44.181 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 149.3472ms
+2024-09-13 15:24:44.189 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 15:24:44.189 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 15:24:44.192 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.7865ms
+2024-09-13 15:24:44.212 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.1144ms
+2024-09-13 15:24:44.473 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 15:24:44.626 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 152.2144ms
+2024-09-13 15:25:02.652 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-13 15:25:02.672 +07:00 [INF] CORS policy execution successful.
+2024-09-13 15:25:02.693 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:25:02.710 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 15:25:02.873 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 152.9738ms
+2024-09-13 15:25:02.879 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:25:02.939 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Movie.API.Infrastructure.Repositories.AccountManager.GenerateToken(IEnumerable`1 claims) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 55
+   at Movie.API.Infrastructure.Repositories.AccountManager.LoginAsync(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 30
+   at Movie.API.Controllers.AccountController.Login(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\AccountController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-13 15:25:02.950 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 500 null text/plain; charset=utf-8 298.6803ms
+2024-09-13 15:25:44.188 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 15:25:44.192 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 3.808ms
+2024-09-13 15:25:44.212 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 15:25:44.217 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 15:25:44.218 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.2178ms
+2024-09-13 15:25:44.233 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.3552ms
+2024-09-13 15:25:44.718 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 15:25:44.728 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.5613ms
+2024-09-13 15:25:51.743 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 15:25:51.748 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 4.6755ms
+2024-09-13 15:25:51.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 15:25:51.769 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.4517ms
+2024-09-13 15:25:51.787 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 15:25:51.791 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 3.3958ms
+2024-09-13 15:25:51.958 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 15:25:51.970 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.1619ms
+2024-09-13 15:25:59.780 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-13 15:25:59.781 +07:00 [INF] CORS policy execution successful.
+2024-09-13 15:25:59.783 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:25:59.783 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 15:25:59.792 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 9.0338ms
+2024-09-13 15:25:59.792 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:25:59.794 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Movie.API.Infrastructure.Repositories.AccountManager.GenerateToken(IEnumerable`1 claims) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 55
+   at Movie.API.Infrastructure.Repositories.AccountManager.LoginAsync(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 30
+   at Movie.API.Controllers.AccountController.Login(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\AccountController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-13 15:25:59.795 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 500 null text/plain; charset=utf-8 15.3889ms
+2024-09-13 15:27:07.497 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 15:27:07.637 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 15:27:07.637 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 15:27:07.640 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 15:27:07.640 +07:00 [INF] Hosting environment: Development
+2024-09-13 15:27:07.640 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 15:27:08.003 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 15:27:08.147 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 145.3515ms
+2024-09-13 15:27:08.157 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 15:27:08.157 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 15:27:08.161 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.5416ms
+2024-09-13 15:27:08.181 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.2858ms
+2024-09-13 15:27:08.277 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 15:27:08.413 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.3115ms
+2024-09-13 15:27:20.208 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-13 15:27:20.229 +07:00 [INF] CORS policy execution successful.
+2024-09-13 15:27:20.251 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:27:20.268 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 15:27:20.385 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 113.4909ms
+2024-09-13 15:27:20.385 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:27:20.407 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at Movie.API.Infrastructure.Repositories.AccountManager.GenerateToken(IEnumerable`1 claims) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 55
+   at Movie.API.Infrastructure.Repositories.AccountManager.LoginAsync(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Infrastructure\Repositories\AccountManager.cs:line 30
+   at Movie.API.Controllers.AccountController.Login(LoginRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\AccountController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-13 15:27:20.411 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 500 null text/plain; charset=utf-8 202.1834ms
+2024-09-13 15:28:28.228 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 15:28:28.373 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 15:28:28.373 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 15:28:28.375 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 15:28:28.375 +07:00 [INF] Hosting environment: Development
+2024-09-13 15:28:28.375 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 15:28:28.860 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-13 15:28:29.067 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 208.2931ms
+2024-09-13 15:28:29.082 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-13 15:28:29.082 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-13 15:28:29.086 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.53ms
+2024-09-13 15:28:29.112 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.6765ms
+2024-09-13 15:28:29.345 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-13 15:28:29.479 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 133.7084ms
+2024-09-13 15:28:39.009 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/Account/login - application/json 46
+2024-09-13 15:28:39.029 +07:00 [INF] CORS policy execution successful.
+2024-09-13 15:28:39.049 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:28:39.067 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Respone] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-13 15:28:39.212 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.AuthenticationResponse'.
+2024-09-13 15:28:39.230 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 159.0423ms
+2024-09-13 15:28:39.230 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-13 15:28:39.231 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/Account/login - 200 null application/json; charset=utf-8 221.9041ms
+2024-09-13 20:47:55.614 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 20:47:55.968 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 20:47:55.969 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 20:47:55.971 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 20:47:55.971 +07:00 [INF] Hosting environment: Development
+2024-09-13 20:47:55.971 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-13 20:48:07.117 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-13 20:48:07.279 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-13 20:48:07.279 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-13 20:48:07.283 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-13 20:48:07.283 +07:00 [INF] Hosting environment: Development
+2024-09-13 20:48:07.283 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API

@@ -5,7 +5,7 @@ using Movie.API.Responses.DTOs;
 
 namespace Movie.API.Features.Roles
 {
-    public class GetRolesQuery : GetRolesRespone, IRequest<Respone>
+    public class GetRolesQuery : GetRolesResponse, IRequest<DataRespone>
     {
        
     }

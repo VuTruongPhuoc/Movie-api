@@ -1,0 +1,564 @@
+2024-09-14 00:42:21.709 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:42:22.046 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:42:22.047 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:42:22.050 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:42:22.050 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:42:22.050 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:42:22.363 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:42:22.582 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 220.2916ms
+2024-09-14 00:42:22.800 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:42:22.800 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:42:22.804 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.0334ms
+2024-09-14 00:42:22.833 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.6763ms
+2024-09-14 00:42:23.400 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:42:23.540 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 140.3904ms
+2024-09-14 00:42:43.788 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:42:43.911 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:42:43.911 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:42:43.913 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:42:43.913 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:42:43.913 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:42:44.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:42:44.632 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 154.2014ms
+2024-09-14 00:42:44.646 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:42:44.647 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:42:44.650 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7933ms
+2024-09-14 00:42:44.675 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.9016ms
+2024-09-14 00:42:44.823 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:42:44.961 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 138.0574ms
+2024-09-14 00:43:09.029 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:43:09.160 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:43:09.160 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:43:09.162 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:43:09.163 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:43:09.163 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:43:09.598 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:43:09.749 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 152.4378ms
+2024-09-14 00:43:09.759 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:43:09.759 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:43:09.762 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.2567ms
+2024-09-14 00:43:09.795 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.6253ms
+2024-09-14 00:43:09.956 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:43:10.138 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 182.1917ms
+2024-09-14 00:43:49.389 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 113
+2024-09-14 00:43:49.412 +07:00 [INF] CORS policy execution successful.
+2024-09-14 00:43:49.415 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:43:49.434 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 00:43:50.832 +07:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 00:43:50.871 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 00:43:50.886 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1446.6219ms
+2024-09-14 00:43:50.890 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:43:50.931 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 64
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 00:43:50.943 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1553.8901ms
+2024-09-14 00:45:02.421 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:45:02.586 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:45:02.586 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:45:02.588 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:45:02.589 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:45:02.589 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:45:03.054 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:45:03.217 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 164.8053ms
+2024-09-14 00:45:03.223 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:45:03.226 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:45:03.231 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.3632ms
+2024-09-14 00:45:03.257 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2611ms
+2024-09-14 00:45:03.475 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:45:03.623 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 147.6826ms
+2024-09-14 00:45:37.794 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 109
+2024-09-14 00:45:37.814 +07:00 [INF] CORS policy execution successful.
+2024-09-14 00:45:37.818 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:45:37.836 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 00:45:37.973 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-14 00:45:37.998 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 157.1619ms
+2024-09-14 00:45:37.998 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:45:38.000 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 400 null application/problem+json; charset=utf-8 205.4434ms
+2024-09-14 00:45:51.895 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 00:45:51.896 +07:00 [INF] CORS policy execution successful.
+2024-09-14 00:45:51.897 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:45:51.897 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 00:45:53.159 +07:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 00:45:53.191 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 00:45:53.198 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1301.1904ms
+2024-09-14 00:45:53.198 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:45:53.224 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 64
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 00:45:53.231 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1335.7666ms
+2024-09-14 00:46:23.582 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:46:23.716 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:46:23.716 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:46:23.719 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:46:23.719 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:46:23.720 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:46:24.267 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:46:24.477 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 210.5676ms
+2024-09-14 00:46:24.486 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:46:24.486 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:46:24.491 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.9026ms
+2024-09-14 00:46:24.514 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.6558ms
+2024-09-14 00:46:24.595 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:46:24.798 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 202.675ms
+2024-09-14 00:46:34.694 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 111
+2024-09-14 00:46:34.720 +07:00 [INF] CORS policy execution successful.
+2024-09-14 00:46:34.724 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:46:34.742 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 00:46:36.059 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 00:46:36.089 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 00:46:36.101 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1355.4408ms
+2024-09-14 00:46:36.102 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 00:46:36.123 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 64
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 00:46:36.132 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1437.3822ms
+2024-09-14 00:59:11.325 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 00:59:11.468 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 00:59:11.469 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 00:59:11.472 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 00:59:11.472 +07:00 [INF] Hosting environment: Development
+2024-09-14 00:59:11.472 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 00:59:11.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 00:59:12.080 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 182.955ms
+2024-09-14 00:59:12.091 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 00:59:12.091 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 00:59:12.095 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.7797ms
+2024-09-14 00:59:12.129 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.6821ms
+2024-09-14 00:59:12.353 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 00:59:12.515 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 161.3142ms
+2024-09-14 01:01:20.188 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 111
+2024-09-14 01:01:20.249 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:01:20.258 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:01:20.319 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:01:23.387 +07:00 [INF] Executed DbCommand (90ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:01:23.460 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:01:23.485 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 3157.5858ms
+2024-09-14 01:01:23.486 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:01:23.539 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 67
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 01:01:23.558 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 3370.294ms
+2024-09-14 01:01:42.487 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:01:42.721 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:01:42.721 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:01:42.725 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:01:42.726 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:01:42.726 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:01:43.378 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:01:43.727 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 352.0378ms
+2024-09-14 01:01:44.080 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:01:44.083 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:01:44.086 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.7376ms
+2024-09-14 01:01:44.132 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.2774ms
+2024-09-14 01:01:44.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:01:45.265 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 291.9799ms
+2024-09-14 01:04:41.158 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:04:41.291 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:04:41.291 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:04:41.293 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:04:41.293 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:04:41.293 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:04:41.839 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:04:42.073 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 235.1498ms
+2024-09-14 01:04:42.110 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:04:42.115 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:04:42.120 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.1981ms
+2024-09-14 01:04:42.187 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 76.698ms
+2024-09-14 01:04:42.798 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:04:43.000 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 202.1711ms
+2024-09-14 01:05:03.436 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 111
+2024-09-14 01:05:03.463 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:05:03.466 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:05:03.487 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:05:04.980 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:05:05.010 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:05:05.021 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1530.8155ms
+2024-09-14 01:05:05.021 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:05:05.043 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 67
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 01:05:05.052 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1616.394ms
+2024-09-14 01:08:21.886 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:08:22.106 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:08:22.106 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:08:22.110 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:08:22.110 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:08:22.111 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:08:22.519 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:08:22.784 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 266.7709ms
+2024-09-14 01:08:22.803 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:08:22.807 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:08:22.825 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 17.5711ms
+2024-09-14 01:08:22.854 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.881ms
+2024-09-14 01:08:23.083 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:08:23.275 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.4002ms
+2024-09-14 01:08:37.620 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 01:08:37.639 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:08:37.643 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:08:37.666 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:08:39.033 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:08:39.066 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:08:39.076 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1406.8376ms
+2024-09-14 01:08:39.077 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:08:39.101 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 67
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 01:08:39.109 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1488.967ms
+2024-09-14 01:10:13.142 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:10:13.351 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:10:13.351 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:10:13.355 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:10:13.356 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:10:13.356 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:10:13.753 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:10:13.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 214.5886ms
+2024-09-14 01:10:13.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:10:13.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:10:13.979 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.834ms
+2024-09-14 01:10:14.018 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.7956ms
+2024-09-14 01:10:14.290 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:10:14.440 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 149.6337ms
+2024-09-14 01:10:19.354 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 01:10:19.373 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:10:19.375 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:10:19.390 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:10:20.657 +07:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:10:20.697 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:10:20.714 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1318.0536ms
+2024-09-14 01:10:20.714 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:10:20.742 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 67
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 01:10:20.751 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1396.5812ms
+2024-09-14 01:14:35.505 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:14:35.714 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:14:35.714 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:14:35.720 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:14:35.721 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:14:35.721 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:14:36.050 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:14:36.261 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 212.3558ms
+2024-09-14 01:14:36.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:14:36.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:14:36.278 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4006ms
+2024-09-14 01:14:36.308 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.5355ms
+2024-09-14 01:14:36.417 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:14:36.575 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 157.9406ms
+2024-09-14 01:14:48.244 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 01:14:48.265 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:14:48.269 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:14:48.288 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:14:49.675 +07:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:14:49.708 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:14:49.719 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1426.8076ms
+2024-09-14 01:14:49.719 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:14:49.743 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddUserCommand -> User
+Movie.API.Features.Users.AddUserCommand -> Movie.API.Models.Domain.Entities.User
+   at Movie.API.Features.Users.AddUserCommandHandler.Handle(AddUserCommand request, CancellationToken cancellationToken) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Features\Users\AddUserCommandHandler.cs:line 73
+   at Movie.API.Controllers.UserController.Add(AddUserRequest model) in D:\Workplace\MoviesApp\Movie-api\Movie.API\Controllers\UserController.cs:line 35
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-14 01:14:49.751 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 500 null text/plain; charset=utf-8 1507.1662ms
+2024-09-14 01:15:14.036 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 01:15:14.241 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 01:15:14.242 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 01:15:14.245 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 01:15:14.246 +07:00 [INF] Hosting environment: Development
+2024-09-14 01:15:14.246 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 01:15:14.814 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 01:15:15.016 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 202.3129ms
+2024-09-14 01:15:15.028 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 01:15:15.031 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 01:15:15.036 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.8097ms
+2024-09-14 01:15:15.063 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.455ms
+2024-09-14 01:15:15.256 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 01:15:15.410 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 154.1377ms
+2024-09-14 01:15:21.604 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 01:15:21.629 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:15:21.633 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:15:21.650 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:15:22.999 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:15:23.033 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:15:23.049 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:15:23.055 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:15:23.263 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = DateTime2), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [AccessFailedCount], [Avatar], [ConcurrencyStamp], [DisplayName], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [RefreshTokenExpiry], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2024-09-14 01:15:23.290 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-09-14 01:15:23.351 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__p_0 AND [u].[RoleId] = @__p_1
+2024-09-14 01:15:23.354 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0
+2024-09-14 01:15:23.375 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:15:23.383 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+2024-09-14 01:15:23.429 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p20='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p21='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [AccessFailedCount] = @p2, [Avatar] = @p3, [ConcurrencyStamp] = @p4, [DisplayName] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [RefreshToken] = @p15, [RefreshTokenExpiry] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2024-09-14 01:15:23.457 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2024-09-14 01:15:23.478 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__roleId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = @__roleId_0
+2024-09-14 01:15:23.485 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.AddUserResponse'.
+2024-09-14 01:15:23.501 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 1846.5797ms
+2024-09-14 01:15:23.501 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:15:23.507 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 200 null application/json; charset=utf-8 1902.6485ms
+2024-09-14 01:17:42.295 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/user/add - application/json 110
+2024-09-14 01:17:42.310 +07:00 [INF] CORS policy execution successful.
+2024-09-14 01:17:42.310 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:17:42.311 +07:00 [INF] Route matched with {action = "Add", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Add(Movie.API.Requests.AddUserRequest) on controller Movie.API.Controllers.UserController (Movie.API).
+2024-09-14 01:17:42.386 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-14 01:17:42.387 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.AddUserResponse'.
+2024-09-14 01:17:42.387 +07:00 [INF] Executed action Movie.API.Controllers.UserController.Add (Movie.API) in 76.6025ms
+2024-09-14 01:17:42.388 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.UserController.Add (Movie.API)'
+2024-09-14 01:17:42.388 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/user/add - 200 null application/json; charset=utf-8 92.8485ms

@@ -47,7 +47,10 @@ namespace Movie.API
             builder.Services.AddCors(options => options.AddPolicy(corsname, policy =>
             {
                 // Allow all origins
-                policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                policy.WithOrigins("*")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                    
             }));
             builder.Services.AddIdentity<User, Role>(config =>
             {
@@ -87,7 +90,7 @@ namespace Movie.API
             {
                 enpoints.MapGet("/", () => "Hello World!");
                 enpoints.MapGet("api/testenpoints",
-                    context => context.Response.WriteAsync(builder.Configuration.GetValue<string>("JWTSecret")));
+                    context => context.Response.WriteAsync(builder.Configuration.GetValue<string>("JWT:Secret")));
             });
 
             app.MapControllers();

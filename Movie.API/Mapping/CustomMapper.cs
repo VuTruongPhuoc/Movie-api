@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Movie.API.Features.Roles;
+using Movie.API.Features.Users;
 using Movie.API.Models.Domain.Entities;
+using Movie.API.Requests;
 using Movie.API.Responses.DTOs;
 
 namespace Movie.API.AutoMapper
@@ -28,8 +30,9 @@ namespace Movie.API.AutoMapper
     {
         public UserProfile()
         {
-
             CreateMap<User, UserDTO>().ForMember(x => x.DisplayName, d => d.MapFrom(x => x.DisplayName)).ReverseMap();
+            CreateMap<AddUserRequest, AddUserCommand>().ReverseMap();
+            CreateMap<AddRoleCommand, User>().ReverseMap();
         }
     } 
     public class FilmProfile: Profile

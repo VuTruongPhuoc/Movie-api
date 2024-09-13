@@ -18,6 +18,7 @@ namespace Movie.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IFilmRepository, FilmRepository>();
             services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
         #region configure authen
@@ -59,7 +60,7 @@ namespace Movie.API
                     }
                 });
             });
-            var key = Encoding.ASCII.GetBytes(configuration["JWTSecret"]);
+            var key = Encoding.ASCII.GetBytes(configuration["JWT:Secret"]);
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -69,13 +70,13 @@ namespace Movie.API
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = true,
-                    ValidIssuer = configuration["LocalIssuer"],
+                    ValidIssuer = configuration["JWT:ValidIssuer"],
                     ValidateAudience = true,
-                    ValidAudience = configuration["LocalAudience"]
-
+                    ValidAudience = configuration["JWT:ValidAudience"],
+                    ValidateIssuerSigningKey = true,
+                    RequireExpirationTime = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
                 };
             });
             return services;

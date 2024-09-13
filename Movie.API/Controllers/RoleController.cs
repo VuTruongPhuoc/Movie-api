@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,8 @@ namespace Movie.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    //[Authorize(AuthenticationSchemes = "Bearer")]
     public class RoleController : ControllerBase
     {
         private readonly IMediator _imediator;
@@ -25,22 +28,35 @@ namespace Movie.API.Controllers
         }
 
         [HttpGet("getall")]
-        public async Task<Respone> GetRoles()
+        public async Task<Response> GetRoles()
         {
-            var roles = _roleManager.Roles.ToList();
-            var query = new GetRolesQuery()
-            {
-                Roles = CustomMapper.Mapper.Map<List<RoleDTO>>(roles)
-            };
+            var query = new GetRolesQuery();
 
             return await _imediator.Send(query);
         }
-        [HttpPost("insert")]
-        public async Task<Respone> InsertRole([FromBody] RoleDTO role)
+        [HttpPost("add")]
+        public async Task<Response> AddRole([FromBody] RoleDTO role)
         {
-            return await _imediator.Send(new InsertRoleCommand()
+            return await _imediator.Send(new AddRoleCommand()
             {
                 Role = role
+            });
+        }
+        [HttpPost("update")]
+        public async Task<Response> UpdateRole([FromBody] RoleDTO role)
+        {
+            return await _imediator.Send(new UpdateRoleCommand()
+            {
+                Role = role
+            });
+        }
+        [HttpDelete("delete")]
+        public async Task<Response> DeleteRole(string rolename)
+        {
+
+            return await _imediator.Send(new DeleteRoleCommand()
+            {
+               RoleName = rolename
             });
         }
     }

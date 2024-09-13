@@ -8,7 +8,7 @@ namespace Movie.API.Infrastructure.Repositories
     {
         Task<List<T>> GetAllAsync();
         Task<T> GetByIdAsync(object id);
-        Task<T> InsertAsync(T Entity);
+        Task<T> AddAsync(T Entity);
         Task<T> UpdateAsync(T Entity);
         Task<bool> DeleteAsync(object id);
         Task SaveAsync();
@@ -33,7 +33,7 @@ namespace Movie.API.Infrastructure.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task<T> InsertAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
             return entity;
@@ -41,7 +41,7 @@ namespace Movie.API.Infrastructure.Repositories
 
         public async Task<T> UpdateAsync(T entity)
         {
-            _dbContext.Update(entity);
+            _dbSet.Update(entity);
             return entity;
         }
         public async Task<bool> DeleteAsync(object id)
