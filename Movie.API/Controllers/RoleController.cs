@@ -11,7 +11,7 @@ using Movie.API.Responses.DTOs;
 
 namespace Movie.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/role")]
     [ApiController]
 
     //[Authorize(AuthenticationSchemes = "Bearer")]
@@ -27,7 +27,7 @@ namespace Movie.API.Controllers
             _roleManager = roleManager;
         }
 
-        [HttpGet("getall")]
+        [HttpGet("all")]
         public async Task<Response> GetRoles()
         {
             var query = new GetRolesQuery();

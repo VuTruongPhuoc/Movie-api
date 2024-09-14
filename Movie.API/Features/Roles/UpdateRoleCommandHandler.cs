@@ -29,7 +29,7 @@ namespace Movie.API.Features.Roles
                 {
                     Success = false,
                     StatusCode = System.Net.HttpStatusCode.NotFound,
-                    Message = "Không tìm thấy role ",
+                    Message = "Không tìm thấy role",
                     Role = request.Role
                    
                 });
@@ -52,7 +52,6 @@ namespace Movie.API.Features.Roles
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Cập nhật role thành công",
                 Role = request.Role
-
             }); 
         }
     }

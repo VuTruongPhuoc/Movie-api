@@ -44,14 +44,7 @@ namespace Movie.API.Features.Users
                         Message = "Email này đã được đăng ký"
                     });
                 }
-                /*var user1 = CustomMapper.Mapper.Map<AddUserCommand, User>(request);*/
-                var user = new User()
-                {
-                    UserName = request.UserName,
-                    Email = request.Email,
-                    DisplayName = request.DisplayName,
-                    PhoneNumber = request.PhoneNumber,
-                };
+                var user = CustomMapper.Mapper.Map<AddUserCommand, User>(request);
                 await _userRepository.AddAsync(user);
                 await _userManager.AddPasswordAsync(user, request.UserName);
                 await _userManager.AddToRoleAsync(user, "Customer");

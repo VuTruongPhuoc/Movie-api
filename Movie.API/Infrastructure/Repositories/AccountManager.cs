@@ -26,13 +26,15 @@ namespace Movie.API.Infrastructure.Repositories
         }
         public async Task<Response> LoginAsync(LoginRequest model)
         {
-            if (model.Username == "phuoc" && model.Password == "123")
+            var user = await _userManager.FindByNameAsync(model.Username);
+            if (user != null && await _userManager.CheckPasswordAsync(user,model.Password))
             {
                 var claims = new Claim[]
                     {
                         new Claim(ClaimTypes.Name, model.Username),
-                        new Claim(ClaimTypes.Role, "Admin"),
-                        new Claim(ClaimTypes.MobilePhone, "0233294832"),
+                        new Claim(ClaimTypes.Role, "Customer"),
+                        new Claim(ClaimTypes.Email, user.Email),
+                        new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     };
                 var token = GenerateToken(claims);

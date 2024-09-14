@@ -34,7 +34,7 @@ namespace Movie.API
                 });
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization header using the bearer scheme. Enter your token in the text input. Example: Bearer asdkfjds",
+                    Description = "JWT Authorization header using the bearer scheme. Enter your token in the text input. Example: asdkfjds",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Scheme = "Bearer",

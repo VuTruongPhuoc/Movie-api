@@ -1,8 +1,9 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Movie.API.Infrastructure.Data;
@@ -59,6 +60,25 @@ namespace Movie.API
             })
               .AddEntityFrameworkStores<MovieDbContext>()
               .AddDefaultTokenProviders();
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                // Thiết lập về Password
+                options.Password.RequireDigit = false; 
+                options.Password.RequireLowercase = false; 
+                options.Password.RequireNonAlphanumeric = false; 
+                options.Password.RequireUppercase = false;  
+                options.Password.RequiredLength = 2; 
+                options.Password.RequiredUniqueChars = 0;
+
+                // Thiết lập về đăng nhập
+                options.SignIn.RequireConfirmedEmail = false;
+                options.SignIn.RequireConfirmedPhoneNumber = false;
+
+                // Thiết lập về user
+                options.User.AllowedUserNameCharacters =
+                        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            });
 
             builder.Services.AddMediatR(configuration =>
             {
@@ -88,7 +108,7 @@ namespace Movie.API
 
             app.UseEndpoints(enpoints =>
             {
-                enpoints.MapGet("/", () => "Hello World!");
+                //enpoints.MapGet("/", () => "Hello World!");
                 enpoints.MapGet("api/testenpoints",
                     context => context.Response.WriteAsync(builder.Configuration.GetValue<string>("JWT:Secret")));
             });

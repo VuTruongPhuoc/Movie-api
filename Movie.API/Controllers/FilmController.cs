@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace Movie.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/film")]
     [ApiController]
     [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
     public class FilmController : ControllerBase
@@ -28,22 +28,12 @@ namespace Movie.API.Controllers
             _dbContext = dbContext;
             _filmRepository = filmRepository;
         }
-        [HttpGet]
-        [Route("All", Name = "GetAllFilms")]
+        [HttpGet("all")]
         //[AllowAnonymous]
         public async Task<ActionResult<IEnumerable<FilmDTO>>> GetFilms()
         {
             _logger.LogInformation("Start get all films");
             _logger.LogError("Error get all films");
-
-          /*  var films = _dbContext.Films.Select(x => new FilmDTO
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Description = x.Description,
-                Image = x.Image
-            }).ToList();*/
-
             var films = await _filmRepository.GetAllAsync();
             var filmsdto = CustomMapper.Mapper.Map<List<FilmDTO>>(films);
  
@@ -71,8 +61,8 @@ namespace Movie.API.Controllers
             return Ok(filmdto);    
         }
         [HttpPost]
-        [Route("Create")]
-        public async Task<ActionResult<FilmDTO>> CreateFilm([FromBody] FilmDTO model)
+        [Route("add")]
+        public async Task<ActionResult<FilmDTO>> AddFilm([FromBody] FilmDTO model)
         {
             if(model == null)
             {

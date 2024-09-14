@@ -32,7 +32,10 @@ namespace Movie.API.AutoMapper
         {
             CreateMap<User, UserDTO>().ForMember(x => x.DisplayName, d => d.MapFrom(x => x.DisplayName)).ReverseMap();
             CreateMap<AddUserRequest, AddUserCommand>().ReverseMap();
-            CreateMap<AddRoleCommand, User>().ReverseMap();
+            CreateMap<UpdateUserRequest, UpdateUserCommand>().ReverseMap();
+            CreateMap<User, AddUserCommand>().ReverseMap();
+            CreateMap<User, UpdateUserCommand>().ReverseMap();
+
         }
     } 
     public class FilmProfile: Profile

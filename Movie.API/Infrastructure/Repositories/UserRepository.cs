@@ -7,6 +7,7 @@ namespace Movie.API.Infrastructure.Repositories
 {
     public interface IUserRepository : IGenericRepository<User>
     {
+        Task<bool> DeleteUserAsync(string username);
     }
     public class UserRepository : GenericRepository<User>,IUserRepository
     {
@@ -27,12 +28,11 @@ namespace Movie.API.Infrastructure.Repositories
             await _userManager.UpdateAsync(entity);
             return await Task.FromResult(entity);
         }
-        public async Task<bool> DeleteAsync(string username)
+        public async Task<bool> DeleteUserAsync(string username)
         {
             var user = await _userManager.FindByNameAsync(username);
             await _userManager.DeleteAsync(user);
             return await Task.FromResult(true);
         }
-
     }
 }
