@@ -15,7 +15,6 @@ namespace Movie.API.Controllers
 {
     [Route("api/account")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Bearer",Roles = "Admin")]
     public class AccountController : ControllerBase
     {
         public readonly UserManager<User> _userManager;
@@ -36,7 +35,7 @@ namespace Movie.API.Controllers
         [HttpPost("register")]
         public async Task<Response> Register([FromBody] RegisterRequest model)
         {
-            return new Response();
+            return await _accountManager.RegisterAsync(model);
         }
         [HttpPost("refreshtoken")]
         public async Task<Response> Refresh([FromBody] RefreshTokenRequest model)

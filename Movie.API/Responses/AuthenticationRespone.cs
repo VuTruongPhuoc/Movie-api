@@ -8,6 +8,7 @@
         public DateTime Expiration { get; set; }
         public string RefreshToken { get; set; }
     }
+    public class RegisterResponse : Response { }
     public class RefreshTokenRespone : Response { }
     
 }

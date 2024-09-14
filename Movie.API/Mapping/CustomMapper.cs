@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Movie.API.Features.Categories;
 using Movie.API.Features.Roles;
 using Movie.API.Features.Users;
 using Movie.API.Models.Domain.Entities;
@@ -17,6 +18,7 @@ namespace Movie.API.AutoMapper
                 cfg.AddProfile<UserProfile>();
                 cfg.AddProfile<FilmProfile>();
                 cfg.AddProfile<RoleProfile>();
+                cfg.AddProfile<CategoryProfile>();
             });
             var mapper = config.CreateMapper();
             return mapper;
@@ -35,7 +37,7 @@ namespace Movie.API.AutoMapper
             CreateMap<UpdateUserRequest, UpdateUserCommand>().ReverseMap();
             CreateMap<User, AddUserCommand>().ReverseMap();
             CreateMap<User, UpdateUserCommand>().ReverseMap();
-
+            CreateMap<User, RegisterRequest>().ReverseMap();
         }
     } 
     public class FilmProfile: Profile
@@ -51,6 +53,17 @@ namespace Movie.API.AutoMapper
         public RoleProfile()
         {
             CreateMap<Role, RoleDTO>().ReverseMap();
+        }
+    }
+    public class CategoryProfile: Profile
+    {
+        public CategoryProfile()
+        {
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<Category, AddCategoryCommand>().ReverseMap();
+            CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
+            CreateMap<CategoryDTO, UpdateCategoryRequest>().ReverseMap();
+            CreateMap<UpdateCategoryCommand, UpdateCategoryRequest>().ReverseMap();
         }
     }
 }
