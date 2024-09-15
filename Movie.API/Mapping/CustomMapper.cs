@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Movie.API.Features.Categories;
+using Movie.API.Features.Countries;
 using Movie.API.Features.Roles;
+using Movie.API.Features.Schedules;
 using Movie.API.Features.Users;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
@@ -19,6 +21,8 @@ namespace Movie.API.AutoMapper
                 cfg.AddProfile<FilmProfile>();
                 cfg.AddProfile<RoleProfile>();
                 cfg.AddProfile<CategoryProfile>();
+                cfg.AddProfile<CountryProfile>();
+                cfg.AddProfile<ScheduleProfile>();
             });
             var mapper = config.CreateMapper();
             return mapper;
@@ -64,6 +68,28 @@ namespace Movie.API.AutoMapper
             CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
             CreateMap<CategoryDTO, UpdateCategoryRequest>().ReverseMap();
             CreateMap<UpdateCategoryCommand, UpdateCategoryRequest>().ReverseMap();
+        }
+    }
+    public class CountryProfile : Profile
+    {
+        public CountryProfile()
+        {
+            CreateMap<Country, CountryDTO>().ReverseMap();
+            CreateMap<Country, AddCountryCommand>().ReverseMap();
+            CreateMap<Country, UpdateCountryCommand>().ReverseMap();
+            CreateMap<CountryDTO, UpdateCategoryRequest>().ReverseMap();
+            CreateMap<UpdateCountryCommand, UpdateCategoryRequest>().ReverseMap();
+        }
+    }
+    public class ScheduleProfile : Profile
+    {
+        public ScheduleProfile()
+        {
+            CreateMap<Schedule, ScheduleDTO>().ReverseMap();
+            CreateMap<Schedule, AddScheduleCommand>().ReverseMap();
+            CreateMap<Schedule, UpdateScheduleCommand>().ReverseMap();
+            CreateMap<ScheduleDTO, UpdateScheduleRequest>().ReverseMap();
+            CreateMap<UpdateScheduleCommand, UpdateScheduleRequest>().ReverseMap();
         }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Movie.API.AutoMapper;
 using Movie.API.Features.Categories;
+using Movie.API.Features.Countries;
 using Movie.API.Requests;
 using Movie.API.Responses;
 

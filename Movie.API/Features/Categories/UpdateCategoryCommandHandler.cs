@@ -40,7 +40,7 @@ namespace Movie.API.Features.Categories
                     Message = "Thể loại đã tồn tại",
                 });
             }
-            CustomMapper.Mapper.Map<UpdateCategoryCommand,Category>(request, category);
+            CustomMapper.Mapper.Map<UpdateCategoryCommand, Category>(request, category);
             category.LastModifiedDate = DateTime.UtcNow;
             await _categoryRepository.UpdateAsync(category);
             await _categoryRepository.SaveAsync();

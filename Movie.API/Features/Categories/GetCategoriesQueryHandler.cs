@@ -20,12 +20,12 @@ namespace Movie.API.Features.Categories
 
             var dtos = CustomMapper.Mapper.Map<List<CategoryDTO>>(categories);
 
-            return await Task.FromResult(new GetCategoriesResponse()
+            return await Task.FromResult(new DataRespone()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Thành công",
-                Categories = dtos
+                Data = dtos
             });
         }
     }

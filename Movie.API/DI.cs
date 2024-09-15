@@ -20,6 +20,8 @@ namespace Movie.API
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<IScheduleRepository, ScheduleRepository>();
             return services;
         }
         #region configure authen

@@ -5327,3 +5327,73 @@ FROM [Categories] AS [c]
 2024-09-14 22:38:41.094 +07:00 [INF] Executed action Movie.API.Controllers.CategoryController.GetCategories (Movie.API) in 30.3674ms
 2024-09-14 22:38:41.094 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.CategoryController.GetCategories (Movie.API)'
 2024-09-14 22:38:41.094 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/category/all - 200 null application/json; charset=utf-8 43.1731ms
+2024-09-14 23:55:40.993 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 23:55:41.138 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 23:55:41.138 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 23:55:41.140 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 23:55:41.141 +07:00 [INF] Hosting environment: Development
+2024-09-14 23:55:41.141 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 23:55:41.512 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:55:41.667 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 155.878ms
+2024-09-14 23:55:41.692 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:55:41.692 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:55:41.695 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.1775ms
+2024-09-14 23:55:41.721 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.6833ms
+2024-09-14 23:55:41.995 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:55:42.151 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.9657ms
+2024-09-14 23:59:24.977 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-14 23:59:25.095 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-14 23:59:25.095 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-14 23:59:25.097 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-14 23:59:25.097 +07:00 [INF] Hosting environment: Development
+2024-09-14 23:59:25.097 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-14 23:59:25.573 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:59:25.723 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 151.566ms
+2024-09-14 23:59:25.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:59:25.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:59:25.739 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.3336ms
+2024-09-14 23:59:25.759 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.4529ms
+2024-09-14 23:59:26.145 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:59:26.294 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.4251ms
+2024-09-14 23:59:30.877 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:59:30.887 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 9.5891ms
+2024-09-14 23:59:30.897 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:59:30.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:59:30.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.7365ms
+2024-09-14 23:59:30.908 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.7334ms
+2024-09-14 23:59:31.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:59:31.036 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.5264ms
+2024-09-14 23:59:33.909 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:59:33.911 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 1.8242ms
+2024-09-14 23:59:33.924 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:59:33.927 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:59:33.928 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.4593ms
+2024-09-14 23:59:33.932 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.8223ms
+2024-09-14 23:59:34.038 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:59:34.051 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1093ms
+2024-09-14 23:59:34.669 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:59:34.671 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 2.0521ms
+2024-09-14 23:59:34.683 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:59:34.685 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:59:34.686 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 0.5479ms
+2024-09-14 23:59:34.688 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.9483ms
+2024-09-14 23:59:34.804 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:59:34.815 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2035ms
+2024-09-14 23:59:35.528 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-14 23:59:35.533 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 4.6059ms
+2024-09-14 23:59:35.563 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-14 23:59:35.565 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.5064ms
+2024-09-14 23:59:35.582 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-14 23:59:35.587 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.4489ms
+2024-09-14 23:59:35.808 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-14 23:59:35.817 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8.9187ms
+2024-09-14 23:59:43.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/country/all - null null
+2024-09-14 23:59:43.797 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.CountryController.GetCategories (Movie.API)'
+2024-09-14 23:59:43.828 +07:00 [INF] Route matched with {action = "GetCategories", controller = "Country"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] GetCategories() on controller Movie.API.Controllers.CountryController (Movie.API).
+2024-09-14 23:59:45.313 +07:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Description], [c].[IsActive], [c].[LastModifiedDate], [c].[Name], [c].[Status]
+FROM [Countries] AS [c]
+2024-09-14 23:59:45.472 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.GetCountriesResponse'.
+2024-09-14 23:59:45.497 +07:00 [INF] Executed action Movie.API.Controllers.CountryController.GetCategories (Movie.API) in 1664.8598ms
+2024-09-14 23:59:45.498 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.CountryController.GetCategories (Movie.API)'
+2024-09-14 23:59:45.505 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/country/all - 200 null application/json; charset=utf-8 1738.372ms
