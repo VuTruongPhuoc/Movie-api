@@ -140,7 +140,6 @@ namespace Movie.API.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -303,11 +302,7 @@ namespace Movie.API.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<int>("HistoryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
@@ -343,8 +338,6 @@ namespace Movie.API.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.HasIndex("HistoryId");
-
                     b.HasIndex("ScheduleId");
 
                     b.ToTable("Films", (string)null);
@@ -362,7 +355,7 @@ namespace Movie.API.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("FilmCategories");
+                    b.ToTable("FilmCategories", (string)null);
                 });
 
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.History", b =>
@@ -375,6 +368,9 @@ namespace Movie.API.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("FilmId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -390,6 +386,8 @@ namespace Movie.API.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FilmId");
 
                     b.HasIndex("UserId");
 
@@ -512,7 +510,6 @@ namespace Movie.API.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -545,9 +542,6 @@ namespace Movie.API.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("FilmId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -563,8 +557,6 @@ namespace Movie.API.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("FilmId");
 
                     b.ToTable("Sections", (string)null);
                 });
@@ -659,7 +651,6 @@ namespace Movie.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DisplayName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -818,12 +809,6 @@ namespace Movie.API.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movie.API.Models.Domain.Entities.History", "History")
-                        .WithMany("Films")
-                        .HasForeignKey("HistoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Movie.API.Models.Domain.Entities.Schedule", "Schedule")
                         .WithMany("Films")
                         .HasForeignKey("ScheduleId")
@@ -831,8 +816,6 @@ namespace Movie.API.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
-
-                    b.Navigation("History");
 
                     b.Navigation("Schedule");
                 });
@@ -858,11 +841,19 @@ namespace Movie.API.Migrations
 
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.History", b =>
                 {
+                    b.HasOne("Movie.API.Models.Domain.Entities.Film", "Film")
+                        .WithMany("Histories")
+                        .HasForeignKey("FilmId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Movie.API.Models.Domain.Entities.User", "User")
                         .WithMany("Histories")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Film");
 
                     b.Navigation("User");
                 });
@@ -895,17 +886,6 @@ namespace Movie.API.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
-                });
-
-            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Section", b =>
-                {
-                    b.HasOne("Movie.API.Models.Domain.Entities.Film", "Film")
-                        .WithMany("Sections")
-                        .HasForeignKey("FilmId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Film");
                 });
 
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Server", b =>
@@ -954,16 +934,11 @@ namespace Movie.API.Migrations
 
                     b.Navigation("Episodes");
 
+                    b.Navigation("Histories");
+
                     b.Navigation("Reviews");
 
-                    b.Navigation("Sections");
-
                     b.Navigation("Tracks");
-                });
-
-            modelBuilder.Entity("Movie.API.Models.Domain.Entities.History", b =>
-                {
-                    b.Navigation("Films");
                 });
 
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Role", b =>

@@ -16,6 +16,9 @@ namespace Movie.API.Infrastructure.Data.Configuration
                 .WithMany(x => x.Histories)
                 .HasForeignKey(x => x.UserId);
 
+            builder.HasOne(x => x.Film)
+                .WithMany(x => x.Histories)
+                .HasForeignKey(x => x.FilmId);
         }
     }
 }

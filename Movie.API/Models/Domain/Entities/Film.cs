@@ -12,21 +12,19 @@ namespace Movie.API.Models.Domain.Entities
     {
         public string Name { get; set; } = default!;
         public string Description { get; set; } = default!;
-        public string Image { get; set; } = default!;
+        public string? Image { get; set; }
         public int NumberOfEpisodes { get; set; }
         public int ReleaseYear { get; set; }
         public long ViewCount { get; set; }
         public int CountryId { get; set; }
-        public int HistoryId { get; set; }
         public int ScheduleId { get; set; }
         public Country? Country { get; set; }
-        public History? History { get; set; }
         public Schedule? Schedule { get; set; }
         public virtual ICollection<Episode> Episodes { get; set; } 
-        public virtual ICollection<Section> Sections { get; set; } 
         public virtual ICollection<Review> Reviews { get; set; } 
         public virtual ICollection<Track> Tracks { get; set; } 
         public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<History> Histories { get; set; }
 
     }
 }

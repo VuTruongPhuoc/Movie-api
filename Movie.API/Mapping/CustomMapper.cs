@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Movie.API.Features.Categories;
 using Movie.API.Features.Countries;
+using Movie.API.Features.Films;
 using Movie.API.Features.Roles;
 using Movie.API.Features.Schedules;
 using Movie.API.Features.Users;
@@ -48,8 +49,12 @@ namespace Movie.API.AutoMapper
     {
         public FilmProfile()
         {
-
             CreateMap<Film, FilmDTO>().ReverseMap();
+            CreateMap<Film, AddFilmCommand>().ReverseMap();
+            CreateMap<Film, UpdateFilmCommand>().ReverseMap();
+            CreateMap<Film, UpdateFilmRequest>().ReverseMap();
+            CreateMap<AddFilmRequest, AddFilmCommand>().ReverseMap();
+            CreateMap<UpdateFilmCommand, UpdateFilmRequest>().ReverseMap();
         }
     }
     public class RoleProfile: Profile

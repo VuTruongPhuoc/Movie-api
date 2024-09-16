@@ -13,10 +13,6 @@ namespace Movie.API.Infrastructure.Data.Configuration
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(30);
-
-            builder.HasOne(x => x.Film)
-                .WithMany(x => x.Sections)
-                .HasForeignKey(x => x.FilmId);
             
         }
     }

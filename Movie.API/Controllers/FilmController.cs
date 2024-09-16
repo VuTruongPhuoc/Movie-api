@@ -5,78 +5,61 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using Movie.API.AutoMapper;
+using Movie.API.Features.Countries;
+using Movie.API.Features.Films;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;
+using Movie.API.Requests;
+using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 using System.Security.Claims;
 
 namespace Movie.API.Controllers
 {
     [Route("api/film")]
-    [ApiController]
-    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
+    [ApiController] 
     public class FilmController : ControllerBase
     {
-        private readonly ILogger<FilmController> _logger;
-        private readonly MovieDbContext _dbContext;
-        private readonly IFilmRepository _filmRepository;
-
-        public FilmController(ILogger<FilmController> logger, MovieDbContext dbContext, IFilmRepository filmRepository)
+        private readonly IMediator _mediator;
+        public FilmController(IMediator mediator)
         {
-            _logger = logger;
-            _dbContext = dbContext;
-            _filmRepository = filmRepository;
+            _mediator = mediator;
         }
         [HttpGet("all")]
-        //[AllowAnonymous]
-        public async Task<ActionResult<IEnumerable<FilmDTO>>> GetFilms()
+        public async Task<Response> GetFilms()
         {
-            _logger.LogInformation("Start get all films");
-            _logger.LogError("Error get all films");
-            var films = await _filmRepository.GetAllAsync();
-            var filmsdto = CustomMapper.Mapper.Map<List<FilmDTO>>(films);
- 
-            return Ok(filmsdto);
+            var query = new GetFilmsQuery();
+            return await _mediator.Send(query);
         }
-        [HttpGet]
-        [Route("{id:int}", Name = "GetFilmById")]
-        [ProducesResponseType(typeof(FilmDTO), 200)]
-        public async Task<ActionResult<FilmDTO>> GetFilmById (int id)
+        [HttpGet("{id}")]
+        public async Task<Response> GetFilm(int id)
         {
-            if(id < 0)
-            {
-                _logger.LogWarning("Bad Request");
-                return BadRequest();
-            }
-            var film = await _dbContext.Films.SingleOrDefaultAsync(x => x.Id == id);
-           
-            if(film == null)
-            {
-                _logger.LogError("Film not found with given Id");
-                return NotFound($"The film with id {id} not found");
-            }
-            var filmdto = CustomMapper.Mapper.Map<FilmDTO>(film);
-
-            return Ok(filmdto);    
+            var query = new GetFilmQuery();
+            query.Id = id;
+            return await _mediator.Send(query);
         }
-        [HttpPost]
-        [Route("add")]
-        public async Task<ActionResult<FilmDTO>> AddFilm([FromBody] FilmDTO model)
+        [HttpPost("add")]
+        public async Task<Response> AddFilm([FromBody] AddFilmRequest model)
         {
-            if(model == null)
-            {
-                _logger.LogError("Bad request");
-                return BadRequest();
-            }
-
-            var film = CustomMapper.Mapper.Map<Film>(model);
-            film.NumberOfEpisodes = 40;
-            await _dbContext.Films.AddAsync(film);
-            await _dbContext.SaveChangesAsync();
-            model.Id = film.Id;
-
-            return CreatedAtRoute("GetFilmById", new {id = model.Id}, model);
-        }     
+            var command = new AddFilmCommand();
+            CustomMapper.Mapper.Map<AddFilmRequest, AddFilmCommand>(model, command);
+            return await _mediator.Send(command);
+        }
+        [HttpPost("update/{id}")]
+        public async Task<Response> UpdateFilm(int id, [FromBody] UpdateFilmRequest model)
+        {
+            var command = new UpdateFilmCommand();
+            command.Id = id;
+            CustomMapper.Mapper.Map<UpdateFilmRequest, UpdateFilmCommand>(model, command);
+            return await _mediator.Send(command);
+        }
+        [HttpDelete("delete/{id}")]
+        public async Task<Response> DeleteFilm(int id)
+        {
+            var command = new DeleteFilmCommand();
+            command.Id = id;
+            return await _mediator.Send(command);
+        }
     }
 }

@@ -14,16 +14,13 @@ namespace Movie.API.Infrastructure.Data.Configuration
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(255);
-            builder.Property(x => x.Image).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.Image).HasMaxLength(255);
             builder.Property(x => x.NumberOfEpisodes).IsRequired().HasMaxLength(10);
             builder.Property(x => x.ReleaseYear).IsRequired().HasMaxLength(10);
 
             builder.HasOne(x => x.Country)
                 .WithMany(x => x.Films)
                 .HasForeignKey(x => x.CountryId);
-            builder.HasOne(x => x.History)
-                .WithMany(x => x.Films)
-                .HasForeignKey(x => x.HistoryId);
             builder.HasOne(x => x.Schedule)
                 .WithMany(x => x.Films)
                 .HasForeignKey(x => x.ScheduleId);

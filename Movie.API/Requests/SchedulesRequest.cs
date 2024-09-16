@@ -1,8 +1,5 @@
 ﻿namespace Movie.API.Requests
 {
-    public class SchedulesRequest
-    {
-    }
     public class AddScheduleRequest
     {
         public string Name { get; set; }
