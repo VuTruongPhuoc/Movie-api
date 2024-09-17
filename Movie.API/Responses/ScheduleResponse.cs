@@ -2,9 +2,6 @@
 
 namespace Movie.API.Responses
 {
-    public class ScheduleResponse
-    {
-    }
     public class GetSchedulesResponse : Response
     {
         public List<ScheduleDTO> Schedules { get; set; }

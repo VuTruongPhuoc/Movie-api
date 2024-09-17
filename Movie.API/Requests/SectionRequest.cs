@@ -9,7 +9,6 @@
     public class UpdateSectionRequest
     {
         public string Name { get; set; }
-        public string Description { get; set; }
         public DateTime LastModifiedDate { get; set; } = DateTime.UtcNow;
         public bool IsActive { get; set; }
     }

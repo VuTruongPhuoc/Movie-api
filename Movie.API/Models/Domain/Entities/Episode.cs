@@ -16,6 +16,5 @@ namespace Movie.API.Models.Domain.Entities
         public string Link { get; set; } = default!;
         public Film Film { get; set; }
         public Section Section { get; set; }
-        public virtual ICollection<Server> Servers { get; set; }
     }
 }

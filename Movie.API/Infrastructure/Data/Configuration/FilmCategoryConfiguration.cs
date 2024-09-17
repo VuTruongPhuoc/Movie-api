@@ -9,6 +9,7 @@ namespace Movie.API.Infrastructure.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<FilmCategory> builder)
         {
+            builder.ToTable("FilmCategories");
             builder.HasKey(x => new { x.FilmId, x.CategoryId });
         }
     }

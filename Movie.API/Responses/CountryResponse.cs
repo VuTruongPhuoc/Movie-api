@@ -2,9 +2,6 @@
 
 namespace Movie.API.Responses
 {
-    public class CountryResponse
-    {
-    }
     public class GetCountriesResponse : Response
     {
         public List<CountryDTO> Countries { get; set; }

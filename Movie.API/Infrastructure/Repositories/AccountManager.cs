@@ -25,8 +25,13 @@ namespace Movie.API.Infrastructure.Repositories
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<Role> _roleManager;    
         private readonly IConfiguration _configuration;
-        public readonly ILogger<AccountManager> _logger;
-        public AccountManager(MovieDbContext dbContext,UserManager<User> userManager,RoleManager<Role> roleManager,IConfiguration configuration, ILogger<AccountManager> logger)
+        private readonly ILogger<AccountManager> _logger;
+        public AccountManager(
+            MovieDbContext dbContext,
+            UserManager<User> userManager,
+            RoleManager<Role> roleManager,
+            IConfiguration configuration, 
+            ILogger<AccountManager> logger)
         {
             _dbContext = dbContext;
             _userManager = userManager;
@@ -45,6 +50,7 @@ namespace Movie.API.Infrastructure.Repositories
                 var claims = new Claim[]
                     {
                         new Claim(ClaimTypes.Name, model.Username),
+                        new Claim("UserId", user.Id),
                         new Claim(ClaimTypes.Role, role.Name),
                         new Claim(ClaimTypes.Email, user.Email),
                         new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),

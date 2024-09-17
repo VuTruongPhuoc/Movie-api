@@ -283,6 +283,21 @@ namespace Movie.API.Migrations
                     b.ToTable("Episodes", (string)null);
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.EpisodeServer", b =>
+                {
+                    b.Property<int>("ServerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EpisodeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ServerId", "EpisodeId");
+
+                    b.HasIndex("EpisodeId");
+
+                    b.ToTable("EpisodeServers", (string)null);
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Film", b =>
                 {
                     b.Property<int>("Id")
@@ -575,9 +590,6 @@ namespace Movie.API.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EpisodeId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -593,8 +605,6 @@ namespace Movie.API.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EpisodeId");
 
                     b.ToTable("Servers", (string)null);
                 });
@@ -801,6 +811,25 @@ namespace Movie.API.Migrations
                     b.Navigation("Section");
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.EpisodeServer", b =>
+                {
+                    b.HasOne("Movie.API.Models.Domain.Entities.Episode", "Episode")
+                        .WithMany()
+                        .HasForeignKey("EpisodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movie.API.Models.Domain.Entities.Server", "Server")
+                        .WithMany()
+                        .HasForeignKey("ServerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Episode");
+
+                    b.Navigation("Server");
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Film", b =>
                 {
                     b.HasOne("Movie.API.Models.Domain.Entities.Country", "Country")
@@ -888,17 +917,6 @@ namespace Movie.API.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Server", b =>
-                {
-                    b.HasOne("Movie.API.Models.Domain.Entities.Episode", "Episode")
-                        .WithMany("Servers")
-                        .HasForeignKey("EpisodeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Episode");
-                });
-
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Track", b =>
                 {
                     b.HasOne("Movie.API.Models.Domain.Entities.Film", "Film")
@@ -921,11 +939,6 @@ namespace Movie.API.Migrations
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Country", b =>
                 {
                     b.Navigation("Films");
-                });
-
-            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Episode", b =>
-                {
-                    b.Navigation("Servers");
                 });
 
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Film", b =>

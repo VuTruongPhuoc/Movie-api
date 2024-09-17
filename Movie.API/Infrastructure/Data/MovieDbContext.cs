@@ -13,6 +13,7 @@ namespace Movie.API.Infrastructure.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Episode> Episodes { get; set; }
+        public DbSet<EpisodeServer> EpisodeServers { get; set; }
         public DbSet<Film> Films { get; set; }
         public DbSet<FilmCategory> FilmCategories { get; set; }
         public DbSet<History> Histories { get; set; }
@@ -42,6 +43,7 @@ namespace Movie.API.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new ServerConfiguration());
             modelBuilder.ApplyConfiguration(new TrackConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new EpisodeServerConfiguration());
 
             base.OnModelCreating(modelBuilder);
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())

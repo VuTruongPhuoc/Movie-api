@@ -15,15 +15,12 @@ namespace Movie.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> _logger;
-        private readonly UserManager<User> _userManager;
-        private readonly RoleManager<Role> _roleManager;
+
         private readonly IMediator _mediator;
         
-        public UserController(ILogger<UserController> logger,UserManager<User> userManager, RoleManager<Role> roleManager, IMediator mediator)
+        public UserController(ILogger<UserController> logger, IMediator mediator)
         {
             _logger = logger;
-            _userManager = userManager; 
-            _roleManager = roleManager;
             _mediator = mediator;
         }
         [HttpGet("all")]

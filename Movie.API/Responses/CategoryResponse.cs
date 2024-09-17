@@ -2,9 +2,6 @@
 
 namespace Movie.API.Responses
 {
-    public class CategoryResponse
-    {
-    }
     public class GetCategoriesResponse : Response
     {
         public List<CategoryDTO> Categories { get; set; }

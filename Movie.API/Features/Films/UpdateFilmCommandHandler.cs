@@ -21,7 +21,7 @@ namespace Movie.API.Features.Films
         }
         public async Task<Response> Handle(UpdateFilmCommand request, CancellationToken cancellationToken)
         {
-            if (request.Id == null)
+            if (request is null)
             {
                 return await Task.FromResult(new UpdateFilmResponse()
                 {
