@@ -21,26 +21,26 @@ namespace Movie.API.Features.Films
 
         public async Task<Response> Handle(AddFilmCommand request, CancellationToken cancellationToken)
         {
-            var country = CustomMapper.Mapper.Map<Film>(request);
-            var countryExists = await _dbContext.Countries.SingleOrDefaultAsync(x => x.Name == country.Name);
-            if (countryExists != null)
+            var film = CustomMapper.Mapper.Map<Film>(request);
+            var filmExists = await _dbContext.Films.SingleOrDefaultAsync(x => x.Name == film.Name);
+            if (filmExists != null)
             {
                 return await Task.FromResult(new AddFilmResponse()
                 {
                     Success = false,
                     StatusCode = System.Net.HttpStatusCode.BadRequest,
-                    Message = "Quốc gia đã tồn tại",
+                    Message = "Phim đã tồn tại",
                 });
             }
-            country.CreateDate = DateTime.UtcNow;
-            await _filmRepository.AddAsync(country);
+            film.CreateDate = DateTime.UtcNow;
+            await _filmRepository.AddAsync(film);
             await _filmRepository.SaveAsync();
             return await Task.FromResult(new AddFilmResponse()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Message = "Thêm quốc gia thành công",
-                Film = CustomMapper.Mapper.Map<FilmDTO>(country)
+                Message = "Thêm phim thành công",
+                Film = CustomMapper.Mapper.Map<FilmDTO>(film)
             });
         }
 

@@ -20,13 +20,13 @@ namespace Movie.API.Features.Films
         }
         public async Task<Response> Handle(DeleteFilmCommand request, CancellationToken cancellationToken)
         {
-            if (request.Id == null)
+            if (request is null)
             {
                 return await Task.FromResult(new DeleteFilmResponse()
                 {
                     Success = false,
                     StatusCode = System.Net.HttpStatusCode.NotFound,
-                    Message = "Không tìm thấy Film cần xóa"
+                    Message = "Không tìm thấy phim cần xóa"
                 });
             }
             var Film = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
@@ -36,7 +36,7 @@ namespace Movie.API.Features.Films
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Message = "Xóa Film thành công",
+                Message = "Xóa phim thành công",
                 Film = CustomMapper.Mapper.Map<FilmDTO>(Film)
             });
 

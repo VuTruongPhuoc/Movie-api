@@ -19,8 +19,9 @@ namespace Movie.API.Features.Categories
             _dbContext = dbContext;
         }
         public async Task<Response> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
-        {   
-            if (request.Id == null)
+        {             
+            var category = await _dbContext.Categories.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            if (category is null)
             {
                 return await Task.FromResult(new UpdateCategoryResponse()
                 {
@@ -29,7 +30,6 @@ namespace Movie.API.Features.Categories
                     Message = "Không tìm thấy thể loại cần cập nhật",
                 });
             }
-            var category = await _dbContext.Categories.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
             var categoryName = await _dbContext.Categories.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
             if (categoryName?.Name != category?.Name && categoryName != null)
             {

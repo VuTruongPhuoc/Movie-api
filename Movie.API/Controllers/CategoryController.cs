@@ -5,6 +5,7 @@ using Movie.API.Features.Categories;
 using Movie.API.Features.Countries;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using System.Net;
 
 namespace Movie.API.Controllers
 {
@@ -24,26 +25,41 @@ namespace Movie.API.Controllers
             return await _mediator.Send(query);
         }
         [HttpPost("add")]
-        public async Task<Response> AddCategory([FromBody] AddCategoryRequest model)
+        public async Task<IActionResult> AddCategory([FromBody] AddCategoryRequest model)
         {
-            var command = new AddCategoryCommand();
-            command.Name = model.Name;
-            return await _mediator.Send(command);
+            var command = new AddCategoryCommand { Name = model.Name };
+            var result = await _mediator.Send(command);
+            if (result.StatusCode == HttpStatusCode.BadRequest)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
         [HttpPost("update/{id}")]
-        public async Task<Response> UpdateCategory(int id,[FromBody] UpdateCategoryRequest model)
+        public async Task<IActionResult> UpdateCategory(int id,[FromBody] UpdateCategoryRequest model)
         {
-            var command = new UpdateCategoryCommand();
-            command.Id = id;
+            var command = new UpdateCategoryCommand() { Id = id};
             CustomMapper.Mapper.Map<UpdateCategoryRequest, UpdateCategoryCommand>(model,command);
-            return await _mediator.Send(command);
+            var result = await _mediator.Send(command); 
+            if (result.StatusCode == HttpStatusCode.BadRequest)
+            {
+                return BadRequest(result);
+            } else if(result.StatusCode == HttpStatusCode.NotFound)
+            {
+                return NotFound(result);
+            }
+            return Ok(result);
         }
         [HttpDelete("delete/{id}")]
-        public async Task<Response> DeleteCategory(int id)
+        public async Task<IActionResult> DeleteCategory(int id)
         {
-            var command = new DeleteCategoryCommand();
-            command.Id = id;
-            return await _mediator.Send(command);
+            var command = new DeleteCategoryCommand() { Id = id };
+            var result = await _mediator.Send(command);
+            if (result.StatusCode == HttpStatusCode.BadRequest)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
         }
 
     }

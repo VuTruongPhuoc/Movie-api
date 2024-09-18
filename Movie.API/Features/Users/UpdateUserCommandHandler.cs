@@ -23,15 +23,6 @@ namespace Movie.API.Features.Users
         }
         public async Task<UpdateUserResponse> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
-            if(request.UserName is null)
-            {
-                return await Task.FromResult(new UpdateUserResponse()
-                {
-                    Success = false,
-                    StatusCode = System.Net.HttpStatusCode.BadRequest,
-                    Message = "Vui lòng nhập user cần cập nhật"
-                });
-            }
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user is null)
             {

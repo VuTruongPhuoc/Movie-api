@@ -20,15 +20,6 @@ namespace Movie.API.Features.Countries
         }
         public async Task<Response> Handle(UpdateCountryCommand request, CancellationToken cancellationToken)
         {   
-            if (request is null)
-            {
-                return await Task.FromResult(new UpdateCountryResponse()
-                {
-                    Success = false,
-                    StatusCode = System.Net.HttpStatusCode.NotFound,
-                    Message = "Không tìm thấy quốc gia cần cập nhật",
-                });
-            }
             var country = await _dbContext.Countries.FindAsync(request.Id);
             if (country is null ) {
                 return await Task.FromResult(new UpdateCountryResponse()

@@ -1,5 +1,6 @@
 ﻿using Azure.Core;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -42,22 +43,23 @@ namespace Movie.API.Infrastructure.Repositories
         public async Task<Response> LoginAsync(LoginRequest model)
         {
             var user = await _userManager.FindByNameAsync(model.Username);
-           
-            if (user != null && await _userManager.CheckPasswordAsync(user,model.Password))
+
+            if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
                 var roleId = (await _dbContext.UserRoles.SingleOrDefaultAsync(x => x.UserId == user.Id)).RoleId;
                 var role = await _roleManager.FindByIdAsync(roleId);
                 var claims = new Claim[]
-                    {
-                        new Claim(ClaimTypes.Name, model.Username),
-                        new Claim("UserId", user.Id),
-                        new Claim(ClaimTypes.Role, role.Name),
-                        new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
-                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-                    };
+                {
+            new Claim(ClaimTypes.Name, model.Username),
+            new Claim("UserId", user.Id),
+            new Claim(ClaimTypes.Role, role.Name),
+            new Claim(ClaimTypes.Email, user.Email),
+            new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                };
                 var token = GenerateToken(claims);
                 var jwttoken = new JwtSecurityTokenHandler().WriteToken(token);
+
                 return new LoginRespone()
                 {
                     Success = true,
@@ -71,12 +73,12 @@ namespace Movie.API.Infrastructure.Repositories
             }
             else
             {
-                return new LoginRespone()
+                return new Response()
                 {
                     Success = false,
                     StatusCode = HttpStatusCode.Unauthorized,
                     Message = "Tên tài khoản hoặc mật khẩu không đúng",
-                    Username = model.Username,
+
                 };
             }
         }

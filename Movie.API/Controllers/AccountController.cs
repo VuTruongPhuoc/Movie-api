@@ -28,14 +28,30 @@ namespace Movie.API.Controllers
         }
         [AllowAnonymous]
         [HttpPost("login")]
-        public async Task<Response> Login([FromBody] LoginRequest model)
+        public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
-            return await _accountManager.LoginAsync(model);
+            var loginResponse = await _accountManager.LoginAsync(model);
+
+            if (!loginResponse.Success)
+            {
+                return Unauthorized(loginResponse);
+            }
+            return Ok(loginResponse);
         }
         [HttpPost("register")]
-        public async Task<Response> Register([FromBody] RegisterRequest model)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest model)
         {
-            return await _accountManager.RegisterAsync(model);
+            var registerResponse = await _accountManager.RegisterAsync(model);
+            if (!registerResponse.Success)
+            {
+                return BadRequest(registerResponse);
+            }
+            return Ok(registerResponse);
+        }
+        [HttpPost("forgotpassword")]
+        public async Task<Response> ForgotPassword()
+        {
+            return new Response();
         }
         [HttpPost("refreshtoken")]
         public async Task<Response> Refresh([FromBody] RefreshTokenRequest model)

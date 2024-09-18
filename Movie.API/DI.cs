@@ -27,6 +27,7 @@ namespace Movie.API
             services.AddScoped<ITrackRepository, TrackRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IHistoryRepository, HistoryRepository>();
+            services.AddScoped<IEpisodeRepository, EpisodeRepository>();
             return services;
         }
         #region configure authen

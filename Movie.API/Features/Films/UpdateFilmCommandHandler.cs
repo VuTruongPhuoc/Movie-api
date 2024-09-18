@@ -12,45 +12,45 @@ namespace Movie.API.Features.Films
 {
     public class UpdateFilmCommandHandler : IRequestHandler<UpdateFilmCommand, Response>
     {
-        private readonly IFilmRepository _FilmRepository;
+        private readonly IFilmRepository _filmRepository;
         private readonly MovieDbContext _dbContext;
         public UpdateFilmCommandHandler(IFilmRepository FilmRepository, MovieDbContext dbContext)
         {
-            _FilmRepository = FilmRepository;
+            _filmRepository = FilmRepository;
             _dbContext = dbContext;
         }
         public async Task<Response> Handle(UpdateFilmCommand request, CancellationToken cancellationToken)
         {
-            if (request is null)
+            var film = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            if (film is null)
             {
                 return await Task.FromResult(new UpdateFilmResponse()
                 {
                     Success = false,
                     StatusCode = System.Net.HttpStatusCode.NotFound,
-                    Message = "Không tìm thấy lịch cần cập nhật",
+                    Message = "Không tìm thấy phim cần cập nhật",
                 });
             }
-            var Film = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
-            var FilmName = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
-            if (FilmName?.Name != Film?.Name && FilmName != null)
+            var filmName = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
+            if (filmName?.Name != film?.Name && filmName != null)
             {
                 return await Task.FromResult(new UpdateFilmResponse()
                 {
                     Success = false,
                     StatusCode = System.Net.HttpStatusCode.BadRequest,
-                    Message = "Lịch đã tồn tại",
+                    Message = "Phim đã tồn tại",
                 });
             }
-            CustomMapper.Mapper.Map<UpdateFilmCommand, Film>(request, Film);
-            Film.LastModifiedDate = DateTime.UtcNow;
-            await _FilmRepository.UpdateAsync(Film);
-            await _FilmRepository.SaveAsync();
+            CustomMapper.Mapper.Map<UpdateFilmCommand, Film>(request, film);
+            film.LastModifiedDate = DateTime.UtcNow;
+            await _filmRepository.UpdateAsync(film);
+            await _filmRepository.SaveAsync();
             return await Task.FromResult(new UpdateFilmResponse()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
-                Message = "Cập nhật lịch thành công",
-                Film = CustomMapper.Mapper.Map<FilmDTO>(Film)
+                Message = "Cập nhật phim thành công",
+                Film = CustomMapper.Mapper.Map<FilmDTO>(film)
             });
         }
     }

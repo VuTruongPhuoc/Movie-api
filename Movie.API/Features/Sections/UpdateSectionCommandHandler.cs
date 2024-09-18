@@ -21,7 +21,8 @@ namespace Movie.API.Features.Sections
         }
         public async Task<Response> Handle(UpdateSectionCommand request, CancellationToken cancellationToken)
         {
-            if (request.Id == null)
+            var section = await _dbContext.Sections.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            if (section is null)
             {
                 return await Task.FromResult(new UpdateSectionResponse()
                 {
@@ -30,9 +31,8 @@ namespace Movie.API.Features.Sections
                     Message = "Không tìm thấy phần cần cập nhật",
                 });
             }
-            var Section = await _dbContext.Sections.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
-            var SectionName = await _dbContext.Sections.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
-            if (SectionName?.Name != Section?.Name && SectionName != null)
+            var sectionName = await _dbContext.Sections.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
+            if (sectionName?.Name != section?.Name && sectionName != null)
             {
                 return await Task.FromResult(new UpdateSectionResponse()
                 {
@@ -41,16 +41,16 @@ namespace Movie.API.Features.Sections
                     Message = "Phần đã tồn tại",
                 });
             }
-            CustomMapper.Mapper.Map<UpdateSectionCommand, Section>(request, Section);
-            Section.LastModifiedDate = DateTime.UtcNow;
-            await _sectionRepository.UpdateAsync(Section);
+            CustomMapper.Mapper.Map<UpdateSectionCommand, Section>(request, section);
+            section.LastModifiedDate = DateTime.UtcNow;
+            await _sectionRepository.UpdateAsync(section);
             await _sectionRepository.SaveAsync();
             return await Task.FromResult(new UpdateSectionResponse()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Cập nhật phần thành công",
-                Section = CustomMapper.Mapper.Map<SectionDTO>(Section)
+                Section = CustomMapper.Mapper.Map<SectionDTO>(section)
             });
         }
     }

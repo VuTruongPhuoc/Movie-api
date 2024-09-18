@@ -1023,3 +1023,141 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
 2024-09-17 11:14:25.349 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.0527ms
 2024-09-17 11:14:25.519 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
 2024-09-17 11:14:25.672 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.1431ms
+2024-09-17 14:23:41.364 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/role/getall - null null
+2024-09-17 14:23:41.364 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/role/getall - null null
+2024-09-17 14:23:41.426 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:23:41.426 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:23:41.427 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/role/getall - 204 null null 63.9156ms
+2024-09-17 14:23:41.428 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/role/getall - 204 null null 64.3978ms
+2024-09-17 14:23:41.430 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:23:41.434 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:23:41.437 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 7.0886ms
+2024-09-17 14:23:41.439 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 14:23:41.440 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:23:41.441 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:23:41.441 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 1.521ms
+2024-09-17 14:23:41.441 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 14:24:46.017 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/account/login - null null
+2024-09-17 14:24:46.017 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:24:46.017 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/account/login - 204 null null 0.6983ms
+2024-09-17 14:24:46.019 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/account/login - application/json 41
+2024-09-17 14:24:46.021 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:24:46.024 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-17 14:24:46.063 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-17 14:24:47.560 +07:00 [INF] Executed DbCommand (75ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-17 14:24:47.799 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2024-09-17 14:24:47.840 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@__roleId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = @__roleId_0
+2024-09-17 14:24:47.896 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.LoginRespone'.
+2024-09-17 14:24:47.923 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 1854.5953ms
+2024-09-17 14:24:47.923 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-17 14:24:47.930 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/account/login - 200 null application/json; charset=utf-8 1911.5634ms
+2024-09-17 14:25:08.652 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/account/login - null null
+2024-09-17 14:25:08.653 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:08.653 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/account/login - 204 null null 1.0125ms
+2024-09-17 14:25:08.654 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7039/api/account/login - application/json 41
+2024-09-17 14:25:08.655 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:08.655 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-17 14:25:08.655 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.Response] Login(Movie.API.Requests.LoginRequest) on controller Movie.API.Controllers.AccountController (Movie.API).
+2024-09-17 14:25:08.711 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[Avatar], [u].[ConcurrencyStamp], [u].[DisplayName], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2024-09-17 14:25:08.828 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [u].[UserId], [u].[RoleId]
+FROM [UserRoles] AS [u]
+WHERE [u].[UserId] = @__user_Id_0
+2024-09-17 14:25:08.829 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__roleId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[Id] = @__roleId_0
+2024-09-17 14:25:08.830 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.LoginRespone'.
+2024-09-17 14:25:08.831 +07:00 [INF] Executed action Movie.API.Controllers.AccountController.Login (Movie.API) in 175.5686ms
+2024-09-17 14:25:08.831 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.AccountController.Login (Movie.API)'
+2024-09-17 14:25:08.831 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7039/api/account/login - 200 null application/json; charset=utf-8 176.7294ms
+2024-09-17 14:25:16.595 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:16.595 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:16.595 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/role/getall - 204 null null 0.3993ms
+2024-09-17 14:25:16.596 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:16.596 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:16.597 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/role/getall - 204 null null 0.3806ms
+2024-09-17 14:25:16.597 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:16.597 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:16.597 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 0.337ms
+2024-09-17 14:25:16.597 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 14:25:16.598 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:16.599 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:16.599 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 0.4317ms
+2024-09-17 14:25:16.599 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 14:25:20.563 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:20.563 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:20.564 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 0.4303ms
+2024-09-17 14:25:20.564 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 14:25:20.565 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/role/getall - null null
+2024-09-17 14:25:20.565 +07:00 [INF] CORS policy execution successful.
+2024-09-17 14:25:20.565 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/role/getall - 404 0 null 0.3254ms
+2024-09-17 14:25:20.566 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7039/api/role/getall, Response status code: 404
+2024-09-17 21:55:52.538 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-17 21:55:52.871 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-17 21:55:52.871 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-17 21:55:52.873 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-17 21:55:52.873 +07:00 [INF] Hosting environment: Development
+2024-09-17 21:55:52.873 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-17 21:55:53.795 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger - null null
+2024-09-17 21:55:53.875 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger - 301 0 null 81.8413ms
+2024-09-17 21:55:53.880 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-17 21:55:53.999 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 118.9743ms
+2024-09-17 21:55:54.003 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/swagger-ui.css - null null
+2024-09-17 21:55:54.005 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/swagger-ui-bundle.js - null null
+2024-09-17 21:55:54.005 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-17 21:55:54.005 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-17 21:55:54.011 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 5.7994ms
+2024-09-17 21:55:54.032 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-17 21:55:54.032 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-17 21:55:54.033 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-17 21:55:54.034 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 28.4069ms
+2024-09-17 21:55:54.034 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/swagger-ui.css - 200 143943 text/css 30.6931ms
+2024-09-17 21:55:54.045 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-17 21:55:54.046 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 40.3883ms
+2024-09-17 21:55:54.070 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.9309ms
+2024-09-17 21:55:54.359 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-17 21:55:54.490 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.5497ms
+2024-09-17 21:58:25.434 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-17 21:58:25.544 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-17 21:58:25.544 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-17 21:58:25.546 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-17 21:58:25.546 +07:00 [INF] Hosting environment: Development
+2024-09-17 21:58:25.546 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-17 21:58:26.024 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-17 21:58:26.168 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 145.2315ms
+2024-09-17 21:58:26.178 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-17 21:58:26.178 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-17 21:58:26.182 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.1291ms
+2024-09-17 21:58:26.198 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.1823ms
+2024-09-17 21:58:26.289 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-17 21:58:26.388 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/favicon-32x32.png - null null
+2024-09-17 21:58:26.399 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-09-17 21:58:26.399 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/favicon-32x32.png - 200 628 image/png 10.6069ms
+2024-09-17 21:58:26.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 162.4807ms
+2024-09-17 21:58:44.391 +07:00 [INF] User profile is available. Using 'C:\Users\phuoc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-17 21:58:44.506 +07:00 [INF] Now listening on: https://localhost:7039
+2024-09-17 21:58:44.506 +07:00 [INF] Now listening on: http://localhost:5203
+2024-09-17 21:58:44.508 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-17 21:58:44.508 +07:00 [INF] Hosting environment: Development
+2024-09-17 21:58:44.508 +07:00 [INF] Content root path: D:\Workplace\MoviesApp\Movie-api\Movie.API
+2024-09-17 21:58:44.971 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/index.html - null null
+2024-09-17 21:58:45.117 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/index.html - 200 null text/html;charset=utf-8 146.2308ms
+2024-09-17 21:58:45.124 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_vs/browserLink - null null
+2024-09-17 21:58:45.130 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-17 21:58:45.135 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.9282ms
+2024-09-17 21:58:45.151 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.0265ms
+2024-09-17 21:58:45.218 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - null null
+2024-09-17 21:58:45.418 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.7551ms

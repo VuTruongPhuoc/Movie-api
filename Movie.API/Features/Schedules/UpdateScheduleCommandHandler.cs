@@ -20,7 +20,8 @@ namespace Movie.API.Features.Schedules
         }
         public async Task<Response> Handle(UpdateScheduleCommand request, CancellationToken cancellationToken)
         {   
-            if (request.Id == null)
+            var schedule = await _dbContext.Schedules.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            if (schedule is null)
             {
                 return await Task.FromResult(new UpdateScheduleResponse()
                 {
@@ -29,7 +30,6 @@ namespace Movie.API.Features.Schedules
                     Message = "Không tìm thấy lịch cần cập nhật",
                 });
             }
-            var schedule = await _dbContext.Schedules.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
             var scheduleName = await _dbContext.Schedules.AsNoTracking().SingleOrDefaultAsync(x => x.Name == request.Name);
             if (scheduleName?.Name != schedule?.Name && scheduleName != null)
             {

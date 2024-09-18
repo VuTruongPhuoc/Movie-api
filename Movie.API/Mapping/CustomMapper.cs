@@ -2,6 +2,7 @@
 using Movie.API.Features.Categories;
 using Movie.API.Features.Comments;
 using Movie.API.Features.Countries;
+using Movie.API.Features.Episodes;
 using Movie.API.Features.Films;
 using Movie.API.Features.Histories;
 using Movie.API.Features.Reviews;
@@ -34,6 +35,7 @@ namespace Movie.API.AutoMapper
                 cfg.AddProfile<ReviewProfile>();
                 cfg.AddProfile<HistoryProfile>();
                 cfg.AddProfile<TrackProfile>();
+                cfg.AddProfile<EpisodeProfile>();
             });
             var mapper = config.CreateMapper();
             return mapper;
@@ -41,8 +43,6 @@ namespace Movie.API.AutoMapper
 
         public static IMapper Mapper => Lazy.Value;
     }
-
-
     public class UserProfile: Profile
     {
         public UserProfile()
@@ -156,6 +156,18 @@ namespace Movie.API.AutoMapper
             CreateMap<History, HistoryDTO>().ReverseMap();
             CreateMap<History, AddHistoryCommand>().ReverseMap();
             CreateMap<AddHistoryRequest, AddHistoryCommand>().ReverseMap();
+        }
+    }
+    public class EpisodeProfile : Profile
+    {
+        public EpisodeProfile()
+        {
+            CreateMap<Episode, EpisodeDTO>().ReverseMap();
+            CreateMap<Episode, AddEpisodeCommand>().ReverseMap();
+            CreateMap<Episode, UpdateEpisodeCommand>().ReverseMap();
+            CreateMap<Episode, UpdateEpisodeRequest>().ReverseMap();
+            CreateMap<AddEpisodeRequest, AddEpisodeCommand>().ReverseMap();
+            CreateMap<UpdateEpisodeCommand, UpdateEpisodeRequest>().ReverseMap();
         }
     }
 }

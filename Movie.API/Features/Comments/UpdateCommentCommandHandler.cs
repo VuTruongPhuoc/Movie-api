@@ -21,7 +21,8 @@ namespace Movie.API.Features.Comments
         }
         public async Task<Response> Handle(UpdateCommentCommand request, CancellationToken cancellationToken)
         {
-            if (request is null)
+            var comment = await _dbContext.Comments.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            if (comment is null)
             {
                 return await Task.FromResult(new UpdateCommentResponse()
                 {
@@ -30,7 +31,6 @@ namespace Movie.API.Features.Comments
                     Message = "Không tìm thấy ",
                 });
             }
-            var comment = await _dbContext.Comments.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
             CustomMapper.Mapper.Map<UpdateCommentCommand, Comment>(request, comment);
             comment.LastModifiedDate = DateTime.UtcNow;
             await _CommentRepository.UpdateAsync(comment);

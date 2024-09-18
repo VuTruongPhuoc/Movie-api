@@ -24,32 +24,28 @@ namespace Movie.API.Controllers
         [HttpGet("all")]
         public async Task<Response> GetCommnets(int filmid)
         {        
-            var query = new GetCommentsQuery();
-            query.FilmId = filmid;
+            var query = new GetCommentsQuery() { FilmId = filmid};
             return await _mediator.Send(query);
         }
         [HttpPost("add")]
         public async Task<Response> AddComment([FromBody] AddCommentRequest model)
         {
             string userid = HttpContext.User.FindFirstValue("UserId");
-            var command = new AddCommentCommand();
-            command.UserId = userid;
+            var command = new AddCommentCommand() { UserId = userid};
             CustomMapper.Mapper.Map<AddCommentRequest, AddCommentCommand>(model, command);
             return await _mediator.Send(command);
         }
         [HttpPost("update/{id}")]
         public async Task<Response> UpdateComment(int id, [FromBody] UpdateCommentRequest model)
         {
-            var command = new UpdateCommentCommand();
-            command.Id = id;
+            var command = new UpdateCommentCommand() { Id = id};
             CustomMapper.Mapper.Map<UpdateCommentRequest, UpdateCommentCommand>(model, command);
             return await _mediator.Send(command);
         }
         [HttpDelete("delete/{id}")]
         public async Task<Response> DeleteComment(int id)
         {
-            var command = new DeleteCommentCommand();
-            command.Id = id;
+            var command = new DeleteCommentCommand() { Id = id};
             return await _mediator.Send(command);
         }
     }
