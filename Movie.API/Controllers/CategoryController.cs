@@ -4,6 +4,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Categories;
 using Movie.API.Features.Countries;
 using Movie.API.Requests;
+using Movie.API.Requests.Pagination;
 using Movie.API.Responses;
 using System.Net;
 
@@ -19,9 +20,12 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCategories()
+        public async Task<Response> GetCategories(int pageNumber = 1, int pageSize = 10)
         {
-            var query = new GetCategoriesQuery();
+            var query = new GetCategoriesQuery()
+            {
+                Pagination = new Pagination() { pageNumber = pageNumber, pageSize = pageSize }
+            };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 
@@ -16,9 +17,9 @@ namespace Movie.API.Features.Categories
         } 
         public async Task<Response> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
-            var categories = await _categoryRepository.GetAllAsync();
+            var categories = await _categoryRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
 
-            var dtos = CustomMapper.Mapper.Map<List<CategoryDTO>>(categories);
+            var dtos = CustomMapper.Mapper.Map<PaginatedList<CategoryDTO>>(categories);
 
             return await Task.FromResult(new DataRespone()
             {

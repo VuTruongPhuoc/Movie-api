@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
@@ -23,7 +24,7 @@ namespace Movie.API.Features.Roles
         }
         public async Task<DataRespone> Handle(GetRolesQuery request, CancellationToken cancellationToken)
         {
-            var roles = await _roleRepository.GetAllAsync();
+            var roles = await _dbContext.Roles.ToListAsync();
             var dtos = CustomMapper.Mapper.Map<List<RoleDTO>>(roles);
 
             return await Task.FromResult(new DataRespone()

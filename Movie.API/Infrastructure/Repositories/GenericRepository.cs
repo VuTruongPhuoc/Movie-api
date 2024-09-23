@@ -1,12 +1,14 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Movie.API.Infrastructure.Data;
+using Movie.API.Models.Domain.Common;
+using System.Numerics;
 
 namespace Movie.API.Infrastructure.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<List<T>> GetAllAsync();
+        Task<PaginatedList<T>> GetAllAsync(int pageNumber, int pageSize);
         Task<T> GetByIdAsync(object id);
         Task<T> AddAsync(T Entity);
         Task<T> UpdateAsync(T Entity);
@@ -23,9 +25,12 @@ namespace Movie.API.Infrastructure.Repositories
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
         }
-        public async Task<List<T>> GetAllAsync()
+        public async Task<PaginatedList<T>> GetAllAsync(int pageNumber, int pageSize)
         {
-            return await _dbSet.ToListAsync();
+            var result  = await _dbSet.Skip((pageNumber - 1)* pageSize).Take(pageSize).ToListAsync();
+            var count = await _dbSet.CountAsync();
+            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+            return new PaginatedList<T>(result, pageNumber, totalPages); 
         }
 
         public async Task<T?> GetByIdAsync(object id)

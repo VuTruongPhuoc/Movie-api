@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rP/IMbpM32VxwPGp3ld0pNf4TwR4y7FPECbQLq0eB+Pnay6TVhEddBrL9JWSGv4HtcJsKwWoCpTuS7oJfCyjaw==",
+  "dgSpecHash": "wvpclhgjCyQlKiHrHgl70mKe8RqfNUIvJdFoeto6xXCTlM2W6j6LkVOflmL0dy5Hy8NpNG8qy7Sm+kPv+hdvxg==",
   "success": true,
-  "projectFilePath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.API\\Movie.API.csproj",
+  "projectFilePath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.API\\Movie.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phuoc\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\phuoc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -1,5 +1,7 @@
 ﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Movie.API.AutoMapper;
+using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
@@ -8,15 +10,15 @@ namespace Movie.API.Features.Schedules
 {
     public class GetSchedulesQueryHandler : IRequestHandler<GetSchedulesQuery, Response>
     {
-        private IScheduleRepository _scheduleRepository;
+        private MovieDbContext _dbContext;
        
-        public GetSchedulesQueryHandler(IScheduleRepository scheduleRepository)
+        public GetSchedulesQueryHandler(MovieDbContext dbContext)
         {
-            _scheduleRepository = scheduleRepository;
+            _dbContext = dbContext;
         } 
         public async Task<Response> Handle(GetSchedulesQuery request, CancellationToken cancellationToken)
         {
-            var categories = await _scheduleRepository.GetAllAsync();
+            var categories = await _dbContext.Schedules.ToListAsync();
 
             var dtos = CustomMapper.Mapper.Map<List<ScheduleDTO>>(categories);
 

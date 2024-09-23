@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
@@ -23,10 +24,10 @@ namespace Movie.API.Features.Users
         }
         public async Task<Response> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _userRepository.GetAllAsync();
-            var dtos = new List<UserDTO>();
+            var users = await _userRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
+            var userdtos = new List<UserDTO>();
 
-            foreach (var user in users)
+            foreach (var user in users.Items)
             {
                 var userRole = await _dbContext.UserRoles.SingleOrDefaultAsync(x => x.UserId == user.Id);
                 if (userRole != null)
@@ -36,10 +37,12 @@ namespace Movie.API.Features.Users
                     {
                         var userDto = CustomMapper.Mapper.Map<User, UserDTO>(user);
                         userDto.RoleName = role.Name ?? "Cùi bắp";
-                        dtos.Add(userDto);
+                        userdtos.Add(userDto);
                     }
                 }
             }
+            var dtos = CustomMapper.Mapper.Map<PaginatedList<UserDTO>>(users);
+            dtos.Items = userdtos;
             return new DataRespone
             {
                 Success = true,

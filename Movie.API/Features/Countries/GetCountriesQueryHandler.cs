@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Movie.API.AutoMapper;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 
@@ -16,9 +17,9 @@ namespace Movie.API.Features.Countries
         } 
         public async Task<Response> Handle(GetCountriesQuery request, CancellationToken cancellationToken)
         {
-            var countries = await _countryRepository.GetAllAsync();
+            var countries = await _countryRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
 
-            var dtos = CustomMapper.Mapper.Map<List<CountryDTO>>(countries);
+            var dtos = CustomMapper.Mapper.Map<PaginatedList<CountryDTO>>(countries);
 
             return await Task.FromResult(new DataRespone()
             {

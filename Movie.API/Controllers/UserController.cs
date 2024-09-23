@@ -6,6 +6,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Users;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
+using Movie.API.Requests.Pagination;
 using Movie.API.Responses;
 
 namespace Movie.API.Controllers
@@ -24,10 +25,32 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetUsers()
+        public async Task<Response> GetUsers(int pageNumber = 1, int pageSize = 10)
         {
-            var query = new GetUsersQuery();
+            var query = new GetUsersQuery()
+            {
+                Pagination = new Pagination()
+                {
+                    pageNumber = pageNumber,
+                    pageSize = pageSize
+                }
+            };
             return await _mediator.Send(query);
+        }
+        [HttpPost("changerole/{username}/{role}")]        
+        public async Task<IActionResult> ChangeRole(string username, string role)
+        {
+            var command = new ChangeRoleCommand()
+            {
+                UserName = username,
+                RoleName = role
+            };
+            var response =  await _mediator.Send(command);
+            if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
 
         [HttpPost("add")]

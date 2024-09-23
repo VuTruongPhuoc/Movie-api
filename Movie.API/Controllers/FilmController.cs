@@ -11,6 +11,7 @@ using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
+using Movie.API.Requests.Pagination;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 using System.Security.Claims;
@@ -27,9 +28,12 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetFilms()
+        public async Task<Response> GetFilms(int pageNumber = 1, int pageSize = 10)
         {
-            var query = new GetFilmsQuery();
+            var query = new GetFilmsQuery()
+            {
+                Pagination = new Pagination { pageNumber = pageNumber, pageSize = pageSize }
+            };
             return await _mediator.Send(query);
         }
         [HttpGet("{id}")]

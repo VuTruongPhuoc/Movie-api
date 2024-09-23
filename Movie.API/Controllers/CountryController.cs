@@ -5,6 +5,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Categories;
 using Movie.API.Features.Countries;
 using Movie.API.Requests;
+using Movie.API.Requests.Pagination;
 using Movie.API.Responses;
 
 namespace Movie.API.Controllers
@@ -19,32 +20,50 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCountries()
+        public async Task<Response> GetCountries(int pageNumber = 1, int pageSize = 10)
         {
-            var query = new GetCountriesQuery();
+            var query = new GetCountriesQuery() { Pagination = new Pagination()
+            { 
+                pageSize = pageSize,
+                pageNumber = pageNumber
+            } };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]
-        public async Task<Response> AddCountry([FromBody] AddCountryRequest model)
+        public async Task<IActionResult> AddCountry([FromBody] AddCountryRequest model)
         {
-            var command = new AddCountryCommand();
-            command.Name = model.Name;
-            return await _mediator.Send(command);
+            var command = new AddCountryCommand() { Name = model.Name};
+            var response =  await _mediator.Send(command);
+            if(response.StatusCode == System.Net.HttpStatusCode.BadGateway)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
         [HttpPost("update/{id}")]
-        public async Task<Response> UpdateCountry(int id, [FromBody] UpdateCountryRequest model)
+        public async Task<IActionResult> UpdateCountry(int id, [FromBody] UpdateCountryRequest model)
         {
-            var command = new UpdateCountryCommand();
-            command.Id = id;
+            var command = new UpdateCountryCommand() { Id = id};
             CustomMapper.Mapper.Map<UpdateCountryRequest, UpdateCountryCommand>(model, command);
-            return await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            } else if (response.StatusCode == System.Net.HttpStatusCode.NotFound) {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
         [HttpDelete("delete/{id}")]
-        public async Task<Response> DeleteCountry(int id)
+        public async Task<IActionResult> DeleteCountry(int id)
         {
-            var command = new DeleteCountryCommand();
-            command.Id = id;
-            return await _mediator.Send(command);
+            var command = new DeleteCountryCommand() { Id = id};
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
     }
 }

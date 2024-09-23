@@ -6,6 +6,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Histories;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using Movie.API.Requests.Pagination;
 using System.Security.Claims;
 
 namespace Movie.API.Controllers
@@ -21,10 +22,18 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetHistories()
+        public async Task<Response> GetHistories(int pageNumber = 1, int pageSize = 10)
         {
             string userid = HttpContext.User.FindFirstValue("UserId");
-            var query = new GetHistoriesQuery();
+            var query = new GetHistoriesQuery()
+            {
+                UserId = userid,
+                Pagination = new Pagination()
+                {
+                    pageNumber = pageNumber,
+                    pageSize = pageSize
+                }
+            };
             query.UserId = userid;
             return await _mediator.Send(query);
         }

@@ -5,6 +5,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Episodes;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using Movie.API.Requests.Pagination;
 
 namespace Movie.API.Controllers
 {
@@ -18,9 +19,17 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetEpisodes()
+        public async Task<Response> GetEpisodes(int pageNumber = 1, int pageSize = 10, int filmId = 1)
         {
-            var query = new GetEpisodesQuery();
+            var query = new GetEpisodesQuery()
+            {
+                FilmId = filmId,
+                Pagination = new Pagination()
+                {
+                    pageNumber = pageNumber,
+                    pageSize =  pageSize
+                }
+            };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]

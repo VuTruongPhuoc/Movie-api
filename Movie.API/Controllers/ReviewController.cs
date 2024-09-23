@@ -6,6 +6,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Reviews;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using Movie.API.Requests.Pagination;
 using System.Security.Claims;
 
 namespace Movie.API.Controllers
@@ -21,10 +22,17 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetReviews(int filmid)
+        public async Task<Response> GetReviews(int pageNumber = 1, int pageSize = 10, int filmid = 1)
         {
-            var query = new GetReviewsQuery();
-            query.FilmId = filmid;
+            var query = new GetReviewsQuery()
+            {
+                FilmId = filmid,
+                Pagination = new Pagination()
+                {
+                    pageNumber = pageNumber,
+                    pageSize = pageSize
+                }
+            };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]

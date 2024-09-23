@@ -2,6 +2,7 @@
 using Movie.API.AutoMapper;
 using Movie.API.Features.Sections;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 
@@ -17,9 +18,9 @@ namespace Movie.API.Features.Sections
         }
         public async Task<Response> Handle(GetSectionsQuery request, CancellationToken cancellationToken)
         {
-            var categories = await _sectionRepository.GetAllAsync();
+            var categories = await _sectionRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
 
-            var dtos = CustomMapper.Mapper.Map<List<SectionDTO>>(categories);
+            var dtos = CustomMapper.Mapper.Map<PaginatedList<SectionDTO>>(categories);
 
             return await Task.FromResult(new DataRespone()
             {

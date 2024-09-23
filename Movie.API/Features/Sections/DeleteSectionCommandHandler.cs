@@ -20,7 +20,7 @@ namespace Movie.API.Features.Sections
         }
         public async Task<Response> Handle(DeleteSectionCommand request, CancellationToken cancellationToken)
         {
-            if (request.Id == null)
+            if (request is null)
             {
                 return await Task.FromResult(new DeleteSectionResponse()
                 {

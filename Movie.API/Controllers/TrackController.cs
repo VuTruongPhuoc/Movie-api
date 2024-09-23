@@ -6,6 +6,7 @@ using Movie.API.AutoMapper;
 using Movie.API.Features.Tracks;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using Movie.API.Requests.Pagination;
 using System.Security.Claims;
 
 namespace Movie.API.Controllers
@@ -21,11 +22,18 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetTracks()
+        public async Task<Response> GetTracks(int pageNumber = 1, int pageSize = 10)
         {
             string userid = HttpContext.User.FindFirstValue("UserId");
-            var query = new GetTracksQuery();
-            query.UserId = userid;
+            var query = new GetTracksQuery()
+            {
+                UserId = userid,
+                Pagination = new Pagination()
+                {
+                    pageSize = pageSize,
+                    pageNumber = pageNumber
+                }
+            };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]

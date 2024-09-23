@@ -11,6 +11,7 @@ using Movie.API.Features.Schedules;
 using Movie.API.Features.Sections;
 using Movie.API.Features.Tracks;
 using Movie.API.Features.Users;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
 using Movie.API.Responses.DTOs;
@@ -53,6 +54,7 @@ namespace Movie.API.AutoMapper
             CreateMap<User, AddUserCommand>().ReverseMap();
             CreateMap<User, UpdateUserCommand>().ReverseMap();
             CreateMap<User, RegisterRequest>().ReverseMap();
+            CreateMap<PaginatedList<User>, PaginatedList<UserDTO>>().ReverseMap();
         }
     } 
     public class FilmProfile: Profile
@@ -65,6 +67,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Film, UpdateFilmRequest>().ReverseMap();
             CreateMap<AddFilmRequest, AddFilmCommand>().ReverseMap();
             CreateMap<UpdateFilmCommand, UpdateFilmRequest>().ReverseMap();
+            CreateMap<PaginatedList<Film>, PaginatedList<FilmDTO>>().ReverseMap();
         }
     }
     public class RoleProfile: Profile
@@ -83,6 +86,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
             CreateMap<CategoryDTO, UpdateCategoryRequest>().ReverseMap();
             CreateMap<UpdateCategoryCommand, UpdateCategoryRequest>().ReverseMap();
+            CreateMap<PaginatedList<Category>, PaginatedList<CategoryDTO>>().ReverseMap();
         }
     }
     public class CountryProfile : Profile
@@ -94,6 +98,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Country, UpdateCountryCommand>().ReverseMap();
             CreateMap<CountryDTO, UpdateCategoryRequest>().ReverseMap();
             CreateMap<UpdateCountryCommand, UpdateCategoryRequest>().ReverseMap();
+            CreateMap<PaginatedList<Country>, PaginatedList<CountryDTO>>().ReverseMap();
         }
     }
     public class ScheduleProfile : Profile
@@ -117,6 +122,7 @@ namespace Movie.API.AutoMapper
             CreateMap<SectionDTO, UpdateSectionRequest>().ReverseMap();
             CreateMap<AddSectionRequest, AddSectionCommand>().ReverseMap();
             CreateMap<UpdateSectionCommand, UpdateSectionRequest>().ReverseMap();
+            CreateMap<PaginatedList<Section>, PaginatedList<SectionDTO>>().ReverseMap();
         }
     }
     public class CommentProfile : Profile
@@ -129,6 +135,7 @@ namespace Movie.API.AutoMapper
             CreateMap<CommentDTO, UpdateCommentRequest>().ReverseMap();
             CreateMap<AddCommentRequest, AddCommentCommand>().ReverseMap();
             CreateMap<UpdateCommentCommand, UpdateCommentRequest>().ReverseMap();
+            CreateMap<PaginatedList<Comment>, PaginatedList<CommentDTO>>().ReverseMap();
         }   
     }
     public class TrackProfile : Profile
@@ -138,6 +145,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Track, TrackDTO>().ReverseMap();
             CreateMap<Track, AddTrackCommand>().ReverseMap();
             CreateMap<AddTrackRequest, AddTrackCommand>().ReverseMap();
+            CreateMap<PaginatedList<Track>, PaginatedList<TrackDTO>>().ReverseMap();
         }
     }
     public class ReviewProfile : Profile
@@ -147,6 +155,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Review, ReviewDTO>().ReverseMap();
             CreateMap<Review, AddReviewCommand>().ReverseMap();
             CreateMap<AddReviewRequest, AddReviewCommand>().ReverseMap();
+            CreateMap<PaginatedList<Review>, PaginatedList<ReviewDTO>>().ReverseMap();
         }
     }
     public class HistoryProfile : Profile
@@ -156,6 +165,7 @@ namespace Movie.API.AutoMapper
             CreateMap<History, HistoryDTO>().ReverseMap();
             CreateMap<History, AddHistoryCommand>().ReverseMap();
             CreateMap<AddHistoryRequest, AddHistoryCommand>().ReverseMap();
+            CreateMap<PaginatedList<History>, PaginatedList<HistoryDTO>>().ReverseMap();
         }
     }
     public class EpisodeProfile : Profile
@@ -168,6 +178,7 @@ namespace Movie.API.AutoMapper
             CreateMap<Episode, UpdateEpisodeRequest>().ReverseMap();
             CreateMap<AddEpisodeRequest, AddEpisodeCommand>().ReverseMap();
             CreateMap<UpdateEpisodeCommand, UpdateEpisodeRequest>().ReverseMap();
+            CreateMap<PaginatedList<Episode>, PaginatedList<EpisodeDTO>>().ReverseMap();
         }
     }
 }

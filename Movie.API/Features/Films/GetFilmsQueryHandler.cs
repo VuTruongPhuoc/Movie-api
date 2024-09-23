@@ -2,6 +2,7 @@
 using Movie.API.AutoMapper;
 using Movie.API.Features.Countries;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
 
@@ -9,24 +10,23 @@ namespace Movie.API.Features.Films
 {
     public class GetFilmsQueryHandler : IRequestHandler<GetFilmsQuery, Response>
     {
-        private IFilmRepository _FilmRepository;
+        private IFilmRepository _filmRepository;
 
-        public GetFilmsQueryHandler(IFilmRepository FilmRepository)
+        public GetFilmsQueryHandler(IFilmRepository filmRepository)
         {
-            _FilmRepository = FilmRepository;
+            _filmRepository = filmRepository;
         }
         public async Task<Response> Handle(GetFilmsQuery request, CancellationToken cancellationToken)
         {
-            var films = await _FilmRepository.GetAllAsync();
+            var films = await _filmRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
 
-            var dtos = CustomMapper.Mapper.Map<List<FilmDTO>>(films);
-
+            var dtoFilms = CustomMapper.Mapper.Map<PaginatedList<FilmDTO>>(films);
             return await Task.FromResult(new DataRespone()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Thành công",
-                Data = dtos
+                Data = dtoFilms
             });
         }
     }

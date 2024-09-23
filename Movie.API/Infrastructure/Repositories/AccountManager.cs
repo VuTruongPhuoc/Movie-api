@@ -1,17 +1,14 @@
 ﻿using Azure.Core;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Movie.API.AutoMapper;
-using Movie.API.Features.Users;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
 using Movie.API.Responses;
-using Movie.API.Responses.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
@@ -199,7 +196,7 @@ namespace Movie.API.Infrastructure.Repositories
                 Issuer = _configuration["JWT:ValidIssuer"],
                 Audience = _configuration["JWT:ValidAudience"],
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddHours(4),
+                Expires = DateTime.UtcNow.AddHours(4),
                 SigningCredentials = new SigningCredentials(authSigninKey, SecurityAlgorithms.HmacSha256)
             };
             var token = tokenHandler.CreateJwtSecurityToken(tokenDescriptor);
