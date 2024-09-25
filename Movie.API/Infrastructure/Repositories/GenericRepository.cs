@@ -30,7 +30,7 @@ namespace Movie.API.Infrastructure.Repositories
             var result  = await _dbSet.Skip((pageNumber - 1)* pageSize).Take(pageSize).ToListAsync();
             var count = await _dbSet.CountAsync();
             var totalPages = (int)Math.Ceiling(count / (double)pageSize);
-            return new PaginatedList<T>(result, pageNumber, totalPages); 
+            return new PaginatedList<T>(result, pageNumber, totalPages);    
         }
 
         public async Task<T?> GetByIdAsync(object id)

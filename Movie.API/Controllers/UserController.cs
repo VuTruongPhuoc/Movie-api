@@ -54,26 +54,45 @@ namespace Movie.API.Controllers
         }
 
         [HttpPost("add")]
-        public async Task<Response> Add([FromBody] AddUserRequest model)
+        public async Task<IActionResult> Add([FromBody] AddUserRequest model)
         {
             var command = new AddUserCommand();
             CustomMapper.Mapper.Map<AddUserRequest, AddUserCommand>(model,command);
-            return await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
         [HttpPost("update/{username}")]
-        public async Task<Response> Update(string username,[FromBody] UpdateUserRequest model)
+        public async Task<IActionResult> Update(string username,[FromBody] UpdateUserRequest model)
         {
-            var command = new UpdateUserCommand();
-            command.UserName = username;
+            var command = new UpdateUserCommand() { UserName = username};
             CustomMapper.Mapper.Map<UpdateUserRequest, UpdateUserCommand>(model,command);
-            return await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
         [HttpDelete("delete/{username}")]
-        public async Task<Response> Delete(string username)
+        public async Task<IActionResult> Delete(string username)
         {
-            var command = new DeleteUserCommand();
-            command.UserName = username;
-            return await _mediator.Send(command);
+            var command = new DeleteUserCommand() { UserName = username};
+            var response =  await _mediator.Send(command);
+            if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }else if(response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
     }
 }

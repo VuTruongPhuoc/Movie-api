@@ -10,7 +10,7 @@
     {
         public string Name { get; set; }
         public DateTime LastModifiedDate { get; set; } = DateTime.UtcNow;
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
     public class DeleteSectionRequest
     {

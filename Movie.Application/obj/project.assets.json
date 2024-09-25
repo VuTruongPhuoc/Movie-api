@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj",
+      "projectUniqueName": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
       "projectName": "Movie.Application",
-      "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj",
+      "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
       "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
-      "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\obj\\",
+      "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phuoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj": {
-              "projectPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Domain\\Movie.Domain.csproj"
+            "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj": {
+              "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Domain\\Movie.Domain.csproj"
             }
           }
         }
