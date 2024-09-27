@@ -55,6 +55,8 @@ namespace Movie.API.AutoMapper
             CreateMap<User, UpdateUserCommand>().ReverseMap();
             CreateMap<User, RegisterRequest>().ReverseMap();
             CreateMap<PaginatedList<User>, PaginatedList<UserDTO>>().ReverseMap();
+            CreateMap<User, ChangeImageRequest>().ReverseMap();
+            CreateMap<User, UserAvatar>().ReverseMap();
         }
     } 
     public class FilmProfile: Profile

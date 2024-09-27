@@ -13,6 +13,7 @@ namespace Movie.API.Models.Domain.Entities
     {
         public string? DisplayName { get; set; }
         public string? Avatar { get; set; }
+        public string? AvatarUrl { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime RefreshTokenExpiry { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }

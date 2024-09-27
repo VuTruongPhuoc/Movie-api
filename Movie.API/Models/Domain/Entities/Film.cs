@@ -15,7 +15,6 @@ namespace Movie.API.Models.Domain.Entities
         public string? Image { get; set; }
         public int NumberOfEpisodes { get; set; }
         public int ReleaseYear { get; set; }
-        public long ViewCount { get; set; }
         public int CountryId { get; set; }
         public int ScheduleId { get; set; }
         public Country? Country { get; set; }

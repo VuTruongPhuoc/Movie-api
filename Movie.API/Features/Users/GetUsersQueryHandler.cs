@@ -11,7 +11,7 @@ using Movie.API.Responses.DTOs;
 
 namespace Movie.API.Features.Users
 {
-    public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, Response>
+    public class GetUsersQueryHandler : IRequestHandler<GetUsersQuery, DataRespone>
     {
         private readonly MovieDbContext _dbContext;
         private readonly IUserRepository _userRepository;
@@ -22,7 +22,7 @@ namespace Movie.API.Features.Users
             _userRepository = userRepository;
             _roleManager = roleManager;
         }
-        public async Task<Response> Handle(GetUsersQuery request, CancellationToken cancellationToken)
+        public async Task<DataRespone> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
             var users = await _userRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
             var userdtos = new List<UserDTO>();
@@ -37,6 +37,7 @@ namespace Movie.API.Features.Users
                     {
                         var userDto = CustomMapper.Mapper.Map<User, UserDTO>(user);
                         userDto.RoleName = role.Name ?? "Cùi bắp";
+                        
                         userdtos.Add(userDto);
                     }
                 }

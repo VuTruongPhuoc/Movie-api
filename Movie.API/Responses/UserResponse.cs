@@ -14,6 +14,10 @@ namespace Movie.API.Responses
     {
         public UserDTO User { get; set; }
     }
+    public class UserAvatarResponse : Response
+    {
+        public UserAvatar User { get; set; }
+    }
     public class DeleteUserResponse : Response
     {
         public UserDTO User { get; set; }

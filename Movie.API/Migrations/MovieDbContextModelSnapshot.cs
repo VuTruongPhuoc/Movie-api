@@ -274,6 +274,9 @@ namespace Movie.API.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<long>("ViewCount")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("FilmId");
@@ -345,9 +348,6 @@ namespace Movie.API.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
-
-                    b.Property<long>("ViewCount")
-                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -654,6 +654,9 @@ namespace Movie.API.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Avatar")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AvatarUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConcurrencyStamp")

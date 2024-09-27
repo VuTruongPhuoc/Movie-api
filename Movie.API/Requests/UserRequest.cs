@@ -1,4 +1,6 @@
-﻿namespace Movie.API.Requests
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Movie.API.Requests
 {
     public class ChangeRoleRequest
     {
@@ -18,6 +20,13 @@
         public string Email { get; set;}
         public string? PhoneNumber { get; set;}  
         public string? Avatar {  get; set;}
+    }
+    public class ChangeImageRequest
+    {
+        public string UserName { get; set;}
+        public string Avatar { get; set;}
+        [NotMapped]
+        public IFormFile AvatarFile { get; set;}
     }
     public class DeleteUserRequest
     {
