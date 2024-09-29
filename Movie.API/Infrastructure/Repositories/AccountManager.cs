@@ -9,6 +9,7 @@ using Movie.API.Infrastructure.Data;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
 using Movie.API.Responses;
+using Movie.API.Responses.DTOs;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
@@ -37,7 +38,7 @@ namespace Movie.API.Infrastructure.Repositories
             _configuration = configuration;
             _logger = logger;
         }
-        public async Task<Response> LoginAsync(LoginRequest model)
+        public async Task<Response> LoginAsync(LoginRequest model,string scheme, HostString host)
         {
             var user = await _userManager.FindByNameAsync(model.Username);
 
@@ -47,25 +48,29 @@ namespace Movie.API.Infrastructure.Repositories
                 var role = await _roleManager.FindByIdAsync(roleId);
                 var claims = new Claim[]
                 {
-            new Claim(ClaimTypes.Name, model.Username),
-            new Claim("UserId", user.Id),
-            new Claim(ClaimTypes.Role, role.Name),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                    new Claim(ClaimTypes.Name, model.Username),
+                    new Claim("UserId", user.Id),
+                    new Claim(ClaimTypes.Role, role.Name),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim("Avatar", user.Avatar),
+                    new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
                 var token = GenerateToken(claims);
                 var jwttoken = new JwtSecurityTokenHandler().WriteToken(token);
 
+                var userdto = CustomMapper.Mapper.Map<UserDTO>(user);
+                userdto.RoleName = role.Name;
+                userdto.AvatarUrl = $"{scheme}://{host}/{user.AvatarUrl}";
                 return new LoginRespone()
                 {
                     Success = true,
                     StatusCode = HttpStatusCode.OK,
                     Message = "Đăng nhập thành công",
-                    Username = model.Username,
                     AccessToken = jwttoken,
                     Expiration = token.ValidTo,
-                    RefreshToken = this.GenerateRefreshToken()
+                    RefreshToken = this.GenerateRefreshToken(),
+                    User = userdto,
                 };
             }
             else

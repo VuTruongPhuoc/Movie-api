@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ly/0W3k9y4Q1Oe+V5KokjeYp9EigiLDG+aEk4VbG1AWANfkNNGKJ+BB1sbfs+V3h1Ml/pHKUnBUBvZAtIwSPgw==",
+  "dgSpecHash": "Vv38MKhzO+A2t+1dYUYYZEMUwdshfOEH2TlOl5ZtB7K2d2sZpmlkN2Naz/6COfWX05nD606R1q3S+eNZQfN/eQ==",
   "success": true,
-  "projectFilePath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\Movie.Application.csproj",
+  "projectFilePath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

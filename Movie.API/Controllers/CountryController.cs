@@ -20,13 +20,9 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCountries(int pageNumber = 1, int pageSize = 10)
+        public async Task<Response> GetCountries()
         {
-            var query = new GetCountriesQuery() { Pagination = new Pagination()
-            { 
-                pageSize = pageSize,
-                pageNumber = pageNumber
-            } };
+            var query = new GetCountriesQuery() { };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]

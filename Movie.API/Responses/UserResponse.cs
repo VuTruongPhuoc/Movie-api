@@ -2,6 +2,10 @@
 
 namespace Movie.API.Responses
 {
+    public class GetUserResponse : Response
+        {
+        public UserDTO User { get; set; }
+    }
     public class GetUsersResponse : Response
     {
         public List<UserDTO> Users { get; set; }

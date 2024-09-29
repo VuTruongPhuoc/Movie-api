@@ -20,18 +20,18 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCategories(int pageNumber = 1, int pageSize = 10)
+        public async Task<Response> GetCategories()
         {
             var query = new GetCategoriesQuery()
             {
-                Pagination = new Pagination() { pageNumber = pageNumber, pageSize = pageSize }
+                
             };
             return await _mediator.Send(query);
         }
         [HttpPost("add")]
         public async Task<IActionResult> AddCategory([FromBody] AddCategoryRequest model)
         {
-            var command = new AddCategoryCommand { Name = model.Name };
+            var command = new AddCategoryCommand { Name = model.Name, Slug = model.Slug };
             var result = await _mediator.Send(command);
             if (result.StatusCode == HttpStatusCode.BadRequest)
             {

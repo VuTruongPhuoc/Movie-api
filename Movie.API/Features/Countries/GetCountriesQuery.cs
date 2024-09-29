@@ -6,6 +6,5 @@ namespace Movie.API.Features.Countries
 {
     public class GetCountriesQuery :  IRequest<Response>
     {
-        public Pagination Pagination { get; set; }
     }
 }

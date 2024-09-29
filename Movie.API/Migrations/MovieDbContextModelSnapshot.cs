@@ -154,6 +154,11 @@ namespace Movie.API.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -271,10 +276,15 @@ namespace Movie.API.Migrations
                     b.Property<int>("SectionId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<long>("ViewCount")
+                    b.Property<long>("View")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -317,8 +327,8 @@ namespace Movie.API.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("Image")
                         .HasMaxLength(255)
@@ -335,18 +345,32 @@ namespace Movie.API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("NumberOfEpisodes")
-                        .HasMaxLength(10)
-                        .HasColumnType("int");
-
-                    b.Property<int>("ReleaseYear")
-                        .HasMaxLength(10)
-                        .HasColumnType("int");
+                    b.Property<string>("OriginName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("ScheduleId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasMaxLength(10)
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -855,13 +879,13 @@ namespace Movie.API.Migrations
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.FilmCategory", b =>
                 {
                     b.HasOne("Movie.API.Models.Domain.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("FilmCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Movie.API.Models.Domain.Entities.Film", "Film")
-                        .WithMany()
+                        .WithMany("FilmCategories")
                         .HasForeignKey("FilmId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -939,6 +963,11 @@ namespace Movie.API.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Category", b =>
+                {
+                    b.Navigation("FilmCategories");
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Country", b =>
                 {
                     b.Navigation("Films");
@@ -949,6 +978,8 @@ namespace Movie.API.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Episodes");
+
+                    b.Navigation("FilmCategories");
 
                     b.Navigation("Histories");
 

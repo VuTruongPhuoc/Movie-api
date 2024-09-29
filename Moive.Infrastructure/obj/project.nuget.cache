@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rE4flHCgdM64Nm7NaD+O57oFS/5iVDzQZMNQAUg4LwXWFqrrpg/TfiTfdDF6dxcCVExKyyEbET/pJ7rFxpeYMg==",
+  "dgSpecHash": "pDcJPGF5gZgdRm4GikowHwJOxLvMinWdsL0o29EUBg7TMPNdzlD7s0yaNr77RQRIKwrgsI0bhgit8+hNh3ClFw==",
   "success": true,
-  "projectFilePath": "D:\\Workplace\\MoviesApp\\movie-api\\Moive.Infrastructure\\Movie.Infrastructure.csproj",
+  "projectFilePath": "D:\\Workplace\\MoviesApp\\Movie-api\\Moive.Infrastructure\\Movie.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\phuoc\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

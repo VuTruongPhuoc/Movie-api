@@ -17,9 +17,9 @@ namespace Movie.API.Features.Countries
         } 
         public async Task<Response> Handle(GetCountriesQuery request, CancellationToken cancellationToken)
         {
-            var countries = await _countryRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
+            var countries = await _countryRepository.GetAllAsync();
 
-            var dtos = CustomMapper.Mapper.Map<PaginatedList<CountryDTO>>(countries);
+            var dtos = CustomMapper.Mapper.Map<List<CountryDTO>>(countries);
 
             return await Task.FromResult(new DataRespone()
             {

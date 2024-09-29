@@ -35,6 +35,17 @@ namespace Movie.API.Features.Films
             film.CreateDate = DateTime.UtcNow;
             await _filmRepository.AddAsync(film);
             await _filmRepository.SaveAsync();
+
+            foreach(var categoryId in request.CategoryIds)
+            {
+                await _dbContext.FilmCategories.AddAsync(new FilmCategory
+                {
+                    FilmId = film.Id,
+                    CategoryId = categoryId,
+                });
+            }
+            await _dbContext.SaveChangesAsync();
+
             return await Task.FromResult(new AddFilmResponse()
             {
                 Success = true,

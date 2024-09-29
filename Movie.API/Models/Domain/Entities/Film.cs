@@ -11,10 +11,13 @@ namespace Movie.API.Models.Domain.Entities
     public class Film : BaseDomainEntity
     {
         public string Name { get; set; } = default!;
+        public string Slug { get; set; }
         public string Description { get; set; } = default!;
         public string? Image { get; set; }
-        public int NumberOfEpisodes { get; set; }
-        public int ReleaseYear { get; set; }
+        public string OriginName { get; set; }
+        public string Time {  get; set; }
+        public int Year { get; set; }
+        public int Type { get; set; }
         public int CountryId { get; set; }
         public int ScheduleId { get; set; }
         public Country? Country { get; set; }
@@ -24,6 +27,7 @@ namespace Movie.API.Models.Domain.Entities
         public virtual ICollection<Track> Tracks { get; set; } 
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<History> Histories { get; set; }
+        public virtual ICollection<FilmCategory> FilmCategories { get; set; }
 
     }
 }

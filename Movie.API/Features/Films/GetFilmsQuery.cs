@@ -4,8 +4,7 @@ using Movie.API.Responses;
 
 namespace Movie.API.Features.Films
 {
-    public class GetFilmsQuery : IRequest<Response>
+    public class GetFilmsQuery : IRequest<DataRespone>
     { 
-        public Pagination Pagination { get; set; } = new Pagination();
     }
 }

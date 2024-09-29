@@ -7,6 +7,7 @@ using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
+using System;
 
 namespace Movie.API.Features.Films
 {
@@ -44,6 +45,22 @@ namespace Movie.API.Features.Films
             CustomMapper.Mapper.Map<UpdateFilmCommand, Film>(request, film);
             film.LastModifiedDate = DateTime.UtcNow;
             await _filmRepository.UpdateAsync(film);
+            await _filmRepository.SaveAsync();
+
+            var filmCategories = _dbContext.FilmCategories
+                                 .Where(fc => fc.FilmId == film.Id)
+                                 .ToList();
+            _dbContext.FilmCategories.RemoveRange(filmCategories);
+            _dbContext.SaveChanges();
+
+            foreach (var categoryId in request.CategoryIds)
+            {
+                await _dbContext.FilmCategories.AddAsync(new FilmCategory
+                {
+                    FilmId = film.Id,
+                    CategoryId = categoryId,
+                });
+            }
             await _filmRepository.SaveAsync();
             return await Task.FromResult(new UpdateFilmResponse()
             {

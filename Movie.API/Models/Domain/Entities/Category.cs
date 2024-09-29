@@ -10,6 +10,8 @@ namespace Movie.API.Models.Domain.Entities
     public class Category : BaseDomainEntity
     {
         public string Name { get; set; } = default!;
+        public string Slug { get; set; }
         public string? Description { get; set; }
+        public virtual ICollection<FilmCategory> FilmCategories { get; set; }
     }
 }

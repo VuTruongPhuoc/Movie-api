@@ -10,6 +10,7 @@ namespace Movie.API.Infrastructure.Repositories
     {
         Task<bool> ChangeRoleAsync(string userName, string roleName);
         Task<bool> DeleteUserAsync(string username);
+        Task<User> GetByNameAsync(string userName);
     }
     public class UserRepository : GenericRepository<User>,IUserRepository
     {
@@ -46,6 +47,12 @@ namespace Movie.API.Infrastructure.Repositories
             var user = await _userManager.FindByNameAsync(username);
             await _userManager.DeleteAsync(user);
             return await Task.FromResult(true);
+        }
+
+        public async Task<User> GetByNameAsync(string userName)
+        {
+            var user = await _userManager.FindByNameAsync(userName);
+            return await Task.FromResult(user);
         }
     }
 }

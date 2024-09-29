@@ -17,9 +17,9 @@ namespace Movie.API.Features.Categories
         } 
         public async Task<Response> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
         {
-            var categories = await _categoryRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize);
+            var categories = await _categoryRepository.GetAllAsync();
 
-            var dtos = CustomMapper.Mapper.Map<PaginatedList<CategoryDTO>>(categories);
+            var dtos = CustomMapper.Mapper.Map<List<CategoryDTO>>(categories);
 
             return await Task.FromResult(new DataRespone()
             {

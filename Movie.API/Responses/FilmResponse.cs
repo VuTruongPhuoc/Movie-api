@@ -22,4 +22,8 @@ namespace Movie.API.Responses
     {
         public FilmDTO Film { get; set; }
     }
+    public class FilmImageResponse : Response
+    {
+        public FilmImage Film { get; set; }
+    }
 }

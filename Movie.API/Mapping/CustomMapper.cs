@@ -64,9 +64,11 @@ namespace Movie.API.AutoMapper
         public FilmProfile()
         {
             CreateMap<Film, FilmDTO>().ReverseMap();
+            CreateMap<Film, FilmImage>().ReverseMap();
             CreateMap<Film, AddFilmCommand>().ReverseMap();
             CreateMap<Film, UpdateFilmCommand>().ReverseMap();
             CreateMap<Film, UpdateFilmRequest>().ReverseMap();
+            CreateMap<Film, ChangeFilmImageRequest>().ReverseMap();
             CreateMap<AddFilmRequest, AddFilmCommand>().ReverseMap();
             CreateMap<UpdateFilmCommand, UpdateFilmRequest>().ReverseMap();
             CreateMap<PaginatedList<Film>, PaginatedList<FilmDTO>>().ReverseMap();
@@ -98,8 +100,8 @@ namespace Movie.API.AutoMapper
             CreateMap<Country, CountryDTO>().ReverseMap();
             CreateMap<Country, AddCountryCommand>().ReverseMap();
             CreateMap<Country, UpdateCountryCommand>().ReverseMap();
-            CreateMap<CountryDTO, UpdateCategoryRequest>().ReverseMap();
-            CreateMap<UpdateCountryCommand, UpdateCategoryRequest>().ReverseMap();
+            CreateMap<CountryDTO, UpdateCountryRequest>().ReverseMap();
+            CreateMap<UpdateCountryCommand, UpdateCountryRequest>().ReverseMap();
             CreateMap<PaginatedList<Country>, PaginatedList<CountryDTO>>().ReverseMap();
         }
     }

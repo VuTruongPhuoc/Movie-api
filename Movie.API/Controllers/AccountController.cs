@@ -30,7 +30,7 @@ namespace Movie.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest model)
         {
-            var loginResponse = await _accountManager.LoginAsync(model);
+            var loginResponse = await _accountManager.LoginAsync(model, Request.Scheme, Request.Host);
 
             if (!loginResponse.Success)
             {
