@@ -19,41 +19,63 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetEpisodes(int pageNumber = 1, int pageSize = 10, int filmId = 1)
+        public async Task<Response> GetEpisodes()
         {
-            var query = new GetEpisodesQuery()
-            {
-                FilmId = filmId,
-                Pagination = new Pagination()
-                {
-                    pageNumber = pageNumber,
-                    pageSize =  pageSize
-                }
-            };
+            var query = new GetEpisodesQuery() {};
             return await _mediator.Send(query);
         }
+        [HttpGet("{filmId}")]
+        public async Task<IActionResult> GetEpisodesbyFilm(int filmId)
+        {
+            var query = new GetEpisodesbyFilmQuery()
+            {
+                FilmId = filmId,
+            };
+            var response = await _mediator.Send(query);
+            if(response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
         [HttpPost("add")]
-        public async Task<Response> AddEpisode([FromBody] AddEpisodeRequest model)
+        public async Task<IActionResult> AddEpisode([FromBody] AddEpisodeRequest model)
         {
             var command = new AddEpisodeCommand();
             CustomMapper.Mapper.Map<AddEpisodeRequest, AddEpisodeCommand>(model, command);
-            return await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
         [HttpPost("update/{id}")]
-        public async Task<Response> UpdateEpisode(int id,int filmid, [FromBody] UpdateEpisodeRequest model)
+        public async Task<IActionResult> UpdateEpisode(int id,[FromBody] UpdateEpisodeRequest model)
         {
-            var command = new UpdateEpisodeCommand();
-            command.Id = id;
-            command.FilmId = filmid;
+            var command = new UpdateEpisodeCommand() { Id = id, FilmId = model.FilmId};
             CustomMapper.Mapper.Map<UpdateEpisodeRequest, UpdateEpisodeCommand>(model, command);
-            return await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            } else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
         [HttpDelete("delete/{id}")]
-        public async Task<Response> DeleteEpisode(int id)
+        public async Task<IActionResult> DeleteEpisode(int id)
         {
-            var command = new DeleteEpisodeCommand();
-            command.Id = id;
-            return await _mediator.Send(command);
+            var command = new DeleteEpisodeCommand() { Id = id };
+            var response =  await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
     }
 }

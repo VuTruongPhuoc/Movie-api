@@ -1,0 +1,90 @@
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Movie.API.AutoMapper;
+using Movie.API.Infrastructure.Data;
+using Movie.API.Infrastructure.Repositories;
+using Movie.API.Responses;
+using Movie.API.Responses.DTOs;
+
+namespace Movie.API.Features.Films
+{
+    public class GetFilmBySlugQueryHandler : IRequestHandler<GetFilmBySlugQuery, GetFilmBySlugResponse>
+    {
+        private readonly IFilmRepository _filmRepository;
+        private readonly IScheduleRepository _scheduleRepository;
+        private readonly ICountryRepository _countryRepository;
+        private readonly ISectionRepository _sectionRepository;
+        private readonly MovieDbContext _dbContext;
+
+        public GetFilmBySlugQueryHandler(
+            IFilmRepository filmRepository,
+            ICountryRepository countryRepository,
+            IScheduleRepository scheduleRepository,
+            ISectionRepository sectionRepository,
+            MovieDbContext dbContext)
+        {
+            _filmRepository = filmRepository;
+            _countryRepository = countryRepository;
+            _scheduleRepository = scheduleRepository;
+            _sectionRepository = sectionRepository;
+            _dbContext = dbContext;
+        }
+
+        public async Task<GetFilmBySlugResponse> Handle(GetFilmBySlugQuery request, CancellationToken cancellationToken)
+        {
+            if(request.Slug is null)
+            {
+                return new GetFilmBySlugResponse
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.NotFound,
+                    Message = null
+                };
+            }
+            var film = await _dbContext.Films
+                .Include(f => f.FilmCategories)
+                    .ThenInclude(fc => fc.Category)
+                .Include(f => f.Schedule)
+                .Include(f => f.Country)
+                .SingleOrDefaultAsync(x => x.Slug == request.Slug, cancellationToken);
+
+            if(film is null)
+            {
+                return new GetFilmBySlugResponse
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.BadRequest,
+                    Message = null
+                };
+            }
+
+            var filmDto = CustomMapper.Mapper.Map<FilmDTO>(film);
+            filmDto.Categories = film.FilmCategories
+                .Select(fc => CustomMapper.Mapper.Map<CategoryDTO>(fc.Category))
+                .ToList();
+            filmDto.Schedule = CustomMapper.Mapper.Map<ScheduleDTO>(film.Schedule);
+            filmDto.Country = CustomMapper.Mapper.Map<CountryDTO>(film.Country);
+
+            var episodes = await _dbContext.Episodes
+                .Where(e => e.FilmId == film.Id)
+                .ToListAsync(cancellationToken);
+            var episodeDtos = new List<EpisodeDTO>();
+            foreach (var episode in episodes)
+            {
+                var episodeDto = CustomMapper.Mapper.Map<EpisodeDTO>(episode);
+                episodeDto.FilmName = film.Name;
+                episodeDto.SectionName = (await _sectionRepository.GetByIdAsync(episode.SectionId)).Name;
+                episodeDtos.Add(episodeDto);
+            }
+           
+            return await Task.FromResult(new GetFilmBySlugResponse()
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+                Film = filmDto,
+                Episodes = episodeDtos
+            });
+        }
+    }
+}

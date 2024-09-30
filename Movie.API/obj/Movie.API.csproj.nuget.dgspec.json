@@ -11,7 +11,7 @@
         "projectName": "Movie.Infrastructure",
         "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Moive.Infrastructure\\Movie.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
-        "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Moive.Infrastructure\\obj\\",
+        "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Moive.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -157,6 +157,10 @@
               "target": "Package",
               "version": "[1.19.5, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -204,7 +208,7 @@
         "projectName": "Movie.Application",
         "projectPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\Movie.Application.csproj",
         "packagesPath": "C:\\Users\\phuoc\\.nuget\\packages\\",
-        "outputPath": "D:\\Workplace\\MoviesApp\\movie-api\\Movie.Application\\obj\\",
+        "outputPath": "D:\\Workplace\\MoviesApp\\Movie-api\\Movie.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phuoc\\AppData\\Roaming\\NuGet\\NuGet.Config",

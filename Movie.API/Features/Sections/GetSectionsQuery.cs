@@ -6,6 +6,5 @@ namespace Movie.API.Features.Sections
 {
     public class GetSectionsQuery : IRequest<Response>
     {
-        public Pagination Pagination ;
     }
 }

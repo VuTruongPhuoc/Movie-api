@@ -6,7 +6,6 @@ namespace Movie.API.Features.Episodes
 {
     public class GetEpisodesQuery : IRequest<Response>
     {
-        public int FilmId { get; set; }
-        public Pagination Pagination { get; set; }
+        
     }
 }

@@ -7,7 +7,7 @@ namespace Movie.API.Infrastructure.Repositories
     public interface IFilmRepository : IGenericRepository<Film>
     {
         Task<List<Film>> GetAllAsync();
-        Task<List<Film>> GetByNameAsync(string name);
+        Task<List<Film>> GetBySlugAsync(string slug);
     }
     public class FilmRepository : GenericRepository<Film>, IFilmRepository
     {
@@ -25,9 +25,9 @@ namespace Movie.API.Infrastructure.Repositories
            return await _filmSet.ToListAsync();
         }
 
-        public async Task<List<Film>> GetByNameAsync(string name)
+        public async Task<List<Film>> GetBySlugAsync(string slug)
         {
-            return await _filmSet.Where(x => x.Name == name).ToListAsync();
+            return await _filmSet.Where(x => x.Slug == slug).ToListAsync();
         }
 
 

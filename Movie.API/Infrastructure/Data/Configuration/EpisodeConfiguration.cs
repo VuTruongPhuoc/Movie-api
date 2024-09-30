@@ -14,6 +14,8 @@ namespace Movie.API.Infrastructure.Data.Configuration
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Slug).IsRequired().HasMaxLength(50);
+            builder.Property(x => x.Link).IsRequired().HasMaxLength(255);
+
             builder.HasOne(x => x.Film)
                 .WithMany(x => x.Episodes)
                 .HasForeignKey(x => x.FilmId);

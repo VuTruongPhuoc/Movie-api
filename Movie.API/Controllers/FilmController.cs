@@ -49,6 +49,29 @@ namespace Movie.API.Controllers
                 Data = filmsResponse.Data
             };
         }
+        [HttpGet("get/{slug}")]
+        public async Task<IActionResult> GetFilmBySlug(string slug)
+        {
+            var query = new GetFilmBySlugQuery() { Slug = slug };
+            var filmResponse = await _mediator.Send(query);
+            if(filmResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(filmResponse);
+            } else if(filmResponse.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(filmResponse);
+            }
+            filmResponse.Film.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmResponse.Film.Image}";
+
+            return Ok(new GetFilmBySlugResponse
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Film = filmResponse.Film,
+                Episodes = filmResponse.Episodes
+
+            });
+        }
         [HttpGet("{id}")]
         public async Task<Response> GetFilm(int id)
         {

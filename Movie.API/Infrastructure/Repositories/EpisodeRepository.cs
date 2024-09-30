@@ -7,7 +7,9 @@ namespace Movie.API.Infrastructure.Repositories
 {
     public interface IEpisodeRepository : IGenericRepository<Episode>
     {
-        Task<PaginatedList<Episode>> GetAllAsync(int pageNumber, int pageSize, int filmId);
+        Task<List<Episode>> GetEpisodesByFilm(int filmId);
+        Task<List<Episode>> GetAllAsync();
+        Task<List<Episode>> GetByNameAsync(string name);
     }
     public class EpisodeRepository : GenericRepository<Episode>, IEpisodeRepository
     {
@@ -17,14 +19,21 @@ namespace Movie.API.Infrastructure.Repositories
         {
             _dbContext = dbContext;
             _episodeSet = _dbContext.Set<Episode>();
-        }
-        public async Task<PaginatedList<Episode>> GetAllAsync(int pageNumber, int pageSize, int filmId)
-        {
-            var episodes = await _episodeSet.Where(x => x.FilmId == filmId).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-            var count = episodes.Count();
-            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
 
-            return new PaginatedList<Episode>(episodes, pageNumber, totalPages);
+        }
+        public async Task<List<Episode>> GetEpisodesByFilm(int filmId)
+        {
+            return await _episodeSet.Where(x => x.FilmId == filmId).ToListAsync();
+        }
+
+        public async Task<List<Episode>> GetByNameAsync(string name)
+        {
+            return await _episodeSet.Where(x => x.Name == name).ToListAsync();
+        }
+
+        public async Task<List<Episode>> GetAllAsync()
+        {
+            return await _episodeSet.ToListAsync();
         }
     }
 }

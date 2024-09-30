@@ -345,6 +345,10 @@ namespace Movie.API.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("NumberOfEpisodes")
+                        .HasColumnType("int")
+                        .HasColumnName("number_of_episodes");
+
                     b.Property<string>("OriginName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -365,6 +369,10 @@ namespace Movie.API.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Trailer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");

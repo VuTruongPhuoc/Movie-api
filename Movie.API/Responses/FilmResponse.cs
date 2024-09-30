@@ -26,4 +26,9 @@ namespace Movie.API.Responses
     {
         public FilmImage Film { get; set; }
     }
+    public class GetFilmBySlugResponse : Response
+    {
+        public FilmDTO Film { get; set; }
+        public List<EpisodeDTO> Episodes { get; set;}
+    }
 }

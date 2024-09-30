@@ -19,15 +19,10 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<IActionResult> GetSections(int pageNumber = 1, int pageSize = 10)
+        public async Task<IActionResult> GetSections()
         {
             var query = new GetSectionsQuery()
             {
-                Pagination = new Pagination()
-                {
-                    pageNumber = pageNumber,
-                    pageSize = pageSize
-                }
             };
             var response = await _mediator.Send(query);
             if(response.StatusCode == System.Net.HttpStatusCode.BadRequest)

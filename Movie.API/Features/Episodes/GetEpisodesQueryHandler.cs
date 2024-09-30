@@ -20,9 +20,9 @@ namespace Movie.API.Features.Episodes
         }
         public async Task<Response> Handle(GetEpisodesQuery request, CancellationToken cancellationToken)
         {
-            var episodes = await _episodeRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageNumber, request.FilmId);
+            var episodes = await _episodeRepository.GetAllAsync();
 
-            var dtos = CustomMapper.Mapper.Map<PaginatedList<EpisodeDTO>>(episodes);
+            var dtos = CustomMapper.Mapper.Map<List<EpisodeDTO>>(episodes);
 
             return await Task.FromResult(new DataRespone()
             {

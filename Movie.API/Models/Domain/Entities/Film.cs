@@ -14,10 +14,14 @@ namespace Movie.API.Models.Domain.Entities
         public string Slug { get; set; }
         public string Description { get; set; } = default!;
         public string? Image { get; set; }
+
+        [Column("number_of_episodes")]
+        public int NumberOfEpisodes {  get; set; }
         public string OriginName { get; set; }
         public string Time {  get; set; }
         public int Year { get; set; }
         public int Type { get; set; }
+        public string? Trailer { get; set; }
         public int CountryId { get; set; }
         public int ScheduleId { get; set; }
         public Country? Country { get; set; }

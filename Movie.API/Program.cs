@@ -7,6 +7,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Movie.API.Controllers;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;
@@ -111,6 +112,7 @@ namespace Movie.API
             });
             app.UseAuthorization();
 
+            //app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseEndpoints(enpoints =>
             {

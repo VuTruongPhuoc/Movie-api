@@ -10,6 +10,8 @@ namespace Movie.API.Requests
         public string OriginName { get; set; }
         public string Time { get; set; }
         public int Year { get; set; }
+        public int NumberOfEpisodes { get; set; }
+        public string Trailer { get; set; }
         public int CountryId { get; set; }
         public int ScheduleId { get; set; }
         public DateTime CreateDate { get; set; } = DateTime.UtcNow;
@@ -24,6 +26,8 @@ namespace Movie.API.Requests
         public string OriginName { get; set; }
         public string Time { get; set; }
         public int Year { get; set; }
+        public int NumberOfEpisodes { get; set; }
+        public string Trailer { get; set; }
         public int CountryId { get; set; }
         public int ScheduleId { get; set; }
         public DateTime LastModifiedDate { get; set; } = DateTime.UtcNow;

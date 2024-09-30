@@ -12,12 +12,13 @@
         public string Time { get; set; }
         public string Type { get; set; }
         public int Year { get; set; }
+        public int NumberOfEpisodes { get; set; }
+        public string Trailer { get; set; }
         public List<CategoryDTO> Categories { get; set; }
         public CountryDTO Country { get; set; }
         public ScheduleDTO Schedule {  get; set; }
         public DateTime CreateDate {  get; set; }
         public DateTime LastModifiedDate { get; set; }
-        public bool IsActive {  get; set; }
     }
     public class FilmImage
     {

@@ -11,11 +11,11 @@ namespace Movie.API.Features.Films
 {
     public class DeleteFilmCommandHandler : IRequestHandler<DeleteFilmCommand, Response>
     {
-        private readonly IFilmRepository _FilmRepository;
+        private readonly IFilmRepository _filmRepository;
         private readonly MovieDbContext _dbContext;
         public DeleteFilmCommandHandler(IFilmRepository FilmRepository, MovieDbContext dbContext)
         {
-            _FilmRepository = FilmRepository;
+            _filmRepository = FilmRepository;
             _dbContext = dbContext;
         }
         public async Task<Response> Handle(DeleteFilmCommand request, CancellationToken cancellationToken)
@@ -29,15 +29,21 @@ namespace Movie.API.Features.Films
                     Message = "Không tìm thấy phim cần xóa"
                 });
             }
-            var Film = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
-            await _FilmRepository.DeleteAsync(request.Id);
-            await _FilmRepository.SaveAsync();
+            var film = await _dbContext.Films.AsNoTracking().SingleOrDefaultAsync(x => x.Id == request.Id);
+            await _filmRepository.DeleteAsync(request.Id);
+            await _filmRepository.SaveAsync();
+
+            var filmCategories = _dbContext.FilmCategories
+                                .Where(fc => fc.FilmId == film.Id)
+                                .ToList();
+            _dbContext.FilmCategories.RemoveRange(filmCategories);
+            _dbContext.SaveChanges();
             return await Task.FromResult(new DeleteFilmResponse()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Xóa phim thành công",
-                Film = CustomMapper.Mapper.Map<FilmDTO>(Film)
+                Film = CustomMapper.Mapper.Map<FilmDTO>(film)
             });
 
         }

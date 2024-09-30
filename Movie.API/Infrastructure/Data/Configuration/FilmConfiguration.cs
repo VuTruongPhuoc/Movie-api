@@ -19,6 +19,8 @@ namespace Movie.API.Infrastructure.Data.Configuration
             builder.Property(x => x.Year).IsRequired().HasMaxLength(10);
             builder.Property(x => x.OriginName).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Time).IsRequired().HasMaxLength(50);
+            builder.Property(x => x.NumberOfEpisodes).IsRequired().HasMaxLength(10);
+            builder.Property(x => x.Trailer).IsRequired().HasMaxLength(255);
 
 
             builder.HasOne(x => x.Country)
