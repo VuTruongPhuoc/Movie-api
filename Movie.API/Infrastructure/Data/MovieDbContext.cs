@@ -25,6 +25,7 @@ namespace Movie.API.Infrastructure.Data
         public DbSet<Server> Servers { get; set; }
         public DbSet<Track> Tracks { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Feedback> Feedbacks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,6 +45,7 @@ namespace Movie.API.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new TrackConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new EpisodeServerConfiguration());
+            modelBuilder.ApplyConfiguration(new FeedbackConfiguration());
 
             base.OnModelCreating(modelBuilder);
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())

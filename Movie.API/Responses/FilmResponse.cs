@@ -26,6 +26,10 @@ namespace Movie.API.Responses
     {
         public FilmImage Film { get; set; }
     }
+    public class FilmPosterResponse : Response
+    {
+        public FilmPoster Film { get; set; }
+    }
     public class GetFilmBySlugResponse : Response
     {
         public FilmDTO Film { get; set; }

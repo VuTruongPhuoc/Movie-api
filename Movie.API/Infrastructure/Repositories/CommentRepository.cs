@@ -7,7 +7,7 @@ namespace Movie.API.Infrastructure.Repositories
 {
     public interface ICommentRepository : IGenericRepository<Comment>
     {
-        Task<PaginatedList<Comment>> GetAllAsync(int pageNumber, int pageSize, int filmId);
+        Task<List<Comment>> GetAllAsync(int filmId);
     }
     public class CommentRepository : GenericRepository<Comment>, ICommentRepository
     {
@@ -18,13 +18,11 @@ namespace Movie.API.Infrastructure.Repositories
             _dbContext = dbContext;
             _commentSet = _dbContext.Set<Comment>();
         }
-        public async Task<PaginatedList<Comment>> GetAllAsync(int pageNumber, int pageSize, int filmId)
+        public async Task<List<Comment>> GetAllAsync(int filmId)
         {
-            var comments = await _commentSet.Where(x => x.FilmId == filmId).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-            var count = comments.Count();
-            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+            var comments = await _commentSet.Where(x => x.FilmId == filmId).ToListAsync();
 
-            return new PaginatedList<Comment> ( comments,pageNumber , totalPages );
+            return comments;
         }
     }
 }

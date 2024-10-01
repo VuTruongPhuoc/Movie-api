@@ -14,6 +14,7 @@ namespace Movie.API.Models.Domain.Entities
         public string Slug { get; set; }
         public string Description { get; set; } = default!;
         public string? Image { get; set; }
+        public string? Poster { get; set; }
 
         [Column("number_of_episodes")]
         public int NumberOfEpisodes {  get; set; }

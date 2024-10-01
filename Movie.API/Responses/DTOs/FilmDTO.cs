@@ -8,6 +8,8 @@
         public string Description { get; set; } 
         public string? Image { get; set; }
         public string? ImageUrl { get; set; }
+        public string Poster { get; set; }
+        public string? PosterUrl { get; set; }
         public string OriginName { get; set; }
         public string Time { get; set; }
         public string Type { get; set; }
@@ -25,6 +27,13 @@
         public int Id { get; set; }
         public string? Image { get; set; }
         public string? ImageUrl { get; set; }
+
+    }
+    public class FilmPoster
+    {
+        public int Id { get; set; }
+        public string? Poster { get; set; }
+        public string? PosterUrl { get; set; }
 
     }
 }

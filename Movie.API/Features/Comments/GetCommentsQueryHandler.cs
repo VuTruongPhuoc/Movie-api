@@ -22,9 +22,9 @@ namespace Movie.API.Features.Comments
         }
         public async Task<Response> Handle(GetCommentsQuery request, CancellationToken cancellationToken)
         {
-            var comments = await _commentRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize, request.FilmId);
+            var comments = await _commentRepository.GetAllAsync(request.FilmId);
 
-            var dtos = CustomMapper.Mapper.Map<PaginatedList<CommentDTO>>(comments);
+            var dtos = CustomMapper.Mapper.Map<List<CommentDTO>>(comments);
 
             return await Task.FromResult(new DataRespone()
             {

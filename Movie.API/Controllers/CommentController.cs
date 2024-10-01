@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Movie.API.AutoMapper;
 using Movie.API.Features.Categories;
 using Movie.API.Features.Comments;
+using Movie.API.Features.Feedbacks;
 using Movie.API.Requests;
 using Movie.API.Requests.Pagination;
 using Movie.API.Responses;
@@ -24,16 +25,11 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCommnets(int pageNumber = 1, int pageSize = 10, int filmid = 1)
+        public async Task<Response> GetCommnets(int filmid)
         {        
-            var query = new GetCommentsQuery() 
+            var query = new GetFeedbacksQuery() 
             { 
-                FilmId = filmid,
-                Pagination =  new Pagination()
-                { 
-                    pageNumber = pageNumber, 
-                    pageSize = pageSize
-                }
+                CommentId = filmid,
             };
             return await _mediator.Send(query);
         }
@@ -41,8 +37,8 @@ namespace Movie.API.Controllers
         public async Task<IActionResult> AddComment([FromBody] AddCommentRequest model)
         {
             string userid = HttpContext.User.FindFirstValue("UserId");
-            var command = new AddCommentCommand() { UserId = userid};
-            CustomMapper.Mapper.Map<AddCommentRequest, AddCommentCommand>(model, command);
+            var command = new AddFeedbackCommand() { UserId = userid};
+            CustomMapper.Mapper.Map<AddCommentRequest, AddFeedbackCommand>(model, command);
 
             var response = await _mediator.Send(command);
             if(response.StatusCode == HttpStatusCode.BadRequest)
@@ -54,8 +50,8 @@ namespace Movie.API.Controllers
         [HttpPost("update/{id}")]
         public async Task<IActionResult> UpdateComment(int id, [FromBody] UpdateCommentRequest model)
         {
-            var command = new UpdateCommentCommand() { Id = id};
-            CustomMapper.Mapper.Map<UpdateCommentRequest, UpdateCommentCommand>(model, command);
+            var command = new UpdateFeedbackCommand() { Id = id};
+            CustomMapper.Mapper.Map<UpdateCommentRequest, UpdateFeedbackCommand>(model, command);
             var response = await _mediator.Send(command);
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
@@ -70,7 +66,7 @@ namespace Movie.API.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteComment(int id)
         {
-            var command = new DeleteCommentCommand() { Id = id};
+            var command = new DeleteFeedbackCommand() { Id = id};
             var response = await _mediator.Send(command);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {

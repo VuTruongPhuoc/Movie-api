@@ -266,7 +266,8 @@ namespace Movie.API.Migrations
 
                     b.Property<string>("Link")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -311,6 +312,50 @@ namespace Movie.API.Migrations
                     b.ToTable("EpisodeServers", (string)null);
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Feedback", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CommentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsLocked")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Feedbacks", (string)null);
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Film", b =>
                 {
                     b.Property<int>("Id")
@@ -346,6 +391,7 @@ namespace Movie.API.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("NumberOfEpisodes")
+                        .HasMaxLength(10)
                         .HasColumnType("int")
                         .HasColumnName("number_of_episodes");
 
@@ -353,6 +399,9 @@ namespace Movie.API.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Poster")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ScheduleId")
                         .HasColumnType("int");
@@ -372,7 +421,8 @@ namespace Movie.API.Migrations
 
                     b.Property<string>("Trailer")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("Type")
                         .HasColumnType("int");
@@ -865,6 +915,25 @@ namespace Movie.API.Migrations
                     b.Navigation("Server");
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Feedback", b =>
+                {
+                    b.HasOne("Movie.API.Models.Domain.Entities.Comment", "Comment")
+                        .WithMany("Feedbacks")
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movie.API.Models.Domain.Entities.User", "User")
+                        .WithMany("Feedbacks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Comment");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Film", b =>
                 {
                     b.HasOne("Movie.API.Models.Domain.Entities.Country", "Country")
@@ -976,6 +1045,11 @@ namespace Movie.API.Migrations
                     b.Navigation("FilmCategories");
                 });
 
+            modelBuilder.Entity("Movie.API.Models.Domain.Entities.Comment", b =>
+                {
+                    b.Navigation("Feedbacks");
+                });
+
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.Country", b =>
                 {
                     b.Navigation("Films");
@@ -1014,6 +1088,8 @@ namespace Movie.API.Migrations
             modelBuilder.Entity("Movie.API.Models.Domain.Entities.User", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Feedbacks");
 
                     b.Navigation("Histories");
 

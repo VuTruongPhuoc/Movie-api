@@ -44,4 +44,10 @@ namespace Movie.API.Requests
         [NotMapped]
         public IFormFile ImageFile { get; set; }
     }
+    public class ChangeFilmPosterRequest
+    {
+        public int Id { get; set; }
+        [NotMapped]
+        public IFormFile PosterFile { get; set; }
+    }
 }

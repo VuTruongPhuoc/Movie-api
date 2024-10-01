@@ -40,8 +40,10 @@ namespace Movie.API.Controllers
             foreach (var image in filmsResponse.Data)
             {
                 image.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{image.Image}";
+                image.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{image.Poster}";
+
             }
-             
+
             return new DataRespone
             {
                 Success = true,
@@ -62,6 +64,7 @@ namespace Movie.API.Controllers
                 return BadRequest(filmResponse);
             }
             filmResponse.Film.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmResponse.Film.Image}";
+            filmResponse.Film.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmResponse.Film.Poster}";
 
             return Ok(new GetFilmBySlugResponse
             {
@@ -152,6 +155,52 @@ namespace Movie.API.Controllers
             var dto = CustomMapper.Mapper.Map<FilmImage>(film);
             dto.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{dto.Image}";
             return Ok(new FilmImageResponse
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+                Film = dto
+            });
+        }
+        [HttpPost("changefilmposter/{id}")]
+        public async Task<IActionResult> ChangeFilmPoster(int id, [FromForm] ChangeFilmPosterRequest model)
+        {
+            if (id != model.Id)
+            {
+                return BadRequest(new Response
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.BadRequest,
+                    Message = null
+                });
+            }
+            var film = await _filmRepository.GetByIdAsync(id);
+            if (model.PosterFile != null)
+            {
+                if (!string.IsNullOrEmpty(film.Poster))
+                {
+                    DeleteImage(film.Poster);
+                }
+                film.Poster = await SaveImage(model.PosterFile);
+            }
+            if (film is null)
+            {
+                return NotFound(new Response()
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.NotFound,
+                    Message = "Không tìm thấy",
+                });
+            }
+
+            CustomMapper.Mapper.Map<ChangeFilmPosterRequest, Film>(model, film);
+            film.Poster = Path.Combine(film.Poster);
+            await _filmRepository.UpdateAsync(film);
+            await _filmRepository.SaveAsync();
+
+            var dto = CustomMapper.Mapper.Map<FilmPoster>(film);
+            dto.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{dto.Poster}";
+            return Ok(new FilmPosterResponse
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,

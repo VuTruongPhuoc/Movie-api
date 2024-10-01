@@ -18,6 +18,7 @@ namespace Movie.API.Models.Domain.Entities
         public DateTime RefreshTokenExpiry { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<Track> Tracks { get; set; }
         public virtual ICollection<History> Histories { get; set; }
     }

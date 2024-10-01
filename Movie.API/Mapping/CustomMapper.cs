@@ -3,6 +3,7 @@ using Movie.API.Features.Categories;
 using Movie.API.Features.Comments;
 using Movie.API.Features.Countries;
 using Movie.API.Features.Episodes;
+using Movie.API.Features.Feedbacks;
 using Movie.API.Features.Films;
 using Movie.API.Features.Histories;
 using Movie.API.Features.Reviews;
@@ -37,6 +38,7 @@ namespace Movie.API.AutoMapper
                 cfg.AddProfile<HistoryProfile>();
                 cfg.AddProfile<TrackProfile>();
                 cfg.AddProfile<EpisodeProfile>();
+                cfg.AddProfile<FeedbackProfile>();
             });
             var mapper = config.CreateMapper();
             return mapper;
@@ -65,10 +67,12 @@ namespace Movie.API.AutoMapper
         {
             CreateMap<Film, FilmDTO>().ReverseMap();
             CreateMap<Film, FilmImage>().ReverseMap();
+            CreateMap<Film, FilmPoster>().ReverseMap();
             CreateMap<Film, AddFilmCommand>().ReverseMap();
             CreateMap<Film, UpdateFilmCommand>().ReverseMap();
             CreateMap<Film, UpdateFilmRequest>().ReverseMap();
             CreateMap<Film, ChangeFilmImageRequest>().ReverseMap();
+            CreateMap<Film, ChangeFilmPosterRequest>().ReverseMap();
             CreateMap<AddFilmRequest, AddFilmCommand>().ReverseMap();
             CreateMap<UpdateFilmCommand, UpdateFilmRequest>().ReverseMap();
             CreateMap<PaginatedList<Film>, PaginatedList<FilmDTO>>().ReverseMap();
@@ -141,6 +145,19 @@ namespace Movie.API.AutoMapper
             CreateMap<UpdateCommentCommand, UpdateCommentRequest>().ReverseMap();
             CreateMap<PaginatedList<Comment>, PaginatedList<CommentDTO>>().ReverseMap();
         }   
+    }
+    public class FeedbackProfile : Profile
+    {
+        public FeedbackProfile()
+        {
+            CreateMap<Feedback, FeedbackDTO>().ReverseMap();
+            CreateMap<Feedback, AddFeedbackCommand>().ReverseMap();
+            CreateMap<Feedback, UpdateFeedbackCommand>().ReverseMap();
+            CreateMap<FeedbackDTO, UpdateFeedbackRequest>().ReverseMap();
+            CreateMap<AddFeedbackRequest, AddFeedbackCommand>().ReverseMap();
+            CreateMap<UpdateFeedbackCommand, UpdateFeedbackRequest>().ReverseMap();
+            CreateMap<PaginatedList<Feedback>, PaginatedList<FeedbackDTO>>().ReverseMap();
+        }
     }
     public class TrackProfile : Profile
     {
