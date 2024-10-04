@@ -10,6 +10,7 @@ using Movie.API.Features.Countries;
 using Movie.API.Features.Films;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
+using Movie.API.Models.Domain.Common;
 using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
 using Movie.API.Requests.Pagination;
@@ -21,15 +22,17 @@ using static System.Net.Mime.MediaTypeNames;
 namespace Movie.API.Controllers
 {
     [Route("api/film")]
-    [ApiController] 
+    [ApiController]
     public class FilmController : BaseController
     {
         private readonly IFilmRepository _filmRepository;
+        private readonly MovieDbContext _dbContext;
         private readonly IMediator _mediator;
-        public FilmController(IMediator mediator, IFilmRepository filmRepository, IWebHostEnvironment hostEnvironment) : base(hostEnvironment)
+        public FilmController(IMediator mediator, IFilmRepository filmRepository, IWebHostEnvironment hostEnvironment, MovieDbContext dbContext) : base(hostEnvironment)
         {
             _mediator = mediator;
             _filmRepository = filmRepository;
+            _dbContext = dbContext;
         }
         [HttpGet("all")]
         public async Task<DataRespone> GetFilms()
@@ -56,10 +59,10 @@ namespace Movie.API.Controllers
         {
             var query = new GetFilmBySlugQuery() { Slug = slug };
             var filmResponse = await _mediator.Send(query);
-            if(filmResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (filmResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 return NotFound(filmResponse);
-            } else if(filmResponse.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            } else if (filmResponse.StatusCode == System.Net.HttpStatusCode.BadRequest)
             {
                 return BadRequest(filmResponse);
             }
@@ -78,7 +81,7 @@ namespace Movie.API.Controllers
         [HttpGet("{id}")]
         public async Task<Response> GetFilm(int id)
         {
-            var query = new GetFilmQuery() { Id = id};
+            var query = new GetFilmQuery() { Id = id };
             return await _mediator.Send(query);
         }
         [Authorize]
@@ -88,7 +91,7 @@ namespace Movie.API.Controllers
             var command = new AddFilmCommand();
             CustomMapper.Mapper.Map<AddFilmRequest, AddFilmCommand>(model, command);
             var response = await _mediator.Send(command);
-            if(response.StatusCode == System.Net.HttpStatusCode.BadGateway)
+            if (response.StatusCode == System.Net.HttpStatusCode.BadGateway)
             {
                 return BadRequest(response);
             }
@@ -99,7 +102,7 @@ namespace Movie.API.Controllers
         [HttpPost("update/{id}")]
         public async Task<IActionResult> UpdateFilm(int id, [FromBody] UpdateFilmRequest model)
         {
-            var command = new UpdateFilmCommand() { Id = id};
+            var command = new UpdateFilmCommand() { Id = id };
             CustomMapper.Mapper.Map<UpdateFilmRequest, UpdateFilmCommand>(model, command);
             var response = await _mediator.Send(command);
             if (response.StatusCode == System.Net.HttpStatusCode.BadGateway)
@@ -113,7 +116,7 @@ namespace Movie.API.Controllers
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteFilm(int id)
         {
-            var command = new DeleteFilmCommand() { Id = id};
+            var command = new DeleteFilmCommand() { Id = id };
             var response = await _mediator.Send(command);
             if (response.StatusCode == System.Net.HttpStatusCode.BadGateway)
             {
@@ -217,5 +220,88 @@ namespace Movie.API.Controllers
                 Film = dto
             });
         }
+
+        [HttpGet("getbycategory/{category}")]
+        public async Task<IActionResult> GetByCategory(int pagenumber, int pagesize, int category)
+        {
+            if(category == null)
+            {
+                return NotFound(new FilterFilmResponse()
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.NotFound,
+                    Message = null,
+                });
+            }
+            var cate = await _dbContext.Categories.FindAsync(category);
+            var films = await _filmRepository.GetByCategoryAsync(pagenumber,pagesize,category);
+            var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
+            foreach (var filmFilter in filter.Items)
+            {
+                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
+                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+            }
+            return Ok(new FilterFilmResponse()
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+                Name = cate.Name,
+                Data = filter,
+            });
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> GetByName(int pagenumber, int pagesize, string name)
+        {
+            if (name == null)
+            {
+                return NotFound(new FilterFilmResponse()
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.NotFound,
+                    Message = null,
+                });
+            }
+            var films = await _filmRepository.GetByNameAsync(pagenumber, pagesize, name);
+            var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
+
+            foreach (var filmFilter in filter.Items)
+            {
+                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
+                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+            }
+            return Ok(new FilterFilmResponse()
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+                Data = filter,
+            });
+        }
+        [HttpGet("filter")]
+        public async Task<IActionResult> Filter(int pagenumber, int pagesize,string name, int category,int country )
+        {
+
+            var films = await _filmRepository.Filter(pagenumber, pagesize, name, country, category);
+            var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
+
+            foreach (var filmFilter in filter.Items)
+            {
+                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
+                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+            }
+            return Ok(new FilterFilmResponse()
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+               
+                Data = filter,
+            });
+        }
+
+
+
     }
 }

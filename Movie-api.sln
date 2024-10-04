@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5CAF6998-9356-4083-9182-F7A0DEBC50BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.API", "Movie.API\Movie.API.csproj", "{0026DEDA-400A-41C4-9D7A-2029E2B4D41F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0026DEDA-400A-41C4-9D7A-2029E2B4D41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0026DEDA-400A-41C4-9D7A-2029E2B4D41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0026DEDA-400A-41C4-9D7A-2029E2B4D41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0026DEDA-400A-41C4-9D7A-2029E2B4D41F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0026DEDA-400A-41C4-9D7A-2029E2B4D41F} = {5CAF6998-9356-4083-9182-F7A0DEBC50BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {004C3E4A-46BE-4332-A6CD-630806636DA9}
+	EndGlobalSection
+EndGlobal

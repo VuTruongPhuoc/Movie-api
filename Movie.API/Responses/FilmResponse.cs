@@ -1,4 +1,5 @@
-﻿using Movie.API.Responses.DTOs;
+﻿using Movie.API.Models.Domain.Common;
+using Movie.API.Responses.DTOs;
 
 namespace Movie.API.Responses
 {
@@ -34,5 +35,11 @@ namespace Movie.API.Responses
     {
         public FilmDTO Film { get; set; }
         public List<EpisodeDTO> Episodes { get; set;}
+    }
+
+    public class FilterFilmResponse : Response
+    {
+        public string Name {  get; set; }
+        public PaginatedList<FilmFilter> Data { get; set; }
     }
 }

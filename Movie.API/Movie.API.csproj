@@ -31,12 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Moive.Infrastructure\Movie.Infrastructure.csproj" />
-    <ProjectReference Include="..\Movie.Application\Movie.Application.csproj" />
-    <ProjectReference Include="..\Movie.Domain\Movie.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Content\Images\" />
     <Folder Include="Utilities\" />
   </ItemGroup>

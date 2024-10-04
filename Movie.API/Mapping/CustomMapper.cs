@@ -66,6 +66,7 @@ namespace Movie.API.AutoMapper
         public FilmProfile()
         {
             CreateMap<Film, FilmDTO>().ReverseMap();
+            CreateMap<Film, FilmFilter>().ReverseMap();
             CreateMap<Film, FilmImage>().ReverseMap();
             CreateMap<Film, FilmPoster>().ReverseMap();
             CreateMap<Film, AddFilmCommand>().ReverseMap();
@@ -76,6 +77,7 @@ namespace Movie.API.AutoMapper
             CreateMap<AddFilmRequest, AddFilmCommand>().ReverseMap();
             CreateMap<UpdateFilmCommand, UpdateFilmRequest>().ReverseMap();
             CreateMap<PaginatedList<Film>, PaginatedList<FilmDTO>>().ReverseMap();
+            CreateMap<PaginatedList<Film>, PaginatedList<FilmFilter>>().ReverseMap();
         }
     }
     public class RoleProfile: Profile
