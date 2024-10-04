@@ -14,6 +14,8 @@ using Movie.API.Models.Domain.Entities;
 using Serilog;
 using System.Security.Cryptography.Xml;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 
 namespace Movie.API
 {
@@ -86,6 +88,12 @@ namespace Movie.API
             builder.Services.AddMediatR(configuration =>
             {
                 configuration.RegisterServicesFromAssembly(typeof(Program).Assembly);
+            });
+
+            builder.Services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                options.JsonSerializerOptions.WriteIndented = true;
             });
 
             var app = builder.Build();

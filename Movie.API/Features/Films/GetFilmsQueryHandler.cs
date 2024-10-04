@@ -52,6 +52,7 @@ namespace Movie.API.Features.Films
                     .ThenInclude(fc => fc.Category)
                 .Include(f => f.Schedule)
                 .Include(f => f.Country)
+                .Include(f => f.Reviews)
                 .ToListAsync();
 
             var filmDtos = films.Select(film =>
@@ -62,6 +63,13 @@ namespace Movie.API.Features.Films
                     .ToList();
                 dto.Schedule = CustomMapper.Mapper.Map<ScheduleDTO>(film.Schedule);
                 dto.Country = CustomMapper.Mapper.Map<CountryDTO>(film.Country);
+
+                var reviews = film.Reviews;
+                dto.Review = new ReviewTotal()
+                {
+                    Count = reviews.Count,
+                    AvgRate = reviews.Count > 0 ? (double)reviews.Sum(x => x.Rate) / reviews.Count : 0
+                };
                 return dto;
             }).ToList();
 

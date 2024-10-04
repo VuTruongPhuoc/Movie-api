@@ -24,14 +24,22 @@ namespace Movie.API.Features.Feedbacks
         {
             var feedbacks = await _feedbackRepository.GetAllAsync(request.CommentId);
 
-            var dtos = CustomMapper.Mapper.Map<List<FeedbackDTO>>(feedbacks);
+            var feedbackDtos = new List<FeedbackDTO>();
+
+            foreach (var feedback in feedbacks)
+            {
+                var dto = CustomMapper.Mapper.Map<FeedbackDTO>(feedback);
+                dto.User = CustomMapper.Mapper.Map<UserDTO>(await _dbContext.Users.FindAsync(feedback.UserId));
+                feedbackDtos.Add(dto);
+            }
+
 
             return await Task.FromResult(new DataRespone()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Thành công",
-                Data = dtos
+                Data = feedbackDtos
             });
         }
     }

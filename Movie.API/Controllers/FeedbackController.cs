@@ -23,13 +23,14 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetCommnets(int commentId = 1)
+        public async Task<Response> GetCommnets(int commentId)
         {
             var query = new GetFeedbacksQuery()
             {
                 CommentId = commentId,
             };
             return await _mediator.Send(query);
+            
         }
         [HttpPost("add")]
         public async Task<IActionResult> AddFeedback([FromBody] AddFeedbackRequest model)
@@ -39,6 +40,7 @@ namespace Movie.API.Controllers
             CustomMapper.Mapper.Map<AddFeedbackRequest, AddFeedbackCommand>(model, command);
 
             var response = await _mediator.Send(command);
+            response.Feedback.User.AvatarUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{response.Feedback.User.Avatar}";
             if (response.StatusCode == HttpStatusCode.BadRequest)
             {
                 return BadRequest(response);

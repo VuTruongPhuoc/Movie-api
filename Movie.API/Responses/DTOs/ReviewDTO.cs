@@ -8,4 +8,10 @@
         public int Rate { get; set; }
         public DateTime CreateDate { get; set; }
     }
+
+    public class ReviewTotal
+    {
+        public int Count { get; set; }
+        public double AvgRate { get; set; }
+    }
 }

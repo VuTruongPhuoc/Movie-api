@@ -8,6 +8,7 @@ using Movie.API.Requests;
 using Movie.API.Responses;
 using Movie.API.Requests.Pagination;
 using System.Security.Claims;
+using Movie.API.Features.Reviews;
 
 namespace Movie.API.Controllers
 {
@@ -22,16 +23,23 @@ namespace Movie.API.Controllers
             _mediator = mediator;
         }
         [HttpGet("all")]
-        public async Task<Response> GetReviews(int pageNumber = 1, int pageSize = 10, int filmid = 1)
+        public async Task<Response> GetReviews(int filmid)
         {
             var query = new GetReviewsQuery()
             {
                 FilmId = filmid,
-                Pagination = new Pagination()
-                {
-                    pageNumber = pageNumber,
-                    pageSize = pageSize
-                }
+            };
+            return await _mediator.Send(query);
+        }
+        [HttpGet("getbyfilm/{filmid}")]
+        public async Task<Response> GetReviewById(int filmid)
+        {
+            var userid = HttpContext.User.FindFirstValue("UserId");
+
+            var query = new GetReviewQuery()
+            {
+                FilmId = filmid,
+                UserId = userid,
             };
             return await _mediator.Send(query);
         }
@@ -43,6 +51,18 @@ namespace Movie.API.Controllers
             command.UserId = userid;
             CustomMapper.Mapper.Map<AddReviewRequest, AddReviewCommand>(model, command);
             return await _mediator.Send(command);
+        }
+        [HttpPost("update/{id}")]
+        public async Task<IActionResult> UpdateReview(int id, [FromBody] UpdateReviewRequest model)
+        {
+            var command = new UpdateReviewCommand() { Id = id };
+            CustomMapper.Mapper.Map<UpdateReviewRequest, UpdateReviewCommand>(model, command);
+            var response = await _mediator.Send(command);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
         }
         [HttpDelete("delete/{id}")]
         public async Task<Response> DeleteReview(int id)

@@ -7,7 +7,8 @@ namespace Movie.API.Infrastructure.Repositories
 {
     public interface IReviewRepository : IGenericRepository<Review>
     {
-        Task<PaginatedList<Review>> GetAllAsync(int pageNumber, int pageSize, int filmId);
+        Task<List<Review>> GetAllAsync(int filmId);
+        Task<Review> GetByFilmAsync(int filmid, string userid);
     }
     public class ReviewRepository : GenericRepository<Review>, IReviewRepository
     {
@@ -18,13 +19,16 @@ namespace Movie.API.Infrastructure.Repositories
             _dbContext = dbContext;
             _reviewSet = _dbContext.Set<Review>();
         }
-        public async Task<PaginatedList<Review>> GetAllAsync(int pageNumber, int pageSize, int filmId)
+        public async Task<List<Review>> GetAllAsync(int filmId)
         {
-            var reviews = await _reviewSet.Where(x => x.FilmId == filmId).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-            var count = reviews.Count();
-            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+            var reviews = await _reviewSet.Where(x => x.FilmId == filmId).ToListAsync();
 
-            return new PaginatedList<Review>(reviews, pageNumber, totalPages);
+            return reviews;
+        }
+        public async Task<Review> GetByFilmAsync(int filmid, string userid)
+        {
+            var review = await _reviewSet.FirstOrDefaultAsync(x => x.FilmId == filmid & x.UserId == userid);
+            return review;
         }
     }
 }

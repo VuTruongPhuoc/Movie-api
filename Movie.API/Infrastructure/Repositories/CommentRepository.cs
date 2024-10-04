@@ -20,7 +20,7 @@ namespace Movie.API.Infrastructure.Repositories
         }
         public async Task<List<Comment>> GetAllAsync(int filmId)
         {
-            var comments = await _commentSet.Where(x => x.FilmId == filmId).ToListAsync();
+            var comments = await _commentSet.Where(x => x.FilmId == filmId).OrderByDescending(x => x.CreateDate).ToListAsync();
 
             return comments;
         }

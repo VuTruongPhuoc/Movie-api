@@ -8,6 +8,13 @@
         public DateTime CreateDate { get; set; } = DateTime.UtcNow;
         public bool IsActive { get; set; } = true;
     }
+    public class UpdateReviewRequest
+    {
+
+        public int Rate { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.UtcNow;
+        public bool IsActive { get; set; } = true;
+    }
     public class DeleteReviewRequest
     {
 

@@ -176,6 +176,8 @@ namespace Movie.API.AutoMapper
             CreateMap<Review, ReviewDTO>().ReverseMap();
             CreateMap<Review, AddReviewCommand>().ReverseMap();
             CreateMap<AddReviewRequest, AddReviewCommand>().ReverseMap();
+            CreateMap<UpdateReviewRequest, UpdateReviewCommand>().ReverseMap();
+            CreateMap<Review, UpdateReviewCommand>().ReverseMap();
             CreateMap<PaginatedList<Review>, PaginatedList<ReviewDTO>>().ReverseMap();
         }
     }

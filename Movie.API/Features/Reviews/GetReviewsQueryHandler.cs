@@ -20,9 +20,9 @@ namespace Movie.API.Features.Reviews
         }
         public async Task<Response> Handle(GetReviewsQuery request, CancellationToken cancellationToken)
         {
-            var comments = await _reviewRepository.GetAllAsync(request.Pagination.pageNumber, request.Pagination.pageSize, request.FilmId);
+            var comments = await _reviewRepository.GetAllAsync(request.FilmId);
 
-            var dtos = CustomMapper.Mapper.Map<PaginatedList<ReviewDTO>>(comments);
+            var dtos = CustomMapper.Mapper.Map<List<ReviewDTO>>(comments);
 
             return await Task.FromResult(new DataRespone()
             {

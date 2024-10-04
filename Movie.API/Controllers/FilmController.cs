@@ -81,6 +81,7 @@ namespace Movie.API.Controllers
             var query = new GetFilmQuery() { Id = id};
             return await _mediator.Send(query);
         }
+        [Authorize]
         [HttpPost("add")]
         public async Task<IActionResult> AddFilm([FromBody] AddFilmRequest model)
         {
@@ -93,6 +94,8 @@ namespace Movie.API.Controllers
             }
             return Ok(response);
         }
+        [Authorize]
+
         [HttpPost("update/{id}")]
         public async Task<IActionResult> UpdateFilm(int id, [FromBody] UpdateFilmRequest model)
         {
@@ -105,6 +108,8 @@ namespace Movie.API.Controllers
             }
             return Ok(response);
         }
+        [Authorize]
+
         [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteFilm(int id)
         {
@@ -116,6 +121,8 @@ namespace Movie.API.Controllers
             }
             return Ok(response);
         }
+        [Authorize]
+
         [HttpPost("changefilmimage/{id}")]
         public async Task<IActionResult> ChangeFilmImage(int id, [FromForm] ChangeFilmImageRequest model)
         {
@@ -162,6 +169,8 @@ namespace Movie.API.Controllers
                 Film = dto
             });
         }
+        [Authorize]
+
         [HttpPost("changefilmposter/{id}")]
         public async Task<IActionResult> ChangeFilmPoster(int id, [FromForm] ChangeFilmPosterRequest model)
         {

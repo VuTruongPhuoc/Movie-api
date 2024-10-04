@@ -4,7 +4,7 @@ namespace Movie.API.Responses
 {
     public class GetCommentsResponse : Response
     {
-        public List<CountryDTO> Comments { get; set; }
+        public List<CommentDTO> Comments { get; set; }
     }
     public class AddCommentResponse : Response
     {

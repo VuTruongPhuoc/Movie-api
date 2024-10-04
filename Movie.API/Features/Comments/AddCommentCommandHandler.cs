@@ -10,7 +10,7 @@ using Movie.API.Responses.DTOs;
 
 namespace Movie.API.Features.Comments
 {
-    public class AddCommentCommandHandler : IRequestHandler<AddCommentCommand, Response>
+    public class AddCommentCommandHandler : IRequestHandler<AddCommentCommand, AddCommentResponse>
     {
         private readonly ICommentRepository _commentRepository;
         private readonly MovieDbContext _dbContext;
@@ -20,18 +20,23 @@ namespace Movie.API.Features.Comments
             _dbContext = dbContext;
         }
 
-        public async Task<Response> Handle(AddCommentCommand request, CancellationToken cancellationToken)
+        public async Task<AddCommentResponse> Handle(AddCommentCommand request, CancellationToken cancellationToken)
         {
             var comment = CustomMapper.Mapper.Map<Comment>(request);
             comment.CreateDate = DateTime.UtcNow;
             await _commentRepository.AddAsync(comment);
             await _commentRepository.SaveAsync();
+
+            var dto = CustomMapper.Mapper.Map<CommentDTO>(comment);
+            dto.User = CustomMapper.Mapper.Map<UserDTO>(await _dbContext.Users.FindAsync(comment.UserId));
+
+
             return await Task.FromResult(new AddCommentResponse()
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Bình luận thành công",
-                Comment = CustomMapper.Mapper.Map<CommentDTO>(comment)
+                Comment = dto
             });
         }
     }

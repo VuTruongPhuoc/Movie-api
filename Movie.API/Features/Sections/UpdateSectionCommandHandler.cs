@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Movie.API.AutoMapper;
-using Movie.API.Features.Sections;
 using Movie.API.Infrastructure.Data;
 using Movie.API.Infrastructure.Repositories;
 using Movie.API.Models.Domain.Entities;

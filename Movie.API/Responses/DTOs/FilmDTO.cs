@@ -19,6 +19,8 @@
         public List<CategoryDTO> Categories { get; set; }
         public CountryDTO Country { get; set; }
         public ScheduleDTO Schedule {  get; set; }
+        
+        public ReviewTotal Review { get; set; }
         public DateTime CreateDate {  get; set; }
         public DateTime LastModifiedDate { get; set; }
     }

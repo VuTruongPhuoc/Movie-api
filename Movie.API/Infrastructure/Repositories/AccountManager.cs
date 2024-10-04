@@ -48,11 +48,11 @@ namespace Movie.API.Infrastructure.Repositories
                 var role = await _roleManager.FindByIdAsync(roleId);
                 var claims = new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, model.Username),
+                    new Claim("UserName", model.Username),
                     new Claim("UserId", user.Id),
-                    new Claim(ClaimTypes.Role, role.Name),
+                    new Claim(ClaimTypes.Role, role.Name ?? string.Empty),
                     new Claim(ClaimTypes.Email, user.Email),
-                    new Claim("Avatar", user.Avatar),
+                    new Claim("Avatar", user.Avatar ?? string.Empty),
                     new Claim(ClaimTypes.MobilePhone, user.PhoneNumber ?? string.Empty),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
@@ -80,7 +80,6 @@ namespace Movie.API.Infrastructure.Repositories
                     Success = false,
                     StatusCode = HttpStatusCode.Unauthorized,
                     Message = "Tên tài khoản hoặc mật khẩu không đúng",
-
                 };
             }
         }
