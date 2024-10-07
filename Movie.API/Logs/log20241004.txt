@@ -11936,3 +11936,89 @@ FROM [Categories] AS [c]
 2024-10-04 22:35:43.423 +07:00 [INF] Executed action Movie.API.Controllers.CategoryController.GetCategories (Movie.API) in 10.7891ms
 2024-10-04 22:35:43.423 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.CategoryController.GetCategories (Movie.API)'
 2024-10-04 22:35:43.423 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/category/all - 200 null application/json; charset=utf-8 11.2247ms
+2024-10-04 23:11:13.876 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:13.876 +07:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:13.877 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:13.877 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:13.877 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/film/all - 204 null null 0.3067ms
+2024-10-04 23:11:13.877 +07:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7039/api/film/all - 204 null null 0.3071ms
+2024-10-04 23:11:13.878 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:13.878 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:13.878 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:13.878 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.DataRespone] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-10-04 23:11:14.032 +07:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[number_of_episodes], [f].[OriginName], [f].[Poster], [f].[ScheduleId], [f].[Slug], [f].[Status], [f].[Time], [f].[Trailer], [f].[Type], [f].[Year], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id], [t].[CreateDate], [t].[Description], [t].[IsActive], [t].[LastModifiedDate], [t].[Name], [t].[Slug], [t].[Status], [s].[CreateDate], [s].[Description], [s].[IsActive], [s].[LastModifiedDate], [s].[Name], [s].[Status], [c].[CreateDate], [c].[Description], [c].[IsActive], [c].[LastModifiedDate], [c].[Name], [c].[Status], [r].[Id], [r].[CreateDate], [r].[FilmId], [r].[IsActive], [r].[LastModifiedDate], [r].[Rate], [r].[Status], [r].[UserId]
+FROM [Films] AS [f]
+INNER JOIN [Schedule] AS [s] ON [f].[ScheduleId] = [s].[Id]
+INNER JOIN [Countries] AS [c] ON [f].[CountryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [f0].[FilmId], [f0].[CategoryId], [c0].[Id], [c0].[CreateDate], [c0].[Description], [c0].[IsActive], [c0].[LastModifiedDate], [c0].[Name], [c0].[Slug], [c0].[Status]
+    FROM [FilmCategories] AS [f0]
+    INNER JOIN [Categories] AS [c0] ON [f0].[CategoryId] = [c0].[Id]
+) AS [t] ON [f].[Id] = [t].[FilmId]
+LEFT JOIN [Reviews] AS [r] ON [f].[Id] = [r].[FilmId]
+ORDER BY [f].[Id], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id]
+2024-10-04 23:11:14.039 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.DataRespone'.
+2024-10-04 23:11:14.040 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 161.855ms
+2024-10-04 23:11:14.040 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:14.040 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/film/all - 200 null application/json; charset=utf-8 162.3541ms
+2024-10-04 23:11:14.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:14.044 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:14.044 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:14.044 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.DataRespone] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-10-04 23:11:14.047 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[number_of_episodes], [f].[OriginName], [f].[Poster], [f].[ScheduleId], [f].[Slug], [f].[Status], [f].[Time], [f].[Trailer], [f].[Type], [f].[Year], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id], [t].[CreateDate], [t].[Description], [t].[IsActive], [t].[LastModifiedDate], [t].[Name], [t].[Slug], [t].[Status], [s].[CreateDate], [s].[Description], [s].[IsActive], [s].[LastModifiedDate], [s].[Name], [s].[Status], [c].[CreateDate], [c].[Description], [c].[IsActive], [c].[LastModifiedDate], [c].[Name], [c].[Status], [r].[Id], [r].[CreateDate], [r].[FilmId], [r].[IsActive], [r].[LastModifiedDate], [r].[Rate], [r].[Status], [r].[UserId]
+FROM [Films] AS [f]
+INNER JOIN [Schedule] AS [s] ON [f].[ScheduleId] = [s].[Id]
+INNER JOIN [Countries] AS [c] ON [f].[CountryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [f0].[FilmId], [f0].[CategoryId], [c0].[Id], [c0].[CreateDate], [c0].[Description], [c0].[IsActive], [c0].[LastModifiedDate], [c0].[Name], [c0].[Slug], [c0].[Status]
+    FROM [FilmCategories] AS [f0]
+    INNER JOIN [Categories] AS [c0] ON [f0].[CategoryId] = [c0].[Id]
+) AS [t] ON [f].[Id] = [t].[FilmId]
+LEFT JOIN [Reviews] AS [r] ON [f].[Id] = [r].[FilmId]
+ORDER BY [f].[Id], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id]
+2024-10-04 23:11:14.050 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.DataRespone'.
+2024-10-04 23:11:14.051 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 6.9248ms
+2024-10-04 23:11:14.051 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:14.051 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/film/all - 200 null application/json; charset=utf-8 7.5562ms
+2024-10-04 23:11:16.194 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:16.194 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:16.194 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:16.194 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.DataRespone] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-10-04 23:11:16.196 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[number_of_episodes], [f].[OriginName], [f].[Poster], [f].[ScheduleId], [f].[Slug], [f].[Status], [f].[Time], [f].[Trailer], [f].[Type], [f].[Year], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id], [t].[CreateDate], [t].[Description], [t].[IsActive], [t].[LastModifiedDate], [t].[Name], [t].[Slug], [t].[Status], [s].[CreateDate], [s].[Description], [s].[IsActive], [s].[LastModifiedDate], [s].[Name], [s].[Status], [c].[CreateDate], [c].[Description], [c].[IsActive], [c].[LastModifiedDate], [c].[Name], [c].[Status], [r].[Id], [r].[CreateDate], [r].[FilmId], [r].[IsActive], [r].[LastModifiedDate], [r].[Rate], [r].[Status], [r].[UserId]
+FROM [Films] AS [f]
+INNER JOIN [Schedule] AS [s] ON [f].[ScheduleId] = [s].[Id]
+INNER JOIN [Countries] AS [c] ON [f].[CountryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [f0].[FilmId], [f0].[CategoryId], [c0].[Id], [c0].[CreateDate], [c0].[Description], [c0].[IsActive], [c0].[LastModifiedDate], [c0].[Name], [c0].[Slug], [c0].[Status]
+    FROM [FilmCategories] AS [f0]
+    INNER JOIN [Categories] AS [c0] ON [f0].[CategoryId] = [c0].[Id]
+) AS [t] ON [f].[Id] = [t].[FilmId]
+LEFT JOIN [Reviews] AS [r] ON [f].[Id] = [r].[FilmId]
+ORDER BY [f].[Id], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id]
+2024-10-04 23:11:16.197 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.DataRespone'.
+2024-10-04 23:11:16.198 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 3.2974ms
+2024-10-04 23:11:16.198 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:16.198 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/film/all - 200 null application/json; charset=utf-8 3.8233ms
+2024-10-04 23:11:16.200 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7039/api/film/all - null null
+2024-10-04 23:11:16.200 +07:00 [INF] CORS policy execution successful.
+2024-10-04 23:11:16.200 +07:00 [INF] Executing endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:16.201 +07:00 [INF] Route matched with {action = "GetFilms", controller = "Film"}. Executing controller action with signature System.Threading.Tasks.Task`1[Movie.API.Responses.DataRespone] GetFilms() on controller Movie.API.Controllers.FilmController (Movie.API).
+2024-10-04 23:11:16.202 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id], [f].[CountryId], [f].[CreateDate], [f].[Description], [f].[Image], [f].[IsActive], [f].[LastModifiedDate], [f].[Name], [f].[number_of_episodes], [f].[OriginName], [f].[Poster], [f].[ScheduleId], [f].[Slug], [f].[Status], [f].[Time], [f].[Trailer], [f].[Type], [f].[Year], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id], [t].[CreateDate], [t].[Description], [t].[IsActive], [t].[LastModifiedDate], [t].[Name], [t].[Slug], [t].[Status], [s].[CreateDate], [s].[Description], [s].[IsActive], [s].[LastModifiedDate], [s].[Name], [s].[Status], [c].[CreateDate], [c].[Description], [c].[IsActive], [c].[LastModifiedDate], [c].[Name], [c].[Status], [r].[Id], [r].[CreateDate], [r].[FilmId], [r].[IsActive], [r].[LastModifiedDate], [r].[Rate], [r].[Status], [r].[UserId]
+FROM [Films] AS [f]
+INNER JOIN [Schedule] AS [s] ON [f].[ScheduleId] = [s].[Id]
+INNER JOIN [Countries] AS [c] ON [f].[CountryId] = [c].[Id]
+LEFT JOIN (
+    SELECT [f0].[FilmId], [f0].[CategoryId], [c0].[Id], [c0].[CreateDate], [c0].[Description], [c0].[IsActive], [c0].[LastModifiedDate], [c0].[Name], [c0].[Slug], [c0].[Status]
+    FROM [FilmCategories] AS [f0]
+    INNER JOIN [Categories] AS [c0] ON [f0].[CategoryId] = [c0].[Id]
+) AS [t] ON [f].[Id] = [t].[FilmId]
+LEFT JOIN [Reviews] AS [r] ON [f].[Id] = [r].[FilmId]
+ORDER BY [f].[Id], [s].[Id], [c].[Id], [t].[FilmId], [t].[CategoryId], [t].[Id]
+2024-10-04 23:11:16.203 +07:00 [INF] Executing ObjectResult, writing value of type 'Movie.API.Responses.DataRespone'.
+2024-10-04 23:11:16.203 +07:00 [INF] Executed action Movie.API.Controllers.FilmController.GetFilms (Movie.API) in 2.8858ms
+2024-10-04 23:11:16.203 +07:00 [INF] Executed endpoint 'Movie.API.Controllers.FilmController.GetFilms (Movie.API)'
+2024-10-04 23:11:16.204 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7039/api/film/all - 200 null application/json; charset=utf-8 3.2299ms

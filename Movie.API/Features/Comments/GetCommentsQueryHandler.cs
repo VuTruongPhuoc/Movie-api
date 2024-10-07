@@ -25,17 +25,6 @@ namespace Movie.API.Features.Comments
         }
         public async Task<DataRespone> Handle(GetCommentsQuery request, CancellationToken cancellationToken)
         {
-            //var comments = await _commentRepository.GetAllAsync(request.FilmId);
-
-
-            /* var commentDtos = new List<CommentDTO>();
-
-             foreach (var comment in comments)
-             {
-                 var dto = CustomMapper.Mapper.Map<CommentDTO>(comment);
-                 dto.User = CustomMapper.Mapper.Map<UserDTO>(await _dbContext.Users.FindAsync(comment.UserId));
-                 commentDtos.Add(dto);
-             }*/
             var comments = await _dbContext.Comments
                             .Include(x => x.Feedbacks)
                                 .ThenInclude(x => x.User)

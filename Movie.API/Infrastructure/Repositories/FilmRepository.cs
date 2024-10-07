@@ -9,9 +9,11 @@ namespace Movie.API.Infrastructure.Repositories
     {
         Task<List<Film>> GetAllAsync();
         Task<Film> GetBySlugAsync(string slug);
+
+        Task<PaginatedList<Film>> GetByTypeAsync(int pagenumber, int pagesize, int type);
         Task<PaginatedList<Film>> GetByCategoryAsync(int pagenumber, int pagesize, int category);
         Task<PaginatedList<Film>> GetByNameAsync(int pagenumber, int pagesize, string name);
-        Task<PaginatedList<Film>> Filter(int pagenumber, int pagesize, string name, int? country, int? category);
+        Task<PaginatedList<Film>> Filter(int pagenumber, int pagesize, int? year, int? country, int? category);
     }
     public class FilmRepository : GenericRepository<Film>, IFilmRepository
     {
@@ -33,6 +35,17 @@ namespace Movie.API.Infrastructure.Repositories
         public async Task<Film> GetBySlugAsync(string slug)
         {
             return await _filmSet.SingleOrDefaultAsync(x => x.Slug == slug);
+        }
+        public async Task<PaginatedList<Film>> GetByTypeAsync(int pageNumber, int pageSize, int type)
+        {
+            var films = await _filmSet
+                .Where(x => x.Type == type)
+                .Skip((pageNumber - 1) * pageSize).Take(pageSize)
+                .ToListAsync();
+            var count = films.Count();
+            var result = films.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            var totalPages = (int)Math.Ceiling(count / (double)pageSize);
+            return new PaginatedList<Film>(result, pageNumber, totalPages);
         }
         public async Task<PaginatedList<Film>> GetByCategoryAsync(int pageNumber, int pageSize, int category)
         {
@@ -61,16 +74,15 @@ namespace Movie.API.Infrastructure.Repositories
             return new PaginatedList<Film>(result, pageNumber, totalPages);
         }
 
-        public async Task<PaginatedList<Film>> Filter(int pageNumber, int pageSize, string name, int? country, int? category)
+        public async Task<PaginatedList<Film>> Filter(int pageNumber, int pageSize, int? year, int? country, int? category)
         {
             var query = _filmSet.Include(x => x.FilmCategories)
                         .ThenInclude(x => x.Category)
                         .AsQueryable();
 
-            if (!string.IsNullOrEmpty(name))
+            if (year != null)
             {
-                var lowerName = name.ToLower();
-                query = query.Where(x => x.Name.ToLower().Contains(lowerName) || x.OriginName.ToLower().Contains(lowerName));
+                query = query.Where(x => x.Year == year);
             }
 
             if (country != null)

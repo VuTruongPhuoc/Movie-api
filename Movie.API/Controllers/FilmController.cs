@@ -42,8 +42,8 @@ namespace Movie.API.Controllers
 
             foreach (var image in filmsResponse.Data)
             {
-                image.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{image.Image}";
-                image.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{image.Poster}";
+                image.ImageUrl = Url() + $"/{image.Image}";
+                image.PosterUrl = Url() + $"/{image.Poster}";
 
             }
 
@@ -66,8 +66,8 @@ namespace Movie.API.Controllers
             {
                 return BadRequest(filmResponse);
             }
-            filmResponse.Film.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmResponse.Film.Image}";
-            filmResponse.Film.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmResponse.Film.Poster}";
+            filmResponse.Film.ImageUrl = Url() + $"/{filmResponse.Film.Image}";
+            filmResponse.Film.PosterUrl = Url() + $"/{filmResponse.Film.Poster}";
 
             return Ok(new GetFilmBySlugResponse
             {
@@ -163,7 +163,7 @@ namespace Movie.API.Controllers
             await _filmRepository.SaveAsync();
 
             var dto = CustomMapper.Mapper.Map<FilmImage>(film);
-            dto.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{dto.Image}";
+            dto.ImageUrl = Url() + $"/{dto.Image}";
             return Ok(new FilmImageResponse
             {
                 Success = true,
@@ -211,13 +211,50 @@ namespace Movie.API.Controllers
             await _filmRepository.SaveAsync();
 
             var dto = CustomMapper.Mapper.Map<FilmPoster>(film);
-            dto.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{dto.Poster}";
+            dto.PosterUrl = Url() + $"/{dto.Poster}";
             return Ok(new FilmPosterResponse
             {
                 Success = true,
                 StatusCode = System.Net.HttpStatusCode.OK,
                 Message = "Thành công",
                 Film = dto
+            });
+        }
+
+        [HttpGet("getbytype/{type}")]
+        public async Task<IActionResult> GetByType(int pagenumber, int pagesize, int type)
+        {
+            if (type == null)
+            {
+                return NotFound(new FilterFilmResponse()
+                {
+                    Success = false,
+                    StatusCode = System.Net.HttpStatusCode.NotFound,
+                    Message = null,
+                });
+            }
+            var typeName = "";
+            if(type == 0)
+            {
+                typeName = "Phim bộ";
+            }else if(type == 1)
+            {
+                typeName = "Phim lẻ";
+            }
+            var films = await _filmRepository.GetByTypeAsync(pagenumber, pagesize, type);
+            var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
+            foreach (var filmFilter in filter.Items)
+            {
+                filmFilter.ImageUrl = Url() + $"/{filmFilter.Image}";
+                filmFilter.PosterUrl = Url() + $"/{filmFilter.Poster}";
+            }
+            return Ok(new FilterFilmResponse()
+            {
+                Success = true,
+                StatusCode = System.Net.HttpStatusCode.OK,
+                Message = "Thành công",
+                Name = typeName,
+                Data = filter,
             });
         }
 
@@ -238,8 +275,8 @@ namespace Movie.API.Controllers
             var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
             foreach (var filmFilter in filter.Items)
             {
-                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
-                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+                filmFilter.ImageUrl = Url() + $"/{filmFilter.Image}";
+                filmFilter.PosterUrl = Url() + $"/{filmFilter.Poster}";
             }
             return Ok(new FilterFilmResponse()
             {
@@ -268,8 +305,8 @@ namespace Movie.API.Controllers
 
             foreach (var filmFilter in filter.Items)
             {
-                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
-                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+                filmFilter.ImageUrl = Url() + $"/{filmFilter.Image}";
+                filmFilter.PosterUrl = Url() + $"/{filmFilter.Poster}";
             }
             return Ok(new FilterFilmResponse()
             {
@@ -280,16 +317,16 @@ namespace Movie.API.Controllers
             });
         }
         [HttpGet("filter")]
-        public async Task<IActionResult> Filter(int pagenumber, int pagesize,string name, int category,int country )
+        public async Task<IActionResult> Filter(int pagenumber, int pagesize,int? year, int? category,int? country )
         {
 
-            var films = await _filmRepository.Filter(pagenumber, pagesize, name, country, category);
+            var films = await _filmRepository.Filter(pagenumber, pagesize, year, country, category);
             var filter = CustomMapper.Mapper.Map<PaginatedList<FilmFilter>>(films);
 
             foreach (var filmFilter in filter.Items)
             {
-                filmFilter.ImageUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Image}";
-                filmFilter.PosterUrl = $"{Request.Scheme}://{Request.Host}/Content/Images/{filmFilter.Poster}";
+                filmFilter.ImageUrl = Url() + $"/{filmFilter.Image}";
+                filmFilter.PosterUrl = Url() + $"/{filmFilter.Poster}";
             }
             return Ok(new FilterFilmResponse()
             {
@@ -301,7 +338,11 @@ namespace Movie.API.Controllers
             });
         }
 
-
+        [NonAction]
+        public string Url()
+        {
+            return $"{Request.Scheme}://{Request.Host}/Content/Images";
+        }
 
     }
 }

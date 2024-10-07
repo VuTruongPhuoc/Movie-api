@@ -39,6 +39,7 @@ namespace Movie.API.Controllers
             return Ok(loginResponse);
         }
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterRequest model)
         {
             var registerResponse = await _accountManager.RegisterAsync(model);
@@ -49,9 +50,15 @@ namespace Movie.API.Controllers
             return Ok(registerResponse);
         }
         [HttpPost("forgotpassword")]
-        public async Task<Response> ForgotPassword()
+        [AllowAnonymous]
+        public async Task<IActionResult> ForgotPassword(string email)
         {
-            return new Response();
+            var response = await _accountManager.ForgotPassword(email);
+            if(response.StatusCode == System.Net.HttpStatusCode.BadRequest)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
         }
         [HttpPost("refreshtoken")]
         public async Task<Response> Refresh([FromBody] RefreshTokenRequest model)

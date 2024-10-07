@@ -10,6 +10,7 @@ using Movie.API.Models.Domain.Entities;
 using Movie.API.Requests;
 using Movie.API.Responses;
 using Movie.API.Responses.DTOs;
+using Movie.API.Utilities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
@@ -25,18 +26,21 @@ namespace Movie.API.Infrastructure.Repositories
         private readonly RoleManager<Role> _roleManager;    
         private readonly IConfiguration _configuration;
         private readonly ILogger<AccountManager> _logger;
+        private readonly ISendEmail _sendEmail;
         public AccountManager(
             MovieDbContext dbContext,
             UserManager<User> userManager,
             RoleManager<Role> roleManager,
             IConfiguration configuration, 
-            ILogger<AccountManager> logger)
+            ILogger<AccountManager> logger,
+            ISendEmail sendEmail)
         {
             _dbContext = dbContext;
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _logger = logger;
+            _sendEmail = sendEmail;
         }
         public async Task<Response> LoginAsync(LoginRequest model,string scheme, HostString host)
         {
@@ -116,6 +120,34 @@ namespace Movie.API.Infrastructure.Repositories
                 Message = "Đăng ký thành công",
             });
 
+        }
+        public async Task<Response> ForgotPassword(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == default)
+            {
+                return new Response()
+                {
+                    Success = false,
+                    StatusCode = HttpStatusCode.BadRequest,
+                    Message = "Tài khoản chưa được đăng ký."
+                };
+            }
+            var newPassword = Cryptography.GetRandomString();
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            _userManager.ResetPasswordAsync(user, token, newPassword);
+            _dbContext.SaveChangesAsync();
+            string subject = "Yêu cầu đặt lại mật khẩu.";
+            string body = $"Xin chào {user.DisplayName}, yêu cầu đặt lại mật khẩu của bạn đã được thực hiện. " +
+                $"Chúng tôi cung cấp cho bạn mật khẩu mới là {newPassword}, bạn có thể đổi mật khẩu tại trang cá nhân. " +
+                $"Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi" ;
+            _sendEmail.SendEmailAsync(email,subject,body);
+            return new Response()
+            {
+                Success = true,
+                StatusCode = HttpStatusCode.OK,
+                Message = "Mật khẩu mới đã được gửi tới email của bạn."
+            };
         }
         public async Task<Response> RefreshToken(RefreshTokenRequest model)
         {

@@ -47,6 +47,7 @@ namespace Movie.API
             builder.Services.AddAuthenticationConfiguration(builder.Configuration);
             builder.Services.AddServices();
 
+
             // Cors Configuration
             var corsname = "MoviesCORS";
             builder.Services.AddCors(options => options.AddPolicy(corsname, policy =>
@@ -95,6 +96,12 @@ namespace Movie.API
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                 options.JsonSerializerOptions.WriteIndented = true;
             });
+
+            //Add SendEmail
+            var sendmail = builder.Configuration.GetSection("SendEmail");
+            builder.Services.Configure<SendEmail>(sendmail);
+            builder.Services.AddSingleton<ISendEmail, SendEmailServices>();
+
 
             var app = builder.Build();
 

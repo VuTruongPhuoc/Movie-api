@@ -30,12 +30,6 @@ D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\refint\Movie.API.dll
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.pdb
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.genruntimeconfig.cache
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\ref\Movie.API.dll
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Application.dll
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Domain.dll
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Infrastructure.dll
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Infrastructure.pdb
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Application.pdb
-D:\Workplace\MoviesApp\movie-api\Movie.API\bin\Debug\net8.0\Movie.Domain.pdb
 D:\Workplace\MoviesApp\movie-api\Movie.API\obj\Debug\net8.0\Movie.API.sourcelink.json
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Azure.Core.dll
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Azure.Identity.dll
@@ -162,3 +156,7 @@ D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Microsoft.AspNetCore
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\MediatR.dll
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\MediatR.Contracts.dll
 D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\MailKit.dll
+D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\MimeKit.dll
+D:\Workplace\MoviesApp\Movie-api\Movie.API\bin\Debug\net8.0\System.Formats.Asn1.dll
